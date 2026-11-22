@@ -78,9 +78,12 @@
 | D-19 | Prix relevés par programme à une source fixe, avec une deuxième source de contrôle ; la recherche web sert aux nouvelles seulement. | 22.11.2026 |
 | D-20 | Frais fictifs calculés selon les tarifs officiels d'Interactive Brokers. | 22.11.2026 |
 | D-21 | ETF de référence : MSCI World capitalisant coté en Suisse ; fonds exact proposé par Claude, validé par Antoine avant le GO. | 22.11.2026 |
+| D-22 | Lancement automatique par tâche planifiée Claude (session cloud chaque jour de bourse à 7 h 45, bilan le vendredi soir). Consommation du quota à mesurer pendant l'essai. | 22.11.2026 |
+| D-23 | Stockage en simples fichiers dans le dépôt GitHub « trading » ; l'historique Git sert de preuve qu'aucune opération n'est réécrite. | 22.11.2026 |
+| D-24 | Tableau de bord : page privée Claude, mise à jour par la routine. | 22.11.2026 |
+| D-25 | Notifications sur téléphone (application Claude) : à chaque opération et pour le bilan du vendredi. | 22.11.2026 |
 
 ## Points ouverts
 
 - Fonds de référence exact (à valider avant le GO).
-- Choix techniques : lancement automatique, stockage, tableau de bord, notifications.
-- Coût d'usage des agents chaque jour de bourse.
+- Qui calcule la comptabilité (programme ou agents), critères de l'essai, conduite en cas de panne, budget.
