@@ -1,6 +1,6 @@
 # Cadrage — Équipe d'agents de trading (argent fictif)
 
-État : entretien terminé (blocs 0 à 9), synthèse présentée, en attente du GO d'Antoine.
+État : cadrage validé — GO donné par Antoine le 22.11.2026. Suite : `docs/plan.md`, piloté avec `/pilotage`.
 
 ## Bloc 0 — L'idée brute (22.11.2026)
 
@@ -108,8 +108,13 @@
 | D-29 | Budget : zéro franc en plus de l'abonnement Claude ; sources gratuites uniquement. | 22.11.2026 |
 | D-30 | Rythme : analyse chaque jour de bourse, ordres rares (« ne rien faire » est la décision normale) ; toute opération doit justifier que le gain espéré dépasse nettement ses frais. Pas d'achats-ventes en cours de journée. | 22.11.2026 |
 | D-31 | Pas de limite de taille par action (choix d'Antoine ; la recommandation était 10 % maximum par action). Risque accepté : une seule action peut faire perdre beaucoup en un jour. | 22.11.2026 |
+| D-32 | Objectif : au moins 2 points au-dessus de la référence sur 6 mois, frais compris, sans plafond (précise D-07). | 22.11.2026 |
+| D-33 | Objectif manqué = pas d'arrêt du projet : analyse des causes, correction de la méthode, nouvelle période de 6 mois (remplace « échec » de D-07). | 22.11.2026 |
+| D-34 | Amélioration continue : leçons relues chaque matin ; bilan du Contrôleur chaque vendredi ; une correction de méthode au maximum par mois, numérotée et datée, valable pour l'avenir seulement ; entretien avec Antoine tous les 3 mois (avertissement si plus de 5 points de retard). | 22.11.2026 |
+| D-35 | Argent réel conditionné à 6 mois consécutifs à +2 points avec une méthode stable (complète D-13). | 22.11.2026 |
+| D-36 | GO d'Antoine pour générer les documents du projet. Référence proposée : iShares Core MSCI World UCITS ETF (capitalisant), ISIN IE00B4L5Y983, à confirmer à l'étape 1. | 22.11.2026 |
 
 ## Points ouverts
 
-- Validation du fonds de référence proposé : iShares Core MSCI World UCITS ETF (capitalisant), ISIN IE00B4L5Y983 ; cotation suisse et disponibilité du prix à confirmer à l'étape 1.
-- GO d'Antoine.
+- Confirmer à l'étape 1 que le prix du fonds de référence se relève chaque jour aux deux sources ; sinon proposer un fonds équivalent.
+- Mesurer pendant l'essai le quota consommé par lancement.
