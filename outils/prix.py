@@ -44,6 +44,8 @@ def controler(p, aujourd_hui):
         c = p["controle"]
         if c["ecart_pct"] >= ECART_MAX * 100:
             alertes.append(f"écart de {c['ecart_pct']} % entre les 2 sources")
+        if c["ecart_ouverture_pct"] is None or c["ecart_ouverture_pct"] >= ECART_MAX * 100:
+            alertes.append("prix d'ouverture non confirmé par la 2e source")
         if c["date_cours"] != p["date_cours"]:
             alertes.append("les 2 sources ne donnent pas le même jour de cours")
     if not p.get("ouverture"):
@@ -90,8 +92,9 @@ def prix_us(code):
         "code": code, "monnaie": a.get("currency", "USD"),
         "cloture": round(p1, 4), "cloture_precedente": float(a["previous_close"]),
         "ouverture": float(a["open"]), "date_cours": d1,
-        "source": "Twelve Data", "controle": {"source": "Finnhub", "cloture": p2, "date_cours": d2,
-                                               "ecart_pct": round(ecart * 100, 3)},
+        "source": "Twelve Data", "controle": {"source": "Finnhub", "cloture": p2, "ouverture": b.get("o"), "date_cours": d2,
+                                               "ecart_pct": round(ecart * 100, 3),
+                                               "ecart_ouverture_pct": round(abs(float(a["open"]) - float(b["o"])) / float(a["open"]) * 100, 3) if b.get("o") else None},
     }
     r["cloture_precedente"] = round(r["cloture_precedente"], 4)
     r["ouverture"] = round(r["ouverture"], 4)
@@ -123,7 +126,8 @@ def main():
     if res["change_en_chf"]:
         age = (aujourd_hui - datetime.strptime(res["change_en_chf"]["date"], "%Y-%m-%d").date()).days
         if age > AGE_MAX_JOURS:
-            res["erreurs"].append({"quoi": "taux de change", "erreur": f"taux vieux de {age} jours"})
+            res["erreurs"].append({"quoi": "taux de change", "erreur": f"taux vieux de {age} jours : écarté"})
+            res["change_en_chf"] = None  # un taux périmé n'est jamais utilisé
     for t in titres:
         us = "code_us" in t
         cle = t.get("isin") or t.get("code_us")

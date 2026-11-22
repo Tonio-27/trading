@@ -1,0 +1,8 @@
+{
+  "phase": "essai",
+  "dossier": "essai",
+  "capital_chf": 10000,
+  "debut_compteur": null,
+  "reference": {"titre": "IE00B4L5Y983", "nom": "ETF MSCI World (iShares Core, SWDA)"},
+  "tableau_de_bord": null
+}
