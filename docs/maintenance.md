@@ -48,6 +48,6 @@
 
 ## Départ du compteur (étape 7, après validation de l'essai)
 - Dans `equipe/config.json` : `phase` = `compteur`, `dossier` = `donnees`, `debut_compteur` = la date.
-- `python3 outils/compta.py --dossier donnees init --capital 10000`, copie de `essai/titres.json`, `lecons.md` et `agenda.md`, puis ordre d'achat de la référence avec `--maximum`.
+- `python3 outils/compta.py --dossier donnees init --capital 5000` (capital du compteur : `capital_compteur_chf` dans `equipe/config.json`), copie de `essai/titres.json`, `lecons.md` et `agenda.md`, puis ordre d'achat de la référence avec `--maximum`.
 
 ## À compléter

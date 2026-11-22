@@ -17,7 +17,7 @@ Règle : une étape à la fois. Chaque étape se termine par un test sur `docs/d
 |---|---|---|---|---|
 | 5 ⏳ en place, à confirmer par 3 lancements | Automatisation | Tâche planifiée chaque jour de bourse à 7 h 45, bilan le vendredi soir | Tâches planifiées ; notifications sur téléphone | 3 lancements automatiques de suite réussis ; une panne simulée est notifiée |
 | 6 ✅ en ligne le 22.11.2026, à valider par Antoine | Tableau de bord | Page privée lisible sur téléphone : valeur, positions, opérations, courbe contre la référence | Page privée Claude mise à jour par la routine | Antoine lit l'essentiel en moins de 2 minutes sur son téléphone |
-| 7 | Départ du compteur | Remise à zéro : CHF 10'000 fictifs, achat fictif de la référence, début des 6 mois | Portefeuille initial ; date de départ notée | Date de départ et prix de départ consignés dans le journal |
+| 7 | Départ du compteur | Remise à zéro : CHF 5'000 fictifs (D-58), achat fictif de la référence, début des 6 mois | Portefeuille initial ; date de départ notée | Date de départ et prix de départ consignés dans le journal |
 
 ## Phase 3 — V2
 

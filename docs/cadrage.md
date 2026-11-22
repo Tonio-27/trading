@@ -134,6 +134,7 @@
 | D-55 | Notation des prévisions (option B) : chaque idée examinée, retenue ou non, est enregistrée avec ses probabilités ; `outils/previsions.py` la note à l'échéance contre le cours réel (note de Brier). Bilan chaque vendredi. | 22.11.2026 |
 | D-56 | Suite de l'audit de faisabilité : R1 retenue — la décision d'engager de l'argent réel se juge aussi sur la qualité des prévisions (au moins 20 notées, meilleures que le hasard) et le respect des règles. R2 (discipline de frais) et R3 (cœur et satellites) non retenues à ce stade. | 22.11.2026 |
 | D-57 | Apprentissage renforcé (précise D-34) : notes par rôle chaque vendredi ; leçons avec cas à l'appui, confirmées, contredites ou retirées ; améliorations de l'outil proposées à Antoine dans `docs/evolutions.md` ; audit mensuel par un agent indépendant avant l'unique correction de méthode, et jugement de la correction précédente. | 22.11.2026 |
+| D-58 | Le compteur des 6 mois démarrera avec CHF 5'000 fictifs, le montant réel envisagé (modifie D-02). Raison : les frais ont un minimum fixe et pèsent deux fois plus lourd sur CHF 5'000 que sur CHF 10'000 ; le test doit être fidèle à la situation réelle. L'essai en cours reste à CHF 10'000 : il ne sert qu'à vérifier la mécanique. | 22.11.2026 |
 
 ## Points ouverts
 

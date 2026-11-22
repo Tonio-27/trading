@@ -1,7 +1,8 @@
 {
   "phase": "essai",
   "dossier": "essai",
-  "capital_chf": 10000,
+  "capital_essai_chf": 10000,
+  "capital_compteur_chf": 5000,
   "debut_compteur": null,
   "reference": {
     "titre": "IE00B4L5Y983",

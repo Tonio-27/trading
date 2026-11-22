@@ -11,7 +11,7 @@ d = Path(sys.argv[1])
 config = json.loads((Path(__file__).parent.parent / "equipe/config.json").read_text())
 etat = json.loads((d / "etat.json").read_text())
 journal = compta.lire_journal(d)
-capital = Decimal(str(config["capital_chf"]))
+capital = sum(Decimal(l["montant_chf"]) for l in journal if l["type"] == "depot" and l["portefeuille"] == "agents")  # le capital vient du journal
 pct = lambda v: float((Decimal(v) / capital * 100 - 100).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
 
 performance = []

@@ -1,7 +1,7 @@
 # Équipe d'agents de trading (argent fictif) — projet personnel d'Antoine
 
 ## But
-Avec CHF 10'000 fictifs, battre d'au moins 2 points sur 6 mois un ETF MSCI World acheté et conservé, frais compris.
+Avec CHF 5'000 fictifs (CHF 10'000 pendant l'essai), battre d'au moins 2 points sur 6 mois un ETF MSCI World acheté et conservé, frais compris.
 
 ## Utilisateurs et niveau
 Antoine seul, sur téléphone, 2 minutes par semaine · N1 (perso), rigueur renforcée sur la comptabilité.
