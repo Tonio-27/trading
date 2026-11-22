@@ -135,6 +135,8 @@
 
 ## Points ouverts
 
+- Audit de faisabilité du 22.11.2026 (`docs/audit-objectif.md`) : trois recommandations en attente de décision d'Antoine — R1 juger aussi sur la qualité des prévisions, R2 discipline de frais, R3 cœur et satellites.
+
 - Résultats des entreprises suisses : pas de source chiffrée automatique ; ils passent par les articles de cash.ch et allnews.ch. Le site de la SEC refuse les lecteurs automatiques sans adresse de contact : non utilisé.
 - Sources : CNBC, BLS (emploi et inflation américains), FMI et OCDE refusent les lecteurs automatiques ; l'ajout d'AP, BBC, Guardian et Reuters a été refusé par le service d'environnement ; la presse financière internationale (Reuters, Bloomberg, Financial Times) est payante ou fermée. Ces informations restent connues par extraits seulement.
 - Coût mesuré à la répétition : environ 360'000 jetons pour les 3 sous-agents d'une routine. À suivre pendant l'essai (colonne `jetons_sous_agents` de `essai/routines.csv`) et à juger par Antoine.
