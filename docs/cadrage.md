@@ -1,6 +1,6 @@
 # Cadrage — Équipe d'agents de trading (argent fictif)
 
-État : cadrage en cours (blocs 0 à 3 terminés, pas encore de GO).
+État : cadrage en cours (blocs 0 à 5 terminés, pas encore de GO).
 
 ## Bloc 0 — L'idée brute (22.11.2026)
 
@@ -40,6 +40,19 @@
 - Prototype jetable : routine lancée à la main pendant une semaine, sans automatisation ni tableau de bord.
 - Le compteur des 6 mois démarre seulement après validation du prototype.
 
+## Bloc 4 — Données et connexions (22.11.2026)
+
+- Entrées : cours de bourse (source fixe gratuite + deuxième source de contrôle), nouvelles et agenda économique (recherche web).
+- Sorties : portefeuille, journal des opérations, agenda, leçons apprises, performance contre la référence, tableau de bord, notifications.
+- Aucune connexion à un logiciel de l'entreprise, aucune donnée personnelle ou sensible.
+- Frais simulés selon les tarifs officiels d'Interactive Brokers (courtier envisagé pour la suite réelle, car il permet de connecter des programmes — à revérifier le moment venu).
+- ETF de référence : MSCI World capitalisant coté à la bourse suisse, fonds exact à proposer et valider avant le GO.
+
+## Bloc 5 — Usage concret (22.11.2026)
+
+- Routine chaque jour de bourse vers 7 h 45 (Zurich), bilan le vendredi soir. Un seul utilisateur. Internet indispensable. Français uniquement.
+- Antoine lit la notification d'opération et le bilan du vendredi ; 2 minutes par semaine.
+
 ## Journal des décisions
 
 | N° | Décision | Date |
@@ -62,8 +75,12 @@
 | D-16 | Hors projet : ordres réels, connexion à un courtier, crypto, dérivés, conseil fiscal. | 22.11.2026 |
 | D-17 | Achats permis : ETF et actions de grandes entreprises uniquement (précise D-04). | 22.11.2026 |
 | D-18 | Prototype d'une semaine lancé à la main ; le compteur des 6 mois démarre après sa validation. | 22.11.2026 |
+| D-19 | Prix relevés par programme à une source fixe, avec une deuxième source de contrôle ; la recherche web sert aux nouvelles seulement. | 22.11.2026 |
+| D-20 | Frais fictifs calculés selon les tarifs officiels d'Interactive Brokers. | 22.11.2026 |
+| D-21 | ETF de référence : MSCI World capitalisant coté en Suisse ; fonds exact proposé par Claude, validé par Antoine avant le GO. | 22.11.2026 |
 
 ## Points ouverts
 
-- ETF de référence exact, courtier simulé pour les frais, source des prix.
+- Fonds de référence exact (à valider avant le GO).
+- Choix techniques : lancement automatique, stockage, tableau de bord, notifications.
 - Coût d'usage des agents chaque jour de bourse.
