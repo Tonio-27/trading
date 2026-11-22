@@ -106,6 +106,8 @@
 | D-27 | Essai validé sur 4 critères chiffrés (5/5 routines, écart de prix < 0,5 % entre 2 sources, comptabilité juste au centime, coût mesuré et accepté). | 22.11.2026 |
 | D-28 | En cas de panne : aucune opération, panne notée au journal, notification à Antoine. | 22.11.2026 |
 | D-29 | Budget : zéro franc en plus de l'abonnement Claude ; sources gratuites uniquement. | 22.11.2026 |
+| D-30 | Rythme : analyse chaque jour de bourse, ordres rares (« ne rien faire » est la décision normale) ; toute opération doit justifier que le gain espéré dépasse nettement ses frais. Pas d'achats-ventes en cours de journée. | 22.11.2026 |
+| D-31 | Pas de limite de taille par action (choix d'Antoine ; la recommandation était 10 % maximum par action). Risque accepté : une seule action peut faire perdre beaucoup en un jour. | 22.11.2026 |
 
 ## Points ouverts
 
