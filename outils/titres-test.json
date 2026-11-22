@@ -1,11 +1,72 @@
 [
-  {"nom": "Nestlé", "isin": "CH0038863350", "monnaie": "CHF"},
-  {"nom": "Zurich Assurances", "isin": "CH0011075394", "monnaie": "CHF"},
-  {"nom": "Roche (action au porteur)", "isin": "CH0012032113", "monnaie": "CHF"},
-  {"nom": "Novartis", "isin": "CH0012005267", "monnaie": "CHF"},
-  {"nom": "UBS", "isin": "CH0244767585", "monnaie": "CHF"},
-  {"nom": "ABB", "isin": "CH0012221716", "monnaie": "CHF"},
-  {"nom": "ETF MSCI World (référence)", "isin": "IE00B4L5Y983", "monnaie": "USD"},
-  {"nom": "ETF S&P 500", "isin": "IE00B5BMR087", "monnaie": "USD"},
-  {"nom": "ETF or (ZKB Gold)", "isin": "CH0139101593", "monnaie": "CHF"}
+  {
+    "nom": "Nestlé",
+    "isin": "CH0038863350",
+    "monnaie": "CHF"
+  },
+  {
+    "nom": "Zurich Assurances",
+    "isin": "CH0011075394",
+    "monnaie": "CHF"
+  },
+  {
+    "nom": "Roche (action au porteur)",
+    "isin": "CH0012032113",
+    "monnaie": "CHF"
+  },
+  {
+    "nom": "Novartis",
+    "isin": "CH0012005267",
+    "monnaie": "CHF"
+  },
+  {
+    "nom": "UBS",
+    "isin": "CH0244767585",
+    "monnaie": "CHF"
+  },
+  {
+    "nom": "ABB",
+    "isin": "CH0012221716",
+    "monnaie": "CHF"
+  },
+  {
+    "nom": "ETF MSCI World (référence)",
+    "isin": "IE00B4L5Y983",
+    "monnaie": "USD"
+  },
+  {
+    "nom": "ETF S&P 500",
+    "isin": "IE00B5BMR087",
+    "monnaie": "USD"
+  },
+  {
+    "nom": "ETF or (ZKB Gold)",
+    "isin": "CH0139101593",
+    "monnaie": "CHF"
+  },
+  {
+    "nom": "ETF Euro Stoxx 50",
+    "isin": "IE00B53L3W79",
+    "monnaie": "EUR"
+  },
+  {
+    "nom": "Apple",
+    "code_us": "AAPL"
+  },
+  {
+    "nom": "Microsoft",
+    "code_us": "MSFT"
+  },
+  {
+    "nom": "Nvidia",
+    "code_us": "NVDA"
+  },
+  {
+    "nom": "JPMorgan",
+    "code_us": "JPM"
+  },
+  {
+    "nom": "Johnson & Johnson",
+    "code_us": "JNJ"
+  }
 ]

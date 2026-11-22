@@ -118,10 +118,11 @@
 | D-39 | Pas d'actions européennes seules pour l'instant : l'Europe est achetée via des ETF cotés en Suisse. À réexaminer en V2. | 22.11.2026 |
 | D-40 | Fonds de référence confirmé : iShares Core MSCI World, code SWDA à la bourse suisse, coté en USD, converti en CHF au taux BCE. | 22.11.2026 |
 | D-41 | Programmes écrits en Python, sans dépendance à installer. | 22.11.2026 |
+| D-42 | Clés Twelve Data et Finnhub enregistrées comme secrets de l'environnement « trading » (jamais dans le dépôt). Étape 1 testée : 15 titres relevés, 0 erreur, 5 actions américaines confirmées par 2 sources. | 22.11.2026 |
 
 ## Points ouverts
 
-- Antoine crée les comptes gratuits Twelve Data et Finnhub, puis enregistre les clés par formulaire sécurisé.
-- Vérifier avec les vraies clés que les deux services répondent depuis le cloud et concordent à moins de 0,5 %.
-- Limite connue : le bon de jouissance Roche (ROG), titre principal de Roche, est introuvable dans la source SIX ; seule l'action au porteur (RO) y figure.
+- Limite connue : le bon de jouissance Roche (ROG) est introuvable dans la source SIX ; seule l'action au porteur (RO) y figure.
+- Limite connue : titres suisses et ETF relevés à une seule source (la bourse elle-même), avec alerte au-delà de 15 % de variation sur un jour.
+- Limite connue : Twelve Data et Finnhub donnent des cours identiques au centime ; ils partagent peut-être le même fournisseur, le contrôle croisé protège donc surtout contre une panne ou un décalage de date.
 - Mesurer pendant l'essai le quota consommé par lancement.
