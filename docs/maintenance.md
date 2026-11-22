@@ -8,7 +8,8 @@
 - Décisions : `docs/cadrage.md`. Plan : `docs/plan.md`.
 
 ## Lancer, arrêter
-- Lancement automatique : tâches planifiées du compte Claude d'Antoine (à créer à l'étape 5).
+- Lancement automatique : deux tâches planifiées du compte Claude d'Antoine, « Trading fictif : routine du matin » (lundi à vendredi, 7 h 45) et « Trading fictif : bilan du vendredi » (22 h 40). Elles réveillent la session de développement, qui applique `equipe/gerant-controleur.md` ou `equipe/bilan-vendredi.md`.
+- L'équipe : consignes dans `equipe/` (règles communes, 3 rôles de sous-agents, routine du Gérant, bilan du Contrôleur). Phase et dossier de travail : `equipe/config.json`.
 - Pour tout arrêter : désactiver les tâches planifiées dans le compte Claude. Aucun argent réel n'est en jeu.
 
 ## Sauvegarde
@@ -37,5 +38,11 @@
 - Frais : `outils/frais.json` (tarifs Interactive Brokers relevés le 22.11.2026). Un changement de tarif ne vaut que pour les opérations futures.
 - Tests : `python3 outils/test_compta.py` doit afficher « TOUT EST JUSTE » avant toute mise en service d'une modification.
 
+## Tableau de bord
+- https://claude.ai/artifact/V4wDXGeLNUN91P56uWSiVy (page privée). Mise à jour : `equipe/tableau-de-bord.md`. Mise en forme : `tableau-de-bord/index.html`.
+
+## Départ du compteur (étape 7, après validation de l'essai)
+- Dans `equipe/config.json` : `phase` = `compteur`, `dossier` = `donnees`, `debut_compteur` = la date.
+- `python3 outils/compta.py --dossier donnees init --capital 10000`, copie de `essai/titres.json`, `lecons.md` et `agenda.md`, puis ordre d'achat de la référence avec `--maximum`.
+
 ## À compléter
-- Adresse du tableau de bord (étape 6).

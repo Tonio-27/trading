@@ -1,0 +1,21 @@
+{
+  "date_cours": "2026-11-20",
+  "releve": "2026-11-22_1702.json",
+  "releve_utc": "2026-11-22T17:02:12Z",
+  "ordres_en_attente": 1,
+  "agents": {
+    "valeur_chf": "10000.00",
+    "liquidites_chf": "10000.00",
+    "frais_cumules_chf": "0",
+    "performance_pct": "0.00",
+    "positions": []
+  },
+  "reference": {
+    "valeur_chf": "10000.00",
+    "liquidites_chf": "10000.00",
+    "frais_cumules_chf": "0",
+    "performance_pct": "0.00",
+    "positions": []
+  },
+  "ecart_points": "0.00"
+}

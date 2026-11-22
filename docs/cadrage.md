@@ -121,12 +121,18 @@
 | D-42 | Clés Twelve Data et Finnhub enregistrées comme secrets de l'environnement « trading » (jamais dans le dépôt). Étape 1 testée : 15 titres relevés, 0 erreur, 5 actions américaines confirmées par 2 sources. | 22.11.2026 |
 | D-43 | Frais simulés : tarif « Fixed » d'Interactive Brokers — bourse suisse 0,05 % (minimum CHF 5) ; actions US USD 0.005 par action (minimum USD 1, maximum 1 %) ; change 0,002 % (minimum USD 2) à chaque opération en monnaie étrangère ; pas de timbre fédéral chez un courtier étranger. Hypothèse prudente, réglable dans `outils/frais.json`. À valider par Antoine. | 22.11.2026 |
 | D-44 | Règles de comptabilité : nombres entiers de titres ; liquidités tenues en CHF ; ordre exécuté au premier prix d'ouverture utilisable après la décision, rejeté après 5 jours sans prix ; ventes traitées avant les achats ; journal en ajout seul, protégé par une empreinte en chaîne. | 22.11.2026 |
+| D-45 | Contrôle des étapes 1 et 2 par un relecteur indépendant : 12 défauts corrigés (date des ordres fixée par le programme, relevés récents uniquement, dividendes et divisions d'actions datés et non répétables, écritures verrouillées, comparaison du journal avec tout l'historique Git, prix d'ouverture confirmé par la 2e source, taux de change périmé écarté, performance notée par jour de cours). | 22.11.2026 |
+| D-46 | Sur délégation d'Antoine (« passer à toutes les autres étapes ») : l'essai est conduit par deux tâches planifiées Claude dans la session de développement — routine du lundi au vendredi à 7 h 45, bilan le vendredi à 22 h 40 (après la clôture américaine). Adapte D-18 (essai « à la main ») et D-22. À confirmer par Antoine. | 22.11.2026 |
+| D-47 | Les données de l'essai vivent dans `essai/`. Au départ du compteur, un dossier neuf `donnees/` est ouvert ; l'essai n'est jamais mélangé au résultat des 6 mois. | 22.11.2026 |
+| D-48 | La référence est achetée en une fois, au plus grand nombre entier de parts que CHF 10'000 permettent (calculé par le programme à l'exécution). | 22.11.2026 |
+| D-49 | Tableau de bord : page privée Claude de type « Data », https://claude.ai/artifact/V4wDXGeLNUN91P56uWSiVy, dont le fichier de données est remplacé à chaque routine. | 22.11.2026 |
+| D-50 | Répétition générale du 22.11.2026 réussie : veille, analyse, contradiction, décision écrite (idée Nestlé écartée, gain espéré trop faible face aux frais), sans aucun calcul fait par les agents. | 22.11.2026 |
 
 ## Points ouverts
 
-- Limite connue : le bon de jouissance Roche (ROG) est introuvable dans la source SIX ; seule l'action au porteur (RO) y figure.
-- Limite connue : titres suisses et ETF relevés à une seule source (la bourse elle-même), avec alerte au-delà de 15 % de variation sur un jour.
-- Limite connue : Twelve Data et Finnhub donnent des cours identiques au centime ; ils partagent peut-être le même fournisseur, le contrôle croisé protège donc surtout contre une panne ou un décalage de date.
-- Tarifs Interactive Brokers relevés par extraits de pages officielles, non lus en entier : à revérifier avant tout passage en argent réel.
-- Dividendes : le journal accepte une ligne « dividende », mais aucune source automatique n'est encore branchée (la référence, capitalisante, n'en verse pas).
-- Mesurer pendant l'essai le quota consommé par lancement.
+- Les agents ne peuvent pas ouvrir les articles de presse (réseau limité) : ils travaillent sur les extraits des moteurs de recherche. À décider avant le départ du compteur : autoriser quelques sites d'information dans l'environnement « trading ».
+- Coût mesuré à la répétition : environ 360'000 jetons pour les 3 sous-agents d'une routine. À suivre pendant l'essai (colonne `jetons_sous_agents` de `essai/routines.csv`) et à juger par Antoine.
+- La routine tourne dans la session de développement : à confirmer ou à déplacer vers une session dédiée au départ du compteur.
+- Tarifs Interactive Brokers relevés par extraits de pages officielles : à revérifier avant tout passage en argent réel.
+- Limites connues des prix : bon de jouissance Roche (ROG) introuvable ; titres suisses et ETF à une seule source ; Twelve Data et Finnhub peut-être issus du même fournisseur.
+- Protection du journal : l'empreinte en chaîne détecte une retouche accidentelle ; la vraie garantie contre une réécriture est l'historique poussé sur GitHub.

@@ -1,0 +1,42 @@
+{
+ "resume": [
+  {
+   "date": "2026-11-20",
+   "phase": "essai",
+   "debut_compteur": null,
+   "valeur_agents_chf": 10000.0,
+   "perf_agents_pct": 0.0,
+   "valeur_reference_chf": 10000.0,
+   "perf_reference_pct": 0.0,
+   "ecart_points": 0.0,
+   "objectif_points": 2.0,
+   "liquidites_chf": 10000.0,
+   "frais_cumules_chf": 0.0,
+   "positions": 0,
+   "ordres_en_attente": 0,
+   "operations_executees": 0,
+   "routines_reussies": 1,
+   "routines_en_panne": 0
+  }
+ ],
+ "performance": [
+  {
+   "date": "2026-11-20",
+   "agents_pct": 0.0,
+   "reference_pct": 0.0,
+   "agents_chf": 10000.0,
+   "reference_chf": 10000.0
+  }
+ ],
+ "positions": [
+  {
+   "nom": "Liquidités",
+   "quantite": null,
+   "cours": null,
+   "monnaie": "CHF",
+   "valeur_chf": 10000.0,
+   "poids_pct": 100.0
+  }
+ ],
+ "operations": []
+}

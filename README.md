@@ -9,7 +9,9 @@ d'au moins 2 points, sur 6 mois, un ETF MSCI World simplement acheté et conserv
 - Antoine reçoit une notification à chaque opération et un bilan le vendredi, et consulte un tableau de bord sur son téléphone.
 
 ## État
-Cadrage validé le 22.11.2026. Développement à venir, étape par étape.
+Phase d'essai depuis le 22.11.2026 : les agents tournent chaque jour de bourse sur un portefeuille d'entraînement. Le compteur des 6 mois démarre après validation de l'essai.
+
+Tableau de bord : https://claude.ai/artifact/V4wDXGeLNUN91P56uWSiVy
 
 ## Documents
 - `docs/cadrage.md` : synthèse et journal des décisions
