@@ -127,10 +127,12 @@
 | D-48 | La référence est achetée en une fois, au plus grand nombre entier de parts que CHF 10'000 permettent (calculé par le programme à l'exécution). | 22.11.2026 |
 | D-49 | Tableau de bord : page privée Claude de type « Data », https://claude.ai/artifact/V4wDXGeLNUN91P56uWSiVy, dont le fichier de données est remplacé à chaque routine. | 22.11.2026 |
 | D-50 | Répétition générale du 22.11.2026 réussie : veille, analyse, contradiction, décision écrite (idée Nestlé écartée, gain espéré trop faible face aux frais), sans aucun calcul fait par les agents. | 22.11.2026 |
+| D-51 | Sources d'information : l'environnement « trading » autorise la BNS, la Fed, la BEA, cash.ch, swissinfo et la RTS (en plus de la BCE et de SIX), que les agents peuvent ouvrir et lire. Règle de confiance : un ordre doit reposer sur au moins un fait lu dans l'article ou sur une page officielle. | 22.11.2026 |
+| D-52 | Trois horizons : veille quotidienne (jours), agenda vérifié sur pages officielles (semaines), dossier de fond mis à jour le lundi (3 à 12 mois). L'analyste doit appuyer chaque idée sur au moins deux horizons. | 22.11.2026 |
 
 ## Points ouverts
 
-- Les agents ne peuvent pas ouvrir les articles de presse (réseau limité) : ils travaillent sur les extraits des moteurs de recherche. À décider avant le départ du compteur : autoriser quelques sites d'information dans l'environnement « trading ».
+- Sources : CNBC, BLS (emploi et inflation américains), FMI et OCDE refusent les lecteurs automatiques ; la presse financière internationale (Reuters, Bloomberg, Financial Times) est payante ou fermée. Ces informations restent connues par extraits seulement.
 - Coût mesuré à la répétition : environ 360'000 jetons pour les 3 sous-agents d'une routine. À suivre pendant l'essai (colonne `jetons_sous_agents` de `essai/routines.csv`) et à juger par Antoine.
 - La routine tourne dans la session de développement : à confirmer ou à déplacer vers une session dédiée au départ du compteur.
 - Tarifs Interactive Brokers relevés par extraits de pages officielles : à revérifier avant tout passage en argent réel.
