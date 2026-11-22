@@ -12,10 +12,13 @@
 | www.cash.ch | Bourse suisse au jour le jour, entreprises du SMI | court |
 | www.swissinfo.ch | Économie et politique suisses | court et moyen |
 | www.rts.ch | Économie suisse et internationale, en français | court |
+| www.allnews.ch | Actualité financière suisse, analyses de gérants | court et moyen |
 | www.six-group.com | Cours officiels de la bourse suisse | court |
 
-## Sites autorisés mais qui refusent les lecteurs automatiques
-www.cnbc.com, www.bls.gov, www.imf.org, www.oecd.org : on ne contourne pas ce refus. Leurs informations ne sont accessibles que par les extraits de la recherche web.
+## Sites qu'on ne peut pas ouvrir
+- CNBC, BLS (emploi et inflation américains), FMI, OCDE : ces sites refusent les lecteurs automatiques. On ne contourne pas ce refus.
+- AP, BBC, Guardian, Reuters : le service d'environnement cloud a refusé leur ajout (22.11.2026).
+Leurs informations ne sont accessibles que par les extraits de la recherche web.
 
 ## Tout le reste
 Seulement des extraits de recherche. Un fait connu par un extrait seul est marqué « extrait seulement ».
