@@ -1,0 +1,8 @@
+{
+  "_source": "Interactive Brokers, tarif « Fixed » (pages officielles de tarifs, lues par extraits le 22.11.2026 ; à revérifier avant tout passage en argent réel)",
+  "six": {"taux": "0.0005", "min_chf": "5.00"},
+  "us": {"par_action_usd": "0.005", "min_usd": "1.00", "max_part": "0.01"},
+  "change": {"taux": "0.00002", "min_usd": "2.00"},
+  "timbre": {"suisse": "0", "etranger": "0"},
+  "_notes": "Bourse suisse : 0,05 % du montant, minimum CHF 5. Actions US : USD 0.005 par action, minimum USD 1, maximum 1 % du montant. Change (conversion manuelle) : 0,002 %, minimum USD 2, appliqué à chaque achat ou vente en monnaie étrangère. Timbre fédéral : non prélevé chez un courtier étranger. Hypothèse prudente : toutes les liquidités sont en CHF, chaque opération en USD ou EUR paie le change."
+}

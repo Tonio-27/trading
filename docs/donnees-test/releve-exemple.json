@@ -1,5 +1,5 @@
 {
-  "releve_utc": "2026-11-22T16:45:33Z",
+  "releve_utc": "2026-11-22T16:49:29Z",
   "change_en_chf": {
     "date": "2026-11-20",
     "source": "BCE (taux de référence)",
@@ -10,7 +10,7 @@
   "titres": [
     {
       "nom": "Nestlé",
-      "isin": "CH0038863350",
+      "id": "CH0038863350",
       "code": "NESN",
       "nom_six": "NESTLE N",
       "monnaie": "CHF",
@@ -18,11 +18,13 @@
       "cloture_precedente": 84.45,
       "ouverture": 85,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "Zurich Assurances",
-      "isin": "CH0011075394",
+      "id": "CH0011075394",
       "code": "ZURN",
       "nom_six": "ZURICH INSURANCE N",
       "monnaie": "CHF",
@@ -30,11 +32,13 @@
       "cloture_precedente": 635.2,
       "ouverture": 640.6,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "Roche (action au porteur)",
-      "isin": "CH0012032113",
+      "id": "CH0012032113",
       "code": "RO",
       "nom_six": "ROCHE I",
       "monnaie": "CHF",
@@ -42,11 +46,13 @@
       "cloture_precedente": 405,
       "ouverture": 407.2,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "Novartis",
-      "isin": "CH0012005267",
+      "id": "CH0012005267",
       "code": "NOVN",
       "nom_six": "NOVARTIS N",
       "monnaie": "CHF",
@@ -54,11 +60,13 @@
       "cloture_precedente": 127.24,
       "ouverture": 127.88,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "UBS",
-      "isin": "CH0244767585",
+      "id": "CH0244767585",
       "code": "UBSG",
       "nom_six": "UBS GROUP N",
       "monnaie": "CHF",
@@ -66,11 +74,13 @@
       "cloture_precedente": 38.41,
       "ouverture": 37.8,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "ABB",
-      "isin": "CH0012221716",
+      "id": "CH0012221716",
       "code": "ABBN",
       "nom_six": "ABB LTD N",
       "monnaie": "CHF",
@@ -78,11 +88,13 @@
       "cloture_precedente": 68.22,
       "ouverture": 66.28,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "ETF MSCI World (référence)",
-      "isin": "IE00B4L5Y983",
+      "id": "IE00B4L5Y983",
       "code": "SWDA",
       "nom_six": "iSh Cor MSCI Wld USD A",
       "monnaie": "USD",
@@ -90,11 +102,13 @@
       "cloture_precedente": 139.12,
       "ouverture": 136.5,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "ETF S&P 500",
-      "isin": "IE00B5BMR087",
+      "id": "IE00B5BMR087",
       "code": "CSSPX",
       "nom_six": "iSh Cor S&P500 USD A",
       "monnaie": "USD",
@@ -102,11 +116,13 @@
       "cloture_precedente": 789.3,
       "ouverture": 772.6,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "ETF or (ZKB Gold)",
-      "isin": "CH0139101593",
+      "id": "CH0139101593",
       "code": "ZGLD",
       "nom_six": "Swisscanto GOLD ETF",
       "monnaie": "CHF",
@@ -114,11 +130,13 @@
       "cloture_precedente": 918,
       "ouverture": 889.6,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "ETF Euro Stoxx 50",
-      "isin": "IE00B53L3W79",
+      "id": "IE00B53L3W79",
       "code": "CSSX5E",
       "nom_six": "iSh Cor EuroStx50 EUR A",
       "monnaie": "EUR",
@@ -126,14 +144,17 @@
       "cloture_precedente": 238.9,
       "ouverture": 236.05,
       "date_cours": "20261120",
-      "source": "SIX (différé 15 min)"
+      "source": "SIX (différé 15 min)",
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "Apple",
+      "id": "AAPL",
       "code": "AAPL",
       "monnaie": "USD",
       "cloture": 342.56,
-      "cloture_precedente": 349.20999,
+      "cloture_precedente": 349.21,
       "ouverture": 352.87,
       "date_cours": "20261120",
       "source": "Twelve Data",
@@ -143,15 +164,17 @@
         "date_cours": "20261120",
         "ecart_pct": 0.0
       },
-      "confirme": true
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "Microsoft",
+      "id": "MSFT",
       "code": "MSFT",
       "monnaie": "USD",
       "cloture": 484.52,
-      "cloture_precedente": 498.29999,
-      "ouverture": 493.73999,
+      "cloture_precedente": 498.3,
+      "ouverture": 493.74,
       "date_cours": "20261120",
       "source": "Twelve Data",
       "controle": {
@@ -160,10 +183,12 @@
         "date_cours": "20261120",
         "ecart_pct": 0.0
       },
-      "confirme": true
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "Nvidia",
+      "id": "NVDA",
       "code": "NVDA",
       "monnaie": "USD",
       "cloture": 125.53,
@@ -177,15 +202,17 @@
         "date_cours": "20261120",
         "ecart_pct": 0.0
       },
-      "confirme": true
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "JPMorgan",
+      "id": "JPM",
       "code": "JPM",
       "monnaie": "USD",
       "cloture": 310.53,
       "cloture_precedente": 320.22,
-      "ouverture": 319.89001,
+      "ouverture": 319.89,
       "date_cours": "20261120",
       "source": "Twelve Data",
       "controle": {
@@ -194,15 +221,17 @@
         "date_cours": "20261120",
         "ecart_pct": 0.0
       },
-      "confirme": true
+      "alertes": [],
+      "utilisable": true
     },
     {
       "nom": "Johnson & Johnson",
+      "id": "JNJ",
       "code": "JNJ",
       "monnaie": "USD",
       "cloture": 270.47,
-      "cloture_precedente": 267.14001,
-      "ouverture": 270.35999,
+      "cloture_precedente": 267.14,
+      "ouverture": 270.36,
       "date_cours": "20261120",
       "source": "Twelve Data",
       "controle": {
@@ -211,7 +240,8 @@
         "date_cours": "20261120",
         "ecart_pct": 0.0
       },
-      "confirme": true
+      "alertes": [],
+      "utilisable": true
     }
   ],
   "erreurs": []

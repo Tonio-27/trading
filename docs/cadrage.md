@@ -119,10 +119,14 @@
 | D-40 | Fonds de référence confirmé : iShares Core MSCI World, code SWDA à la bourse suisse, coté en USD, converti en CHF au taux BCE. | 22.11.2026 |
 | D-41 | Programmes écrits en Python, sans dépendance à installer. | 22.11.2026 |
 | D-42 | Clés Twelve Data et Finnhub enregistrées comme secrets de l'environnement « trading » (jamais dans le dépôt). Étape 1 testée : 15 titres relevés, 0 erreur, 5 actions américaines confirmées par 2 sources. | 22.11.2026 |
+| D-43 | Frais simulés : tarif « Fixed » d'Interactive Brokers — bourse suisse 0,05 % (minimum CHF 5) ; actions US USD 0.005 par action (minimum USD 1, maximum 1 %) ; change 0,002 % (minimum USD 2) à chaque opération en monnaie étrangère ; pas de timbre fédéral chez un courtier étranger. Hypothèse prudente, réglable dans `outils/frais.json`. À valider par Antoine. | 22.11.2026 |
+| D-44 | Règles de comptabilité : nombres entiers de titres ; liquidités tenues en CHF ; ordre exécuté au premier prix d'ouverture utilisable après la décision, rejeté après 5 jours sans prix ; ventes traitées avant les achats ; journal en ajout seul, protégé par une empreinte en chaîne. | 22.11.2026 |
 
 ## Points ouverts
 
 - Limite connue : le bon de jouissance Roche (ROG) est introuvable dans la source SIX ; seule l'action au porteur (RO) y figure.
 - Limite connue : titres suisses et ETF relevés à une seule source (la bourse elle-même), avec alerte au-delà de 15 % de variation sur un jour.
 - Limite connue : Twelve Data et Finnhub donnent des cours identiques au centime ; ils partagent peut-être le même fournisseur, le contrôle croisé protège donc surtout contre une panne ou un décalage de date.
+- Tarifs Interactive Brokers relevés par extraits de pages officielles, non lus en entier : à revérifier avant tout passage en argent réel.
+- Dividendes : le journal accepte une ligne « dividende », mais aucune source automatique n'est encore branchée (la référence, capitalisante, n'en verse pas).
 - Mesurer pendant l'essai le quota consommé par lancement.

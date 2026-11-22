@@ -7,7 +7,7 @@ Règle : une étape à la fois. Chaque étape se termine par un test sur `docs/d
 | N° | Étape | Objectif | Livrable | Critère « terminé » |
 |---|---|---|---|---|
 | 1 ✅ fait le 22.11.2026 | Relevé des prix | Relever chaque jour le prix des titres à 2 sources gratuites | Programme de relevé ; choix des 2 sources validé par Antoine ; fonds de référence confirmé | Sur 10 titres réels (suisses, US, européens, or), les 2 sources concordent à moins de 0,5 % et la monnaie est correcte |
-| 2 | Comptabilité | Calculer portefeuille, frais Interactive Brokers, change, dividendes, performance contre la référence | Programme de comptabilité ; fichiers portefeuille et journal | 5 opérations d'exemple recalculées à la main : juste au centime |
+| 2 ✅ fait le 22.11.2026 | Comptabilité | Calculer portefeuille, frais Interactive Brokers, change, dividendes, performance contre la référence | Programme de comptabilité ; fichiers portefeuille et journal | 5 opérations d'exemple recalculées à la main : juste au centime |
 | 3 | Les 4 rôles | Écrire les consignes des 4 rôles regroupés et la routine du matin | Consignes des rôles ; routine lançable à la main | Une routine complète produit une décision justifiée par écrit, sans calcul fait par les agents |
 | 4 | Essai d'une semaine | Lancer la routine à la main 5 jours de bourse | Journal de l'essai ; mesure du quota par lancement | Les 4 critères de l'essai sont remplis (voir `criteres-reussite.md`) ; Antoine valide |
 

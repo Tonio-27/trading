@@ -31,6 +31,11 @@
 - Lancer un relevé : `python3 outils/prix.py outils/titres-test.json`. Chaque relevé crée un fichier daté, jamais réécrit.
 - Si SIX change son service : le programme signale l'erreur, aucune opération n'est passée, Antoine est prévenu. Il faudra alors choisir une autre source.
 
+## Comptabilité
+- `outils/compta.py` : commandes `init`, `ordre`, `executer`, `etat`, `verifier`. Les données vivent dans `donnees/` (journal, état, performance).
+- Le journal `donnees/journal.jsonl` ne se modifie jamais à la main : `python3 outils/compta.py verifier` détecte toute retouche.
+- Frais : `outils/frais.json` (tarifs Interactive Brokers relevés le 22.11.2026). Un changement de tarif ne vaut que pour les opérations futures.
+- Tests : `python3 outils/test_compta.py` doit afficher « TOUT EST JUSTE » avant toute mise en service d'une modification.
+
 ## À compléter
-- Tarifs Interactive Brokers appliqués et date du relevé (étape 2).
 - Adresse du tableau de bord (étape 6).

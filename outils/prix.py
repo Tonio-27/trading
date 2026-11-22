@@ -17,10 +17,40 @@ BCE = "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
 CHAMPS = "ShortName,ISIN,ValorSymbol,ClosingPrice,PreviousClosingPrice,OpeningPrice,TradingBaseCurrency,LatestTradeDate"
 
 
-def lire(url):
+AGE_MAX_JOURS = 5  # un cours plus vieux que cela n'est pas utilisable (titre peu échangé, source en panne)
+
+
+def lire(url, essais=2):
     req = urllib.request.Request(url, headers={"User-Agent": "releve-prix-perso/1.0"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read().decode("utf-8")
+    for n in range(essais):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return r.read().decode("utf-8")
+        except Exception:
+            if n == essais - 1:
+                raise
+            time.sleep(5)
+
+
+def controler(p, aujourd_hui):
+    """Ajoute les alertes et le verdict « utilisable ». Ne corrige jamais un prix."""
+    alertes = []
+    age = (aujourd_hui - datetime.strptime(p["date_cours"], "%Y%m%d").date()).days
+    if age > AGE_MAX_JOURS:
+        alertes.append(f"cours vieux de {age} jours")
+    if p.get("cloture_precedente") and abs(p["cloture"] / p["cloture_precedente"] - 1) > 0.15:
+        alertes.append("variation de plus de 15 % sur un jour : à vérifier avant toute opération")
+    if "controle" in p:
+        c = p["controle"]
+        if c["ecart_pct"] >= ECART_MAX * 100:
+            alertes.append(f"écart de {c['ecart_pct']} % entre les 2 sources")
+        if c["date_cours"] != p["date_cours"]:
+            alertes.append("les 2 sources ne donnent pas le même jour de cours")
+    if not p.get("ouverture"):
+        alertes.append("prix d'ouverture absent")
+    p["alertes"] = alertes
+    p["utilisable"] = not alertes
+    return p
 
 
 def prix_six(isin, monnaie):
@@ -62,10 +92,9 @@ def prix_us(code):
         "ouverture": float(a["open"]), "date_cours": d1,
         "source": "Twelve Data", "controle": {"source": "Finnhub", "cloture": p2, "date_cours": d2,
                                                "ecart_pct": round(ecart * 100, 3)},
-        "confirme": ecart < ECART_MAX and d1 == d2,
     }
-    if not r["confirme"]:
-        r["alerte"] = "prix non confirmé par les 2 sources : pas d'opération sur ce titre aujourd'hui"
+    r["cloture_precedente"] = round(r["cloture_precedente"], 4)
+    r["ouverture"] = round(r["ouverture"], 4)
     return r
 
 
@@ -74,6 +103,9 @@ def taux_bce():
     date = re.search(r"time='([^']+)'", x).group(1)
     t = {m.group(1): float(m.group(2)) for m in re.finditer(r"currency='(\w+)' rate='([^']+)'", x)}
     # Taux BCE : 1 EUR = t[X]. On veut la valeur en CHF d'une unité de chaque monnaie.
+    for m in ("CHF", "USD"):
+        if not t.get(m) or t[m] <= 0:
+            raise ValueError(f"taux {m} absent")
     return {"date": date, "source": "BCE (taux de référence)",
             "CHF": 1.0, "EUR": round(t["CHF"], 6), "USD": round(t["CHF"] / t["USD"], 6)}
 
@@ -87,30 +119,30 @@ def main():
         res["change_en_chf"] = taux_bce()
     except Exception as e:
         res["erreurs"].append({"quoi": "taux de change", "erreur": str(e)})
+    aujourd_hui = maintenant.date()
+    if res["change_en_chf"]:
+        age = (aujourd_hui - datetime.strptime(res["change_en_chf"]["date"], "%Y-%m-%d").date()).days
+        if age > AGE_MAX_JOURS:
+            res["erreurs"].append({"quoi": "taux de change", "erreur": f"taux vieux de {age} jours"})
     for t in titres:
+        us = "code_us" in t
+        cle = t.get("isin") or t.get("code_us")
         try:
-            if "code_us" in t:
-                p = prix_us(t["code_us"])
-                res["titres"].append({"nom": t["nom"], **p})
-                time.sleep(8)  # limite du compte gratuit Twelve Data : 8 demandes par minute
-                continue
-            p = prix_six(t["isin"], t["monnaie"])
-            # Contrôle de cohérence : un saut de plus de 15 % en un jour est signalé, pas corrigé.
-            if p["cloture_precedente"] and abs(p["cloture"] / p["cloture_precedente"] - 1) > 0.15:
-                p["alerte"] = "variation de plus de 15 % sur un jour : à vérifier avant toute opération"
-            res["titres"].append({"nom": t["nom"], "isin": t["isin"], **p})
+            p = prix_us(t["code_us"]) if us else prix_six(t["isin"], t["monnaie"])
+            res["titres"].append({"nom": t["nom"], "id": cle, **controler(p, aujourd_hui)})
         except Exception as e:
-            res["erreurs"].append({"quoi": t["nom"], "titre": t.get("isin") or t.get("code_us"), "erreur": str(e)})
-        time.sleep(0.5)
+            res["erreurs"].append({"quoi": t["nom"], "titre": cle, "erreur": str(e)})
+        time.sleep(8 if us else 0.5)  # compte gratuit Twelve Data : 8 demandes par minute
     sortie.mkdir(parents=True, exist_ok=True)
     f = sortie / f"{maintenant.strftime('%Y-%m-%d_%H%M')}.json"
     if f.exists():
         sys.exit(f"Refus : {f} existe déjà (un relevé n'est jamais réécrit).")
     f.write_text(json.dumps(res, ensure_ascii=False, indent=2) + "\n")
     for x in res["titres"]:
-        print(f"{x['nom']:28} {x['code']:6} {x['cloture']:>10} {x['monnaie']}  ouverture {x['ouverture']}  ({x['date_cours']})" + (f"  contrôle {x['controle']['cloture']} écart {x['controle']['ecart_pct']} %" if "controle" in x else "") + ("  ALERTE" if "alerte" in x else ""))
+        print(f"{x['nom']:28} {x['code']:6} {x['cloture']:>10} {x['monnaie']}  ouverture {x['ouverture']}  ({x['date_cours']})" + (f"  contrôle {x['controle']['cloture']} écart {x['controle']['ecart_pct']} %" if "controle" in x else "") + ("" if x["utilisable"] else "  NON UTILISABLE : " + " ; ".join(x["alertes"])))
     print("Change en CHF :", res["change_en_chf"])
-    print(f"{len(res['titres'])} prix relevés, {len(res['erreurs'])} erreur(s) -> {f}")
+    ok = sum(1 for x in res["titres"] if x["utilisable"])
+    print(f"{len(res['titres'])} prix relevés dont {ok} utilisables, {len(res['erreurs'])} erreur(s) -> {f}")
     for e in res["erreurs"]:
         print("ERREUR", e)
     sys.exit(1 if res["erreurs"] else 0)
