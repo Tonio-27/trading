@@ -9,6 +9,7 @@ Lis `equipe/regles.md` et `equipe/config.json`. Dans la suite, `D` désigne le d
 2. **Relevé des prix** : `python3 outils/prix.py D/titres.json D/prix`. Note le nom du fichier créé.
    - Si le fichier n'est pas créé ou s'il n'y a pas de taux de change : **panne**.
    - Si seuls certains titres sont en erreur ou « non utilisables » : on continue, ces titres sont intouchables aujourd'hui.
+2b. **Résultats d'entreprises** : `python3 outils/entreprises.py D/titres.json D/entreprises`. Une erreur ici n'est pas une panne : on continue sans ce fichier et on le note dans le résumé.
 3. **Exécution et état** : `python3 outils/compta.py --dossier D executer D/prix/FICHIER`, puis `... etat D/prix/FICHIER`.
 4. **Lecture** : `D/lecons.md`, `D/agenda.md`, `D/etat.json`, la décision de la veille dans `D/decisions/`.
 5. **Veille et agenda** : lance un sous-agent (type général) avec la consigne : « Lis et applique `equipe/veille-agenda.md`. Dossier : D. Date : AAAA-MM-JJ. »
@@ -19,6 +20,9 @@ Lis `equipe/regles.md` et `equipe/config.json`. Dans la suite, `D` désigne le d
    - ta réponse aux objections de l'avocat du diable ;
    - ce qui te ferait vendre plus tard.
    Une idée `BLOQUÉ` ne peut pas être retenue. Tu peux écarter une idée ayant reçu un feu vert. Tu ne dépasses jamais la taille proposée par le gestionnaire de risques.
+8b. **Prévisions** : pour **chaque idée examinée**, retenue ou non, enregistre la ligne de prévision de l'analyste :
+   `python3 outils/previsions.py ajouter D D/prix/FICHIER --titre ID --nom "NOM" --horizon-jours N --seuil-haut X --seuil-bas -Y --p-favorable A --p-neutre B --p-defavorable C --decision retenue|reduite|ecartee|bloquee`.
+   C'est ce qui permettra de savoir, chiffres à l'appui, où l'équipe voit juste.
 9. **Ordres** : pour chaque décision retenue —
    - si le titre est nouveau, ajoute-le à `D/titres.json` (ISIN + monnaie, ou code américain) ;
    - `python3 outils/compta.py --dossier D ordre --portefeuille agents --sens achat|vente --titre ID --nom "NOM" --quantite N --justification "résumé de la thèse, du verdict de risque et de ta décision"`.

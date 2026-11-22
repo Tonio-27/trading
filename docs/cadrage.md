@@ -129,9 +129,13 @@
 | D-50 | Répétition générale du 22.11.2026 réussie : veille, analyse, contradiction, décision écrite (idée Nestlé écartée, gain espéré trop faible face aux frais), sans aucun calcul fait par les agents. | 22.11.2026 |
 | D-51 | Sources d'information : l'environnement « trading » autorise la BNS, la Fed, la BEA, cash.ch, swissinfo, la RTS et allnews (en plus de la BCE et de SIX), que les agents peuvent ouvrir et lire. Règle de confiance : un ordre doit reposer sur au moins un fait lu dans l'article ou sur une page officielle. | 22.11.2026 |
 | D-52 | Trois horizons : veille quotidienne (jours), agenda vérifié sur pages officielles (semaines), dossier de fond mis à jour le lundi (3 à 12 mois). L'analyste doit appuyer chaque idée sur au moins deux horizons. | 22.11.2026 |
+| D-53 | Lecture des pages web par le programme `outils/lire.py`, seul moyen qui passe par le réseau autorisé (l'outil de lecture web habituel des agents ne le fait pas). | 22.11.2026 |
+| D-54 | Résultats d'entreprises (option A) : `outils/entreprises.py` relève chaque matin, pour les actions américaines suivies, les résultats trimestriels avec leur surprise, la prochaine date de résultats et la presse des 3 derniers jours (Finnhub, compte gratuit). Le Veilleur écrit une fiche à chaque publication. | 22.11.2026 |
+| D-55 | Notation des prévisions (option B) : chaque idée examinée, retenue ou non, est enregistrée avec ses probabilités ; `outils/previsions.py` la note à l'échéance contre le cours réel (note de Brier). Bilan chaque vendredi. | 22.11.2026 |
 
 ## Points ouverts
 
+- Résultats des entreprises suisses : pas de source chiffrée automatique ; ils passent par les articles de cash.ch et allnews.ch. Le site de la SEC refuse les lecteurs automatiques sans adresse de contact : non utilisé.
 - Sources : CNBC, BLS (emploi et inflation américains), FMI et OCDE refusent les lecteurs automatiques ; l'ajout d'AP, BBC, Guardian et Reuters a été refusé par le service d'environnement ; la presse financière internationale (Reuters, Bloomberg, Financial Times) est payante ou fermée. Ces informations restent connues par extraits seulement.
 - Coût mesuré à la répétition : environ 360'000 jetons pour les 3 sous-agents d'une routine. À suivre pendant l'essai (colonne `jetons_sous_agents` de `essai/routines.csv`) et à juger par Antoine.
 - La routine tourne dans la session de développement : à confirmer ou à déplacer vers une session dédiée au départ du compteur.

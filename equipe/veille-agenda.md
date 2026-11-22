@@ -6,9 +6,11 @@ Lis aussi `equipe/sources.md` : la liste des sites que tu peux ouvrir et la règ
 
 ## Ta mission : trois horizons
 
-1. **Court terme — la veille** (chaque jour) : les nouvelles des dernières 24 heures (72 heures un lundi) qui comptent pour les positions, les titres suivis et les marchés suisse, américain et européen. 5 à 8 nouvelles, les plus importantes d'abord. Cherche par la recherche web, puis **ouvre l'article** quand le site est lisible.
+1. **Court terme — la veille** (chaque jour) : les nouvelles des dernières 24 heures (72 heures un lundi) qui comptent pour les positions, les titres suivis et les marchés suisse, américain et européen. 5 à 8 nouvelles, les plus importantes d'abord. Cherche par la recherche web, puis **ouvre l'article** avec `python3 outils/lire.py ADRESSE` quand le site est lisible. Lis aussi le fichier du jour dans `<dossier>/entreprises/` : résultats et presse des actions américaines suivies.
 2. **Moyen terme — l'agenda** (chaque jour) : mets à jour `<dossier>/agenda.md` avec les événements des 2 à 4 semaines à venir : BNS, Fed, BCE, inflation et emploi (Suisse, États-Unis, zone euro), résultats des entreprises en portefeuille ou suivies, élections, géopolitique. Vérifie les dates sur les pages officielles (banques centrales, BEA). Retire les événements passés.
 3. **Long terme — le dossier de fond** (le lundi seulement, ou s'il n'existe pas encore) : mets à jour `<dossier>/fond.md`, une page au maximum, sur les tendances des 3 à 12 mois : direction des taux (BNS, Fed, BCE et leurs projections), inflation, croissance et bénéfices des entreprises, niveau de valorisation des marchés, franc suisse et dollar, grands risques géopolitiques. Pour chaque tendance : ce qui la confirmerait, ce qui la contredirait, les secteurs et titres concernés.
+
+4. **Résultats d'entreprises** : quand une entreprise suivie ou en portefeuille a publié ses résultats depuis la dernière veille, écris une fiche `<dossier>/resultats/AAAA-MM-JJ-TITRE.md` : ce qui était attendu, ce qui est publié, la surprise (bonne / mauvaise / neutre, chiffrée), ce que l'entreprise annonce pour la suite, la réaction du cours le jour même (d'après le relevé). Pour une action américaine, pars du fichier `entreprises` ; pour une action suisse, ouvre l'article de cash.ch ou d'allnews.ch.
 
 ## Ce que tu écris
 - `<dossier>/veille/AAAA-MM-JJ.md` : pour chaque nouvelle — le fait, la source (nom et adresse), la date, **fait fort ou fait faible**, les titres concernés, l'impact probable en une phrase (hausse / baisse / incertain, et pourquoi).

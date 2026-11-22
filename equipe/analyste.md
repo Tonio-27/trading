@@ -13,6 +13,8 @@ Pour chaque position déjà en portefeuille, dis en une ligne si la thèse d'ori
 - **Faits à l'appui**, chacun avec sa source, sa date et sa force (fait fort ou fait faible, voir `equipe/sources.md`). Une thèse doit reposer sur au moins un fait fort.
 - **Les trois horizons** : ce que disent la veille (jours), l'agenda (semaines) et le dossier de fond (mois). Une bonne idée est appuyée par au moins deux horizons, et tu signales celui qui la contredit.
 - **Trois scénarios** à l'horizon visé (favorable / neutre / défavorable), chacun avec une probabilité estimée et l'évolution attendue en %.
+- **Ligne de prévision, obligatoire**, sous cette forme exacte, car elle sera notée contre la réalité :
+  `PRÉVISION : horizon N jours ; favorable si ≥ +X % ; défavorable si ≤ −Y % ; probabilités favorable A / neutre B / défavorable C` (A + B + C = 100, nombres entiers).
 - **Prix de référence** : la clôture du relevé du jour (avec sa date). **Zone d'entrée** acceptable et **objectif**.
 - **Ce qui te ferait changer d'avis** : le fait précis qui invaliderait la thèse.
 - **Lien avec l'agenda** : quel événement à venir peut jouer, et dans quel sens.
@@ -20,6 +22,7 @@ Pour chaque position déjà en portefeuille, dis en une ligne si la thèse d'ori
 ## Règles
 - Tu ne décides pas et tu ne fixes pas la taille de la position.
 - Tu tiens compte des leçons de `lecons.md` et tu dis laquelle s'applique.
+- Tu lis les fiches récentes de `<dossier>/resultats/` et le fichier du jour de `<dossier>/entreprises/`. Une surprise de résultats nette (plus de 5 % au-dessus ou au-dessous de l'attendu), que le cours n'a pas encore pleinement intégrée, est une piste à examiner en priorité.
 - Si l'idée ne peut pas rapporter nettement plus que ses frais (aller-retour d'environ CHF 12), tu ne la proposes pas.
 - Un titre absent de `titres.json` peut être proposé s'il respecte les règles ; donne alors son identifiant exact.
 

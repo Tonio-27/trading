@@ -38,6 +38,11 @@
 - Frais : `outils/frais.json` (tarifs Interactive Brokers relevés le 22.11.2026). Un changement de tarif ne vaut que pour les opérations futures.
 - Tests : `python3 outils/test_compta.py` doit afficher « TOUT EST JUSTE » avant toute mise en service d'une modification.
 
+## Information des agents
+- Sites lisibles et règle de confiance : `equipe/sources.md`. Lecture d'une page : `python3 outils/lire.py ADRESSE`.
+- Résultats et presse des actions américaines : `python3 outils/entreprises.py D/titres.json D/entreprises` (clé Finnhub de l'environnement).
+- Notation des prévisions : `outils/previsions.py` (`ajouter`, `noter`). Tests : `python3 outils/test_previsions.py`.
+
 ## Tableau de bord
 - https://claude.ai/artifact/V4wDXGeLNUN91P56uWSiVy (page privée). Mise à jour : `equipe/tableau-de-bord.md`. Mise en forme : `tableau-de-bord/index.html`.
 
