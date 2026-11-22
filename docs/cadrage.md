@@ -1,6 +1,6 @@
 # Cadrage — Équipe d'agents de trading (argent fictif)
 
-État : cadrage en cours (blocs 0 à 5 terminés, pas encore de GO).
+État : entretien terminé (blocs 0 à 9), synthèse présentée, en attente du GO d'Antoine.
 
 ## Bloc 0 — L'idée brute (22.11.2026)
 
@@ -53,6 +53,26 @@
 - Routine chaque jour de bourse vers 7 h 45 (Zurich), bilan le vendredi soir. Un seul utilisateur. Internet indispensable. Français uniquement.
 - Antoine lit la notification d'opération et le bilan du vendredi ; 2 minutes par semaine.
 
+## Blocs 7 à 9 — Qualité, pannes, budget (22.11.2026)
+
+- Tous les calculs (valeur, frais, change, performance) sont faits par un programme ; les agents décident, ils ne calculent pas.
+- Essai validé si : 5 routines sur 5 sans erreur ; chaque prix confirmé par les 2 sources à moins de 0,5 % d'écart
+  (sinon pas d'opération sur ce titre ce jour-là) ; comptabilité recalculée à la main et juste au centime ; coût d'un lancement mesuré et accepté.
+- En cas de panne : aucune opération, portefeuille inchangé, panne notée au journal, notification à Antoine, reprise le jour de bourse suivant.
+- Sécurité : aucun accès à de l'argent réel, aucune donnée sensible. Si Antoine est absent, la routine tourne seule ; si elle casse, elle s'arrête sans dégât.
+- Budget : zéro franc en plus de l'abonnement Claude. Si le quota ne suffit pas, on réduit la fréquence.
+
+## Synthèse (présentée le 22.11.2026)
+
+1. Problème et objectif : Antoine veut savoir si une équipe d'agents peut gérer un portefeuille mieux qu'un simple ETF, avant d'y mettre CHF 5'000 réels.
+   Objectif : avec CHF 10'000 fictifs, battre sur 6 mois un ETF MSCI World acheté et conservé, frais compris.
+2. Niveau : N1 (perso), rigueur renforcée sur la comptabilité.
+3. Périmètre V1 : routine du matin, comptabilité par programme, tableau de bord et notifications. Hors projet : ordres réels, courtier, crypto, dérivés, conseil fiscal, petites entreprises.
+4. Choix techniques : tâche planifiée Claude, fichiers dans GitHub, programme de calcul, 2 sources de prix, page privée Claude, notification sur téléphone, frais Interactive Brokers.
+5. Critères de réussite : les 4 critères de l'essai ; puis portefeuille au-dessus de la référence après 6 mois, frais compris.
+6. Risques : prix faux ou source gratuite qui casse ; résultat dû à la chance sur 6 mois (et aucune limite de baisse) ; quota de l'abonnement insuffisant pour une routine par jour.
+7. Étapes : documents du projet ; programme de comptabilité et relevé des prix ; 4 rôles et essai d'une semaine à la main ; automatisation et notifications ; tableau de bord ; départ du compteur ; passage à 7 agents.
+
 ## Journal des décisions
 
 | N° | Décision | Date |
@@ -82,8 +102,12 @@
 | D-23 | Stockage en simples fichiers dans le dépôt GitHub « trading » ; l'historique Git sert de preuve qu'aucune opération n'est réécrite. | 22.11.2026 |
 | D-24 | Tableau de bord : page privée Claude, mise à jour par la routine. | 22.11.2026 |
 | D-25 | Notifications sur téléphone (application Claude) : à chaque opération et pour le bilan du vendredi. | 22.11.2026 |
+| D-26 | Tous les calculs sont faits par un programme ; les agents décident, ils ne calculent pas. | 22.11.2026 |
+| D-27 | Essai validé sur 4 critères chiffrés (5/5 routines, écart de prix < 0,5 % entre 2 sources, comptabilité juste au centime, coût mesuré et accepté). | 22.11.2026 |
+| D-28 | En cas de panne : aucune opération, panne notée au journal, notification à Antoine. | 22.11.2026 |
+| D-29 | Budget : zéro franc en plus de l'abonnement Claude ; sources gratuites uniquement. | 22.11.2026 |
 
 ## Points ouverts
 
-- Fonds de référence exact (à valider avant le GO).
-- Qui calcule la comptabilité (programme ou agents), critères de l'essai, conduite en cas de panne, budget.
+- Validation du fonds de référence proposé : iShares Core MSCI World UCITS ETF (capitalisant), ISIN IE00B4L5Y983 ; cotation suisse et disponibilité du prix à confirmer à l'étape 1.
+- GO d'Antoine.
