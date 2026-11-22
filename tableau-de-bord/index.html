@@ -40,11 +40,13 @@
   <section class="pf-tete" id="chiffres">
     <div class="pf-carte"><span class="pf-muted">Agents, valeur en CHF</span><span class="pf-nombre" data-draw="valeur-agents" data-source="resume" data-field="valeur_agents_chf" data-row="0">—</span><span><b data-draw="perf-agents" data-source="resume" data-field="perf_agents_pct" data-row="0">—</b> % depuis le départ</span></div>
     <div class="pf-carte"><span class="pf-muted">Référence, valeur en CHF</span><span class="pf-nombre" data-draw="valeur-reference" data-source="resume" data-field="valeur_reference_chf" data-row="0">—</span><span><b data-draw="perf-reference" data-source="resume" data-field="perf_reference_pct" data-row="0">—</b> % depuis le départ</span></div>
+    <div class="pf-carte"><span class="pf-muted">Deux poches, valeur en CHF</span><span class="pf-nombre" data-draw="valeur-mixte" data-source="resume" data-field="valeur_mixte_chf" data-row="0">—</span><span><b data-draw="perf-mixte" data-source="resume" data-field="perf_mixte_pct" data-row="0">—</b> % depuis le départ</span></div>
   </section>
 
   <section class="pf-section" id="courbe">
     <h2>Agents contre référence, en % depuis le départ</h2>
-    <div class="pf-legende"><span><i class="pf-trait-agents"></i>Agents</span><span><i class="pf-trait-reference"></i>Référence : ETF MSCI World acheté et conservé</span></div>
+    <div class="pf-legende"><span><i class="pf-trait-agents"></i>Agents</span><span><i class="pf-trait-reference"></i>Référence : ETF MSCI World acheté et conservé</span><span><i class="pf-trait-mixte"></i>Deux poches : moitié ETF, moitié agents</span></div>
+    <p class="pf-muted">« Deux poches » montre ce que donnerait un placement réparti entre l'ETF et les agents. Il est calculé à partir des deux autres courbes ; l'objectif des agents se juge toujours sur leur courbe seule.</p>
     <div class="pf-courbe" data-draw="courbe" data-source="performance"></div>
   </section>
 
@@ -88,6 +90,8 @@ champ('valeur-agents', (r) => chf(r.valeur_agents_chf));
 champ('valeur-reference', (r) => chf(r.valeur_reference_chf));
 champ('perf-agents', (r) => signe(r.perf_agents_pct, 2));
 champ('perf-reference', (r) => signe(r.perf_reference_pct, 2));
+champ('valeur-mixte', (r) => chf(r.valeur_mixte_chf));
+champ('perf-mixte', (r) => signe(r.perf_mixte_pct, 2));
 champ('ecart', (r) => signe(r.ecart_points, 2));
 champ('date', (r) => r.date.split('-').reverse().join('.'));
 champ('liquidites', (r) => chf(r.liquidites_chf));
@@ -106,6 +110,7 @@ dash.onData(() => {
   });
   document.querySelectorAll('.pf-trait-agents').forEach((e) => { e.style.background = dash.colors[0]; });
   document.querySelectorAll('.pf-trait-reference').forEach((e) => { e.style.background = 'var(--cds-chart-muted)'; });
+  document.querySelectorAll('.pf-trait-mixte').forEach((e) => { e.style.background = dash.colors[1]; });
   const o = dash.data('operations');
   document.querySelectorAll('#aucune-operation').forEach((e) => { e.hidden = !(o.status === 'ok' && o.data.length === 0); });
 });
@@ -147,23 +152,26 @@ dash.draw('courbe', (el) => {
   const p = dash.data('performance');
   el.replaceChildren();
   if (p.status !== 'ok' || !p.data.length) { el.textContent = p.status === 'error' ? 'La courbe n’a pas pu être chargée.' : '—'; return; }
-  const lignes = p.data.map((r) => ({t: new Date(r.date + 'T00:00:00Z'), a: +r.agents_pct, r: +r.reference_pct}));
+  const lignes = p.data.map((r) => ({t: new Date(r.date + 'T00:00:00Z'), a: +r.agents_pct, r: +r.reference_pct, m: +r.mixte_pct}));
   const w = Math.max(280, el.clientWidth), h = 230, m = {t: 14, r: 58, b: 26, l: 46};
   const x = d3.scaleUtc().domain(lignes.length > 1 ? d3.extent(lignes, (d) => d.t) : [d3.utcDay.offset(lignes[0].t, -1), d3.utcDay.offset(lignes[0].t, 1)]).range([m.l, w - m.r]);
-  const lo = Math.min(0, d3.min(lignes, (d) => Math.min(d.a, d.r))), hi = Math.max(0, d3.max(lignes, (d) => Math.max(d.a, d.r)));
+  const lo = Math.min(0, d3.min(lignes, (d) => Math.min(d.a, d.r, d.m))), hi = Math.max(0, d3.max(lignes, (d) => Math.max(d.a, d.r, d.m)));
   const marge = Math.max(0.5, (hi - lo) * 0.15);
   const y = d3.scaleLinear().domain([lo - marge, hi + marge]).nice().range([h - m.b, m.t]);
   const svg = d3.select(el).append('svg').attr('viewBox', '0 0 ' + w + ' ' + h).attr('role', 'img')
-    .attr('aria-label', 'Performance en pour cent depuis le départ : agents et ETF de référence, jour par jour.');
+    .attr('aria-label', 'Performance en pour cent depuis le départ : agents, ETF de référence et portefeuille à deux poches, jour par jour.');
   svg.append('g').attr('transform', 'translate(' + m.l + ',0)').call(d3.axisLeft(y).ticks(5).tickSize(-(w - m.l - m.r)).tickFormat((v) => signe(v, 1) + ' %'))
     .call((g) => g.select('.domain').remove()).call((g) => g.selectAll('line').style('stroke', 'var(--cds-chart-grid)'));
   svg.append('g').attr('transform', 'translate(0,' + (h - m.b) + ')').call(d3.axisBottom(x).ticks(Math.min(5, Math.max(1, lignes.length - 1))).tickFormat(d3.utcFormat('%d.%m')).tickSizeOuter(0))
     .call((g) => g.select('.domain').style('stroke', 'var(--cds-chart-axis)')).call((g) => g.selectAll('line').style('stroke', 'var(--cds-chart-axis)'));
   svg.append('line').attr('x1', m.l).attr('x2', w - m.r).attr('y1', y(0)).attr('y2', y(0)).style('stroke', 'var(--cds-chart-reference)');
-  const series = [{k: 'r', c: 'var(--cds-chart-muted)'}, {k: 'a', c: dash.colors[0]}];
+  const series = [{k: 'r', c: 'var(--cds-chart-muted)'}, {k: 'm', c: dash.colors[1]}, {k: 'a', c: dash.colors[0]}];
   const dernier = lignes[lignes.length - 1];
-  const yFin = {a: y(dernier.a), r: y(dernier.r)};
-  if (Math.abs(yFin.a - yFin.r) < 14) { const mid = (yFin.a + yFin.r) / 2, haut = dernier.a >= dernier.r ? 'a' : 'r'; yFin[haut] = mid - 7; yFin[haut === 'a' ? 'r' : 'a'] = mid + 7; }
+  const yFin = {};
+  const ordre = series.map((s) => s.k).sort((p, q) => y(dernier[p]) - y(dernier[q]));
+  ordre.forEach((k, i) => { yFin[k] = i ? Math.max(y(dernier[k]), yFin[ordre[i - 1]] + 14) : y(dernier[k]); });
+  const trop = yFin[ordre[ordre.length - 1]] - (h - m.b);
+  if (trop > 0) ordre.forEach((k) => { yFin[k] -= trop; });
   for (const s of series) {
     svg.append('path').attr('fill', 'none').style('stroke', s.c).attr('stroke-width', 2).attr('d', d3.line().x((d) => x(d.t)).y((d) => y(d[s.k]))(lignes));
     svg.append('circle').attr('cx', x(dernier.t)).attr('cy', y(dernier[s.k])).attr('r', 3.5).style('fill', s.c);
@@ -175,7 +183,7 @@ dash.draw('courbe', (el) => {
     const [px] = d3.pointer(ev);
     const d = lignes[d3.leastIndex(lignes, (q) => Math.abs(x(q.t) - px))];
     repere.style('display', null).attr('x1', x(d.t)).attr('x2', x(d.t));
-    bulle.textContent = d3.utcFormat('%d.%m.%Y')(d.t) + ' · agents ' + signe(d.a, 2) + ' % · référence ' + signe(d.r, 2) + ' %';
+    bulle.textContent = d3.utcFormat('%d.%m.%Y')(d.t) + ' · agents ' + signe(d.a, 2) + ' % · deux poches ' + signe(d.m, 2) + ' % · référence ' + signe(d.r, 2) + ' %';
     bulle.hidden = false;
     const echelle = el.clientWidth / w, gauche = Math.min(Math.max(0, x(d.t) * echelle - bulle.offsetWidth / 2), el.clientWidth - bulle.offsetWidth);
     bulle.style.left = gauche + 'px'; bulle.style.top = '0px';

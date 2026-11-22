@@ -8,6 +8,9 @@
    "perf_agents_pct": 0.0,
    "valeur_reference_chf": 10000.0,
    "perf_reference_pct": 0.0,
+   "valeur_mixte_chf": 10000.0,
+   "perf_mixte_pct": 0.0,
+   "part_agents_pct": 50.0,
    "ecart_points": 0.0,
    "objectif_points": 2.0,
    "liquidites_chf": 10000.0,
@@ -24,6 +27,7 @@
    "date": "2026-11-20",
    "agents_pct": 0.0,
    "reference_pct": 0.0,
+   "mixte_pct": 0.0,
    "agents_chf": 10000.0,
    "reference_chf": 10000.0
   }

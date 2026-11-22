@@ -14,10 +14,16 @@ journal = compta.lire_journal(d)
 capital = sum(Decimal(l["montant_chf"]) for l in journal if l["type"] == "depot" and l["portefeuille"] == "agents")  # le capital vient du journal
 pct = lambda v: float((Decimal(v) / capital * 100 - 100).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP))
 
+# Portefeuille « deux poches » : une part confiée aux agents, le reste dans l'ETF de référence, sans rééquilibrage.
+# Il se déduit des deux autres : aucun ordre, aucune ligne de journal en plus.
+part = Decimal(str(config.get("deux_poches_part_agents", 0.5)))
+mixte = lambda a, r: (Decimal(a) * part + Decimal(r) * (1 - part)).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+
 performance = []
 with open(d / "performance.csv") as h:
     for r in csv.DictReader(h):
         performance.append({"date": r["date_cours"], "agents_pct": pct(r["valeur_agents_chf"]), "reference_pct": pct(r["valeur_reference_chf"]),
+                            "mixte_pct": pct(mixte(r["valeur_agents_chf"], r["valeur_reference_chf"])),
                             "agents_chf": float(r["valeur_agents_chf"]), "reference_chf": float(r["valeur_reference_chf"])})
 
 total = Decimal(etat["agents"]["valeur_chf"])
@@ -59,6 +65,9 @@ resume = [{
     "date": etat["date_cours"], "phase": config["phase"], "debut_compteur": config.get("debut_compteur"),
     "valeur_agents_chf": float(etat["agents"]["valeur_chf"]), "perf_agents_pct": float(etat["agents"]["performance_pct"]),
     "valeur_reference_chf": float(etat["reference"]["valeur_chf"]), "perf_reference_pct": float(etat["reference"]["performance_pct"]),
+    "valeur_mixte_chf": float(mixte(etat["agents"]["valeur_chf"], etat["reference"]["valeur_chf"])),
+    "perf_mixte_pct": pct(mixte(etat["agents"]["valeur_chf"], etat["reference"]["valeur_chf"])),
+    "part_agents_pct": float(part * 100),
     "ecart_points": float(etat["ecart_points"]), "objectif_points": 2.0,
     "liquidites_chf": float(etat["agents"]["liquidites_chf"]), "frais_cumules_chf": float(etat["agents"]["frais_cumules_chf"]),
     "positions": len(etat["agents"]["positions"]), "ordres_en_attente": sum(1 for o in operations if o["statut"] == "en attente"),
