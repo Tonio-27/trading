@@ -132,10 +132,11 @@
 | D-53 | Lecture des pages web par le programme `outils/lire.py`, seul moyen qui passe par le réseau autorisé (l'outil de lecture web habituel des agents ne le fait pas). | 22.11.2026 |
 | D-54 | Résultats d'entreprises (option A) : `outils/entreprises.py` relève chaque matin, pour les actions américaines suivies, les résultats trimestriels avec leur surprise, la prochaine date de résultats et la presse des 3 derniers jours (Finnhub, compte gratuit). Le Veilleur écrit une fiche à chaque publication. | 22.11.2026 |
 | D-55 | Notation des prévisions (option B) : chaque idée examinée, retenue ou non, est enregistrée avec ses probabilités ; `outils/previsions.py` la note à l'échéance contre le cours réel (note de Brier). Bilan chaque vendredi. | 22.11.2026 |
+| D-56 | Suite de l'audit de faisabilité : R1 retenue — la décision d'engager de l'argent réel se juge aussi sur la qualité des prévisions (au moins 20 notées, meilleures que le hasard) et le respect des règles. R2 (discipline de frais) et R3 (cœur et satellites) non retenues à ce stade. | 22.11.2026 |
+| D-57 | Apprentissage renforcé (précise D-34) : notes par rôle chaque vendredi ; leçons avec cas à l'appui, confirmées, contredites ou retirées ; améliorations de l'outil proposées à Antoine dans `docs/evolutions.md` ; audit mensuel par un agent indépendant avant l'unique correction de méthode, et jugement de la correction précédente. | 22.11.2026 |
 
 ## Points ouverts
 
-- Audit de faisabilité du 22.11.2026 (`docs/audit-objectif.md`) : trois recommandations en attente de décision d'Antoine — R1 juger aussi sur la qualité des prévisions, R2 discipline de frais, R3 cœur et satellites.
 
 - Résultats des entreprises suisses : pas de source chiffrée automatique ; ils passent par les articles de cash.ch et allnews.ch. Le site de la SEC refuse les lecteurs automatiques sans adresse de contact : non utilisé.
 - Sources : CNBC, BLS (emploi et inflation américains), FMI et OCDE refusent les lecteurs automatiques ; l'ajout d'AP, BBC, Guardian et Reuters a été refusé par le service d'environnement ; la presse financière internationale (Reuters, Bloomberg, Financial Times) est payante ou fermée. Ces informations restent connues par extraits seulement.

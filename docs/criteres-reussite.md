@@ -17,7 +17,12 @@
 | Moins de 2 points au-dessus, ou en dessous | Pas d'arrêt : analyse des causes, correction de la méthode, nouvelle période de 6 mois |
 
 - Entretien intermédiaire à 3 mois : avertissement si plus de 5 points de retard.
-- Argent réel : seulement après 6 mois consécutifs à +2 points avec une méthode stable, et chaque ordre validé par Antoine.
+- Argent réel (D-13, D-35, D-56) : seulement si les quatre conditions sont réunies —
+  1. 6 mois consécutifs à +2 points avec une méthode stable ;
+  2. au moins 20 prévisions notées, avec une note moyenne meilleure que le hasard (note de Brier inférieure à 0.67) ;
+  3. règles respectées : aucune retouche du journal, aucun ordre sans dossier complet ;
+  4. chaque ordre réel validé par Antoine.
+  Raison : à 6 mois, le résultat seul doit trop à la chance (voir `docs/audit-objectif.md`).
 
 ## 3. Protocole
 
