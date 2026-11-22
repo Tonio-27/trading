@@ -113,8 +113,15 @@
 | D-34 | Amélioration continue : leçons relues chaque matin ; bilan du Contrôleur chaque vendredi ; une correction de méthode au maximum par mois, numérotée et datée, valable pour l'avenir seulement ; entretien avec Antoine tous les 3 mois (avertissement si plus de 5 points de retard). | 22.11.2026 |
 | D-35 | Argent réel conditionné à 6 mois consécutifs à +2 points avec une méthode stable (complète D-13). | 22.11.2026 |
 | D-36 | GO d'Antoine pour générer les documents du projet. Référence proposée : iShares Core MSCI World UCITS ETF (capitalisant), ISIN IE00B4L5Y983, à confirmer à l'étape 1. | 22.11.2026 |
+| D-37 | Environnement cloud personnel « trading » créé pour ce dépôt : il autorise uniquement les sources de cours et de change. Les tâches planifiées devront tourner dans cet environnement. | 22.11.2026 |
+| D-38 | Sources de cours (adapte D-19 et D-17) : actions suisses et tous les ETF par la bourse suisse (SIX, source officielle, contrôle de cohérence par le programme) ; actions américaines par 2 comptes gratuits, Twelve Data et Finnhub, qui se contrôlent l'un l'autre ; taux de change de la BCE. Yahoo et Stooq écartés (accès refusé depuis le cloud). | 22.11.2026 |
+| D-39 | Pas d'actions européennes seules pour l'instant : l'Europe est achetée via des ETF cotés en Suisse. À réexaminer en V2. | 22.11.2026 |
+| D-40 | Fonds de référence confirmé : iShares Core MSCI World, code SWDA à la bourse suisse, coté en USD, converti en CHF au taux BCE. | 22.11.2026 |
+| D-41 | Programmes écrits en Python, sans dépendance à installer. | 22.11.2026 |
 
 ## Points ouverts
 
-- Confirmer à l'étape 1 que le prix du fonds de référence se relève chaque jour aux deux sources ; sinon proposer un fonds équivalent.
+- Antoine crée les comptes gratuits Twelve Data et Finnhub, puis enregistre les clés par formulaire sécurisé.
+- Vérifier avec les vraies clés que les deux services répondent depuis le cloud et concordent à moins de 0,5 %.
+- Limite connue : le bon de jouissance Roche (ROG), titre principal de Roche, est introuvable dans la source SIX ; seule l'action au porteur (RO) y figure.
 - Mesurer pendant l'essai le quota consommé par lancement.

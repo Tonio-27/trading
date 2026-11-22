@@ -1,0 +1,121 @@
+{
+  "releve_utc": "2026-11-22T16:39:13Z",
+  "change_en_chf": {
+    "date": "2026-11-20",
+    "source": "BCE (taux de référence)",
+    "CHF": 1.0,
+    "EUR": 0.9223,
+    "USD": 0.839217
+  },
+  "titres": [
+    {
+      "nom": "Nestlé",
+      "isin": "CH0038863350",
+      "code": "NESN",
+      "nom_six": "NESTLE N",
+      "monnaie": "CHF",
+      "cloture": 85.55,
+      "cloture_precedente": 84.45,
+      "ouverture": 85,
+      "date_cours": "20261120",
+      "source": "SIX (différé 15 min)"
+    },
+    {
+      "nom": "Zurich Assurances",
+      "isin": "CH0011075394",
+      "code": "ZURN",
+      "nom_six": "ZURICH INSURANCE N",
+      "monnaie": "CHF",
+      "cloture": 633.4,
+      "cloture_precedente": 635.2,
+      "ouverture": 640.6,
+      "date_cours": "20261120",
+      "source": "SIX (différé 15 min)"
+    },
+    {
+      "nom": "Roche (action au porteur)",
+      "isin": "CH0012032113",
+      "code": "RO",
+      "nom_six": "ROCHE I",
+      "monnaie": "CHF",
+      "cloture": 402.6,
+      "cloture_precedente": 405,
+      "ouverture": 407.2,
+      "date_cours": "20261120",
+      "source": "SIX (différé 15 min)"
+    },
+    {
+      "nom": "Novartis",
+      "isin": "CH0012005267",
+      "code": "NOVN",
+      "nom_six": "NOVARTIS N",
+      "monnaie": "CHF",
+      "cloture": 127.76,
+      "cloture_precedente": 127.24,
+      "ouverture": 127.88,
+      "date_cours": "20261120",
+      "source": "SIX (différé 15 min)"
+    },
+    {
+      "nom": "UBS",
+      "isin": "CH0244767585",
+      "code": "UBSG",
+      "nom_six": "UBS GROUP N",
+      "monnaie": "CHF",
+      "cloture": 36.97,
+      "cloture_precedente": 38.41,
+      "ouverture": 37.8,
+      "date_cours": "20261120",
+      "source": "SIX (différé 15 min)"
+    },
+    {
+      "nom": "ABB",
+      "isin": "CH0012221716",
+      "code": "ABBN",
+      "nom_six": "ABB LTD N",
+      "monnaie": "CHF",
+      "cloture": 65.34,
+      "cloture_precedente": 68.22,
+      "ouverture": 66.28,
+      "date_cours": "20261120",
+      "source": "SIX (différé 15 min)"
+    },
+    {
+      "nom": "ETF MSCI World (référence)",
+      "isin": "IE00B4L5Y983",
+      "code": "SWDA",
+      "nom_six": "iSh Cor MSCI Wld USD A",
+      "monnaie": "USD",
+      "cloture": 134.82,
+      "cloture_precedente": 139.12,
+      "ouverture": 136.5,
+      "date_cours": "20261120",
+      "source": "SIX (différé 15 min)"
+    },
+    {
+      "nom": "ETF S&P 500",
+      "isin": "IE00B5BMR087",
+      "code": "CSSPX",
+      "nom_six": "iSh Cor S&P500 USD A",
+      "monnaie": "USD",
+      "cloture": 762.9,
+      "cloture_precedente": 789.3,
+      "ouverture": 772.6,
+      "date_cours": "20261120",
+      "source": "SIX (différé 15 min)"
+    },
+    {
+      "nom": "ETF or (ZKB Gold)",
+      "isin": "CH0139101593",
+      "code": "ZGLD",
+      "nom_six": "Swisscanto GOLD ETF",
+      "monnaie": "CHF",
+      "cloture": 880.1,
+      "cloture_precedente": 918,
+      "ouverture": 889.6,
+      "date_cours": "20261120",
+      "source": "SIX (différé 15 min)"
+    }
+  ],
+  "erreurs": []
+}
