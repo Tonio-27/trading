@@ -48,10 +48,11 @@ def controler(p, aujourd_hui):
             alertes.append("prix d'ouverture non confirmé par la 2e source")
         if c["date_cours"] != p["date_cours"]:
             alertes.append("les 2 sources ne donnent pas le même jour de cours")
-    if not p.get("ouverture"):
-        alertes.append("prix d'ouverture absent")
     p["alertes"] = alertes
-    p["utilisable"] = not alertes
+    p["utilisable"] = not alertes          # le cours de clôture est fiable : on peut valoriser, analyser, prévoir
+    # Exécuter un ordre demande en plus le prix d'ouverture du jour. La bourse suisse ne l'affiche que du jour même
+    # jusqu'au lendemain matin tôt : il est donc normal qu'il manque au relevé de 7 h 45 et soit présent le soir.
+    p["executable"] = p["utilisable"] and bool(p.get("ouverture"))
     return p
 
 
@@ -143,10 +144,11 @@ def main():
         sys.exit(f"Refus : {f} existe déjà (un relevé n'est jamais réécrit).")
     f.write_text(json.dumps(res, ensure_ascii=False, indent=2) + "\n")
     for x in res["titres"]:
-        print(f"{x['nom']:28} {x['code']:6} {x['cloture']:>10} {x['monnaie']}  ouverture {x['ouverture']}  ({x['date_cours']})" + (f"  contrôle {x['controle']['cloture']} écart {x['controle']['ecart_pct']} %" if "controle" in x else "") + ("" if x["utilisable"] else "  NON UTILISABLE : " + " ; ".join(x["alertes"])))
+        print(f"{x['nom']:28} {x['code']:6} {x['cloture']:>10} {x['monnaie']}  ouverture {x['ouverture']}  ({x['date_cours']})" + (f"  contrôle {x['controle']['cloture']} écart {x['controle']['ecart_pct']} %" if "controle" in x else "") + ("" if x["utilisable"] else "  NON UTILISABLE : " + " ; ".join(x["alertes"])) + ("" if x["executable"] or not x["utilisable"] else "  (pas encore d'ouverture)"))
     print("Change en CHF :", res["change_en_chf"])
     ok = sum(1 for x in res["titres"] if x["utilisable"])
-    print(f"{len(res['titres'])} prix relevés dont {ok} utilisables, {len(res['erreurs'])} erreur(s) -> {f}")
+    ex = sum(1 for x in res["titres"] if x["executable"])
+    print(f"{len(res['titres'])} prix relevés dont {ok} utilisables et {ex} exécutables, {len(res['erreurs'])} erreur(s) -> {f}")
     for e in res["erreurs"]:
         print("ERREUR", e)
     sys.exit(1 if res["erreurs"] else 0)

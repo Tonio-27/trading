@@ -3,7 +3,7 @@
 Lis `equipe/regles.md` et `equipe/config.json`. `D` est le dossier de travail. Aucun ordre n'est passé pendant le bilan.
 
 1. `git pull`, puis `python3 outils/compta.py --dossier D verifier`.
-2. Relevé des prix de clôture : `python3 outils/prix.py D/titres.json D/prix`, puis `python3 outils/compta.py --dossier D etat D/prix/FICHIER`.
+2. Relevé des prix de clôture : `python3 outils/prix.py D/titres.json D/prix`, puis `python3 outils/compta.py --dossier D executer D/prix/FICHIER` (exécution des ordres du matin au prix d'ouverture du jour), puis `... etat D/prix/FICHIER`.
 3. **Contrôle des opérations de la semaine** : pour chaque ordre exécuté ou rejeté, relis la thèse, les scénarios et la décision. La thèse était-elle juste ? Qu'a-t-on mal vu ?
 4. **Dividendes et divisions d'actions** : pour chaque titre en portefeuille, vérifie par recherche web (2 sources) si un dividende a été détaché ou une division d'action faite cette semaine. Si oui, enregistre-le avec `compta.py dividende` (retenue : 35 % pour une action suisse, 15 % pour une action américaine) ou `compta.py fractionnement`, source à l'appui.
 4b. **Notation des prévisions** : `python3 outils/previsions.py noter D D/prix/FICHIER`. Reporte le bilan affiché dans le bilan écrit : nombre de prévisions notées, nombre de justes, note moyenne, et ce que sont devenues les idées écartées ou bloquées (avait-on raison de ne pas les suivre ?).

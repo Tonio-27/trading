@@ -128,6 +128,21 @@ s4, _ = compta.situation(compta.lire_journal(d))
 attendu("division après l'achat : 12 Apple", s4["agents"]["positions"]["AAPL"]["quantite"], 12)
 attendu("même division refusée une 2e fois", refuse(*frac("2026-11-21")), True)
 
+# Relevé du matin : cours fiable mais pas encore de prix d'ouverture → l'ordre attend, il n'est ni exécuté ni rejeté
+matin = json.loads(Path(RELEVE).read_text())
+for t in matin["titres"]:
+    if t["id"] == "CH0011075394":
+        t["ouverture"], t["executable"] = None, False
+(Path(d) / "matin.json").write_text(json.dumps(matin))
+horloge(VENDREDI_MATIN)
+ordre("agents", "achat", "CH0011075394", "Zurich Assurances", 1)
+horloge(DIMANCHE_SOIR)
+lancer("executer", str(Path(d) / "matin.json"))
+j2 = compta.lire_journal(d)
+attendu("sans prix d'ouverture, l'ordre attend", any(l.get("ordre") == "O-0009" for l in j2), False)
+lancer("executer", RELEVE)   # relevé du soir : l'ouverture est là
+attendu("avec le prix d'ouverture du soir, l'ordre est exécuté", [l["prix"] for l in compta.lire_journal(d) if l.get("ordre") == "O-0009" and l["type"] == "execution"], [640.6])
+
 # Relevé trop ancien : 3 jours plus tard, le même relevé ne doit plus servir
 horloge(datetime(2026, 11, 25, 17, 0, tzinfo=timezone.utc))
 attendu("relevé trop ancien refusé", refuse("executer", RELEVE), True)

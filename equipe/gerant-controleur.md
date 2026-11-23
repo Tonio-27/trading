@@ -9,6 +9,7 @@ Lis `equipe/regles.md` et `equipe/config.json`. Dans la suite, `D` désigne le d
 2. **Relevé des prix** : `python3 outils/prix.py D/titres.json D/prix`. Note le nom du fichier créé.
    - Si le fichier n'est pas créé ou s'il n'y a pas de taux de change : **panne**.
    - Si seuls certains titres sont en erreur ou « non utilisables » : on continue, ces titres sont intouchables aujourd'hui.
+   - Le matin, les titres cotés en Suisse sont « utilisables » mais pas encore « exécutables » (pas de prix d'ouverture) : c'est normal. On peut les analyser et passer un ordre ; il sera exécuté par le relevé du soir, au prix d'ouverture du jour.
 2b. **Résultats d'entreprises** : `python3 outils/entreprises.py D/titres.json D/entreprises`. Une erreur ici n'est pas une panne : on continue sans ce fichier et on le note dans le résumé.
 3. **Exécution et état** : `python3 outils/compta.py --dossier D executer D/prix/FICHIER`, puis `... etat D/prix/FICHIER`.
 4. **Lecture** : `D/lecons.md`, `D/agenda.md`, `D/etat.json`, la décision de la veille dans `D/decisions/`.
@@ -26,7 +27,7 @@ Lis `equipe/regles.md` et `equipe/config.json`. Dans la suite, `D` désigne le d
 9. **Ordres** : pour chaque décision retenue —
    - si le titre est nouveau, ajoute-le à `D/titres.json` (ISIN + monnaie, ou code américain) ;
    - `python3 outils/compta.py --dossier D ordre --portefeuille agents --sens achat|vente --titre ID --nom "NOM" --quantite N --justification "résumé de la thèse, du verdict de risque et de ta décision"`.
-   L'ordre sera exécuté par le programme au prochain prix d'ouverture. Tu ne choisis ni la date ni le prix.
+   L'ordre sera exécuté par le programme au prix d'ouverture du jour, lors du relevé du soir (ou le lendemain matin pour une action américaine). Tu ne choisis ni la date ni le prix.
 10. **Journal de bord** : `python3 outils/journal_bord.py D matin ok "résumé en une phrase" --ordres-passes N --ordres-executes N --jetons TOTAL` (total des jetons des sous-agents, tel qu'affiché à leur retour).
 11. **Tableau de bord** : `python3 outils/tableau.py D`, puis publie la mise à jour comme indiqué dans `equipe/tableau-de-bord.md`.
 12. **Enregistrement** : `git add -A`, commit avec un message clair en français, `git push`.

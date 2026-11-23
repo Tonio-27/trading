@@ -192,6 +192,11 @@ def charger_releve(chemin, journal):
     return r, {t["id"]: t for t in r["titres"]}
 
 
+def executable(p):
+    """Un ordre ne s'exécute que sur un cours fiable accompagné de son prix d'ouverture."""
+    return bool(p) and p.get("executable", p["utilisable"]) and bool(p.get("ouverture"))
+
+
 def taux_de(releve, monnaie):
     t = releve["change_en_chf"].get(monnaie)
     if not t:
@@ -255,7 +260,7 @@ def cmd_executer(a, F):
         if decision < enregistre:
             rejet("date de décision antérieure à l'enregistrement de l'ordre")
             continue
-        if not p or not p["utilisable"] or p["date_cours"] < decision.strftime("%Y%m%d"):
+        if not executable(p) or p["date_cours"] < decision.strftime("%Y%m%d"):
             if jour_releve > limite:
                 rejet(f"aucun prix d'ouverture utilisable dans les {EXPIRATION_JOURS} jours après la décision")
             else:

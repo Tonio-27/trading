@@ -23,6 +23,11 @@ import compta
 SCENARIOS = ("favorable", "neutre", "defavorable")
 
 
+def fiable(p):
+    """Le cours de clôture est fiable (les relevés d'avant le 23.11.2026 comptaient l'ouverture absente comme une alerte)."""
+    return bool(p) and (p["utilisable"] or p.get("alertes") == ["prix d'ouverture absent"])
+
+
 def lire(f):
     return [json.loads(l) for l in f.read_text().splitlines() if l.strip()] if f.exists() else []
 
@@ -42,7 +47,7 @@ def jour(aaaammjj):
 def cmd_ajouter(a):
     releve, prix = compta.charger_releve(a.releve, [])
     p = prix.get(a.titre)
-    if not p or not p["utilisable"]:
+    if not fiable(p):
         raise compta.Refus("titre absent du relevé ou prix non utilisable")
     probas = [a.p_favorable, a.p_neutre, a.p_defavorable]
     if any(x < 0 for x in probas) or sum(probas) != 100:
@@ -69,7 +74,7 @@ def cmd_noter(a):
     notees = {l["id"] for l in lire(d / "previsions-notes.jsonl")}
     for pr in lire(d / "previsions.jsonl"):
         p = prix.get(pr["titre"])
-        if pr["id"] in notees or not p or not p["utilisable"] or p["date_cours"] < pr["echeance"]:
+        if pr["id"] in notees or not fiable(p) or p["date_cours"] < pr["echeance"]:
             continue
         variation = (Decimal(str(p["cloture"])) / Decimal(str(pr["prix_depart"])) * 100 - 100).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
         arrive = "favorable" if variation >= Decimal(str(pr["seuil_haut_pct"])) else "defavorable" if variation <= Decimal(str(pr["seuil_bas_pct"])) else "neutre"

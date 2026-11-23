@@ -8,7 +8,7 @@
 - Décisions : `docs/cadrage.md`. Plan : `docs/plan.md`.
 
 ## Lancer, arrêter
-- Lancement automatique : deux tâches planifiées du compte Claude d'Antoine, « Trading fictif : routine du matin » (lundi à vendredi, 7 h 45) et « Trading fictif : bilan du vendredi » (22 h 40). Elles réveillent la session de développement, qui applique `equipe/gerant-controleur.md` ou `equipe/bilan-vendredi.md`.
+- Lancement automatique : deux tâches planifiées du compte Claude d'Antoine, « Trading fictif : routine du matin » (lundi à vendredi, 7 h 45) et « Trading fictif : bilan du vendredi » (22 h 40). Une troisième, « Trading fictif : relevé du soir » (lundi à jeudi, 22 h 40), exécute sans agents les ordres du matin (`equipe/releve-soir.md`). Elles réveillent la session de développement, qui applique `equipe/gerant-controleur.md`, `equipe/releve-soir.md` ou `equipe/bilan-vendredi.md`.
 - L'équipe : consignes dans `equipe/` (règles communes, 3 rôles de sous-agents, routine du Gérant, bilan du Contrôleur). Phase et dossier de travail : `equipe/config.json`.
 - Pour tout arrêter : désactiver les tâches planifiées dans le compte Claude. Aucun argent réel n'est en jeu.
 
