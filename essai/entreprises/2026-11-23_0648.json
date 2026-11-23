@@ -1,0 +1,412 @@
+{
+ "releve_utc": "2026-11-23T06:48:04Z",
+ "source": "Finnhub",
+ "entreprises": [
+  {
+   "nom": "Apple",
+   "code": "AAPL",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.0263,
+     "benefice_par_action_publie": 2.1,
+     "surprise_pct": 3.6372
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.9271,
+     "benefice_par_action_publie": 1.91,
+     "surprise_pct": -0.8873
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.9884,
+     "benefice_par_action_publie": 2.01,
+     "surprise_pct": 1.0863
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.7257,
+     "benefice_par_action_publie": 2.84,
+     "surprise_pct": 4.1934
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-23 04:13",
+     "source": "Yahoo",
+     "titre": "Trump Throws His Weight Behind Jensen Huang’s Return As Nvidia CEO: ‘It Would Be The Best Thing For The Company’",
+     "resume": "“I hope the Board of Nvidia rehires Jensen Huang,” Trump posted on Truth Social on Sunday."
+    },
+    {
+     "date": "2026-11-23 04:00",
+     "source": "Yahoo",
+     "titre": "BTIG's Krinsky Says S&P 500 Bottom Unlikely While Apple Holds Near Highs",
+     "resume": "BTIG's Jonathan Krinsky says an S&P 500 bottom is unlikely while Apple sits near highs, citing a decade of data."
+    },
+    {
+     "date": "2026-11-23 02:44",
+     "source": "Yahoo",
+     "titre": "How Did Dell Grow From $56 Billion To $151 Billion In 20 Years?",
+     "resume": "Today's big story: Will 2027 Be A 2022 Repeat For Stocks."
+    },
+    {
+     "date": "2026-11-22 22:55",
+     "source": "Yahoo",
+     "titre": "Apple Is Now 25% of Berkshire Hathaway's Stock Portfolio. Here's What Holding Every Share Tells Investors.",
+     "resume": "The iPhone maker still matters tremendously to the diversified Omaha company's finances."
+    },
+    {
+     "date": "2026-11-22 21:17",
+     "source": "Yahoo",
+     "titre": "Charlie Bilello Flags the Nasdaq 100’s First Bear Market Since April 2025",
+     "resume": "The Nasdaq 100 slipped past a line it hasn't touched in over a year, then barely escaped at the closing bell. If you hold no Nasdaq fund, your retirement account may still be more exposed than you think."
+    },
+    {
+     "date": "2026-11-22 20:20",
+     "source": "Yahoo",
+     "titre": "A $6.4 Billion Fund Just Bought These 3 Stocks",
+     "resume": "Key TakeawaysApollo Management Holdings, whose 13F holds $6. 43 billion of US stocks, raised its Churchill Downs stake 512% and its Primo Brands stake 121% in the third quarter, and added put options on Apple."
+    },
+    {
+     "date": "2026-11-22 20:06",
+     "source": "Yahoo",
+     "titre": "What Is Apple (AAPL) Planning With Its New Autonomous AI Agent?",
+     "resume": "Apple (NasdaqGS:AAPL) is building an autonomous AI agent designed to handle complex, multistep tasks for everyday users. Job postings point to a large scale buildout of AI engineering and product roles tied directly to this new assistant effort. Internal planning targets a potential consumer launch "
+    },
+    {
+     "date": "2026-11-22 18:00",
+     "source": "Yahoo",
+     "titre": "AI debt fears mount: why cash and defensive stocks are back in favor",
+     "resume": "Ron Insana, CEO of Insana Information Partners and author of The Message of the Markets on Substack, says investors should separate long-term investing from money needed soon."
+    }
+   ]
+  },
+  {
+   "nom": "Microsoft",
+   "code": "MSFT",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 4.824,
+     "benefice_par_action_publie": 4.89,
+     "surprise_pct": 1.3682
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 4.3274,
+     "benefice_par_action_publie": 4.74,
+     "surprise_pct": 9.5346
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 4.1432,
+     "benefice_par_action_publie": 4.27,
+     "surprise_pct": 3.0604
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 4.0345,
+     "benefice_par_action_publie": 4.14,
+     "surprise_pct": 2.6149
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-23 02:44",
+     "source": "Yahoo",
+     "titre": "Amazon Spent $1.82 For Every $1 Of Cash Last Quarter. Can It Keep Going?",
+     "resume": "Today's big story: Will 2027 Be A 2022 Repeat For Stocks."
+    },
+    {
+     "date": "2026-11-23 02:44",
+     "source": "Yahoo",
+     "titre": "How Did Dell Grow From $56 Billion To $151 Billion In 20 Years?",
+     "resume": "Today's big story: Will 2027 Be A 2022 Repeat For Stocks."
+    },
+    {
+     "date": "2026-11-23 00:22",
+     "source": "SeekingAlpha",
+     "titre": "GLO: Discount Gets Even Wider, Still Remaining On The Sidelines",
+     "resume": "Clough Global Opportunities Fund remains a CEF I would continue to avoid, even as its discount goes deeper."
+    },
+    {
+     "date": "2026-11-22 21:15",
+     "source": "Yahoo",
+     "titre": "15% of parents already cut college savings after Microsoft AI CEO told a mom 'probably not' to bother saving",
+     "resume": "Parents are cutting back on some college savings plans, thanks to AI. Is that a good idea?"
+    },
+    {
+     "date": "2026-11-22 20:30",
+     "source": "Yahoo",
+     "titre": "Microsoft Remains Attractively Valued as Azure and Cloud Drive Growth",
+     "resume": "Bill Ackman says he remains bullish on Microsoft despite Pershing Square selling 2 million shares."
+    },
+    {
+     "date": "2026-11-22 19:33",
+     "source": "Yahoo",
+     "titre": "Marriott hotels announce major shake-up affecting over 500 workers",
+     "resume": "Two Marriott hotels are changing operators, triggering employment terminations."
+    },
+    {
+     "date": "2026-11-22 19:03",
+     "source": "Yahoo",
+     "titre": "Bank of America sends strong signal to Microsoft stock investors",
+     "resume": "Bank of America is not being subtle about where it stands on Microsoft stock."
+    },
+    {
+     "date": "2026-11-22 18:00",
+     "source": "Yahoo",
+     "titre": "AI debt fears mount: why cash and defensive stocks are back in favor",
+     "resume": "Ron Insana, CEO of Insana Information Partners and author of The Message of the Markets on Substack, says investors should separate long-term investing from money needed soon."
+    }
+   ]
+  },
+  {
+   "nom": "Nvidia",
+   "code": "NVDA",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-12-31",
+     "benefice_par_action_attendu": 2.5252,
+     "benefice_par_action_publie": 2.68,
+     "surprise_pct": 6.1302
+    },
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.1384,
+     "benefice_par_action_publie": 2.22,
+     "surprise_pct": 3.8159
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.7922,
+     "benefice_par_action_publie": 1.87,
+     "surprise_pct": 4.341
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.5634,
+     "benefice_par_action_publie": 1.62,
+     "surprise_pct": 3.6203
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-23 05:20",
+     "source": "Yahoo",
+     "titre": "Tech back in the firing line as traders track Wall Street rout",
+     "resume": "Ahead of European markets opening, Asian stock markets struggled to recover from last week's sell-off, with tech firms again in the firing line as investors tracked an eye-watering rout on Wall Street.View on euronews"
+    },
+    {
+     "date": "2026-11-23 05:20",
+     "source": "Yahoo",
+     "titre": "These 5 Stocks Could Double by 2028. Here's What Has to Go Right.",
+     "resume": "SpaceX, Broadcom, SentinelOne, SoundHound, and Dutch Bros have the potential to double."
+    },
+    {
+     "date": "2026-11-23 05:11",
+     "source": "Yahoo",
+     "titre": "Why Did NVDA, NFLX, ORCL Slip To 52-Week Lows Last Week?",
+     "resume": "Nvidia, Netflix and Oracle shares plunged to annual lows on Friday amid leadership concerns, slowing pace of growth, and broader liquidity issues following Anthropic’s recent IPO."
+    },
+    {
+     "date": "2026-11-23 05:02",
+     "source": "Yahoo",
+     "titre": "Jim Cramer Says AI Selloff Is Not 2000 as S&P 500 Enters Correction, Not Crash",
+     "resume": "CNBC's Jim Cramer says the AI selloff is not a 2000 repeat as the S&P 500 and Dow enter correction territory, not a crash."
+    },
+    {
+     "date": "2026-11-23 04:27",
+     "source": "Yahoo",
+     "titre": "Trump urges Nvidia board to rehire Jensen Huang",
+     "resume": "Investing.com-- U.S. President Donald Trump on Monday renewed his call for Nvidia's (NASDAQ:NVDA) board to reinstate former Chief Executive Jensen Huang, saying his return would benefit both the chipmaker and the United States."
+    },
+    {
+     "date": "2026-11-23 04:15",
+     "source": "Yahoo",
+     "titre": "Dow Jones Futures Jump As Oracle, Korea Try To Ease Market Fears; Look For These Absolute Losers",
+     "resume": "Futures loom as Oracle and South Korea try to calm market fears after the stock market worst week since Covid."
+    },
+    {
+     "date": "2026-11-23 04:13",
+     "source": "Yahoo",
+     "titre": "Trump Throws His Weight Behind Jensen Huang’s Return As Nvidia CEO: ‘It Would Be The Best Thing For The Company’",
+     "resume": "“I hope the Board of Nvidia rehires Jensen Huang,” Trump posted on Truth Social on Sunday."
+    },
+    {
+     "date": "2026-11-23 03:33",
+     "source": "Yahoo",
+     "titre": "Asia stocks slide as AI rout deepens despite rebound in U.S. futures",
+     "resume": "Investing.com -- Asian stocks fell on Monday as renewed selling in technology and semiconductor shares deepened concerns over AI valuations and the mounting debt used to finance data-centre investments, even as U.S. equity futures rebounded following Wall Street's sharp weekly losses."
+    }
+   ]
+  },
+  {
+   "nom": "JPMorgan",
+   "code": "JPM",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 5.958,
+     "benefice_par_action_publie": 5.57,
+     "surprise_pct": -6.5123
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 5.906,
+     "benefice_par_action_publie": 6.14,
+     "surprise_pct": 3.9621
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 5.5024,
+     "benefice_par_action_publie": 5.94,
+     "surprise_pct": 7.9529
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 5.0539,
+     "benefice_par_action_publie": 5.23,
+     "surprise_pct": 3.4844
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-22 15:05",
+     "source": "Yahoo",
+     "titre": "Trump Backs a 10% Card Rate Cap With Democrats. That’s a Big Risk for JPMorgan and Citigroup",
+     "resume": "Key TakeawaysPresident Trump said Saturday he would cap credit card interest rates at 10%, against a median card rate of about 22. 2%."
+    },
+    {
+     "date": "2026-11-22 12:30",
+     "source": "Yahoo",
+     "titre": "Invest $225,000 in These 4 Dividend Stocks and Collect Quarterly Income in Retirement",
+     "resume": "Retirement turns portfolio math into a question about electric bills and property taxes. Four dividend payers from banking, biotech, staples and utilities promise a paycheck every three months, but one of them carries a thinner safety cushion than the rest."
+    },
+    {
+     "date": "2026-11-22 12:14",
+     "source": "Yahoo",
+     "titre": "Big Short Investor Steve Eisman: Banks Are “Safer Today Than at Any Point in My Career.” Good News for Citigroup",
+     "resume": "Key TakeawaysSteve Eisman says reckless mortgage lending inside banks is less of a risk than at any point in his career, and puts Citigroup’s leverage at 10 to 1, down from about 40 to 1. The past week’s scares came from technology: a JPMorgan outage and a Fed warning that AI agents could speed up b"
+    },
+    {
+     "date": "2026-11-22 12:07",
+     "source": "Yahoo",
+     "titre": "JPMorgan, American Express and Travelers Are Raising Dividends for Retirees",
+     "resume": "Three Dow financials pay yields under 2%, yet retirees keep piling in. Their secret is a payout that eats barely a quarter of earnings, and one of them has already survived a brutal cut that should give income seekers pause."
+    },
+    {
+     "date": "2026-11-22 08:36",
+     "source": "Yahoo",
+     "titre": "JPMorgan Says $290B AI-Fueled IPO Wave Is A ‘Drop In The Bucket’ For $70 Trillion Stock Market — ‘Eventual Winners In AI May Not Even Exist Yet’",
+     "resume": "The firm argued that the AI infrastructure boom is reshaping how companies raise capital."
+    },
+    {
+     "date": "2026-11-22 00:46",
+     "source": "Benzinga",
+     "titre": "JB Pritzker Says Americans are ‘Tired of the Corruption in Washington’ as He Urges Leaders to ‘Repair the Damage’ Left by the Trump Administration",
+     "resume": "Illinois Gov. JB Pritzker says voters demand accountability and economic relief, urging leaders to repair damage from Trump&#39;s administration."
+    },
+    {
+     "date": "2026-11-21 17:00",
+     "source": "Yahoo",
+     "titre": "These 5 Stock Market Myths Can Cost You Thousands (Here's the Reality)",
+     "resume": "These common stock market myths can shape how you invest. Learn what's actually true before they lead to costly financial decisions."
+    },
+    {
+     "date": "2026-11-21 15:07",
+     "source": "Yahoo",
+     "titre": "J.P. Morgan prices in stunning shift in Fed rate-hike call",
+     "resume": "Wall Street giant abandons previous forecast as sticky inflation threatens hopes for 2027 interest-rate cuts."
+    }
+   ]
+  },
+  {
+   "nom": "Johnson & Johnson",
+   "code": "JNJ",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.5631,
+     "benefice_par_action_publie": 2.59,
+     "surprise_pct": 1.0495
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 2.8745,
+     "benefice_par_action_publie": 2.9,
+     "surprise_pct": 0.8871
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 2.6914,
+     "benefice_par_action_publie": 2.7,
+     "surprise_pct": 0.3195
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.4633,
+     "benefice_par_action_publie": 2.46,
+     "surprise_pct": -0.134
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-23 03:01",
+     "source": "Yahoo",
+     "titre": "Nasdaq, Dow, S&P 500 Futures Jump Nearly 2% After Brutal Tech Selloff Last Week: GME, JNJ, ALNY, GAP In Focus",
+     "resume": "Last week, technology and AI-related stocks saw a massive drawdown amid rising concerns over artificial intelligence’s sustainability."
+    },
+    {
+     "date": "2026-11-22 18:04",
+     "source": "Yahoo",
+     "titre": "Bristol Myers Squibb vs. Novo Nordisk: Which Healthcare Stock Is a Better Buy for 2027?",
+     "resume": "Novo Nordisk's profit margins are running far above Bristol Myers, yet the cheaper valuation tells a different story about where the value sits."
+    },
+    {
+     "date": "2026-11-22 16:06",
+     "source": "Yahoo",
+     "titre": "Johnson & Johnson (JNJ) Posts Phase 4 STAR Win In Psoriatic Arthritis",
+     "resume": "Johnson & Johnson (NYSE:JNJ) reported new Phase 4 STAR trial results for TREMFYA in psoriatic arthritis with axial involvement. The Phase 4 data showed statistically significant improvements in MRI confirmed spinal inflammation for adults in the TREMFYA treatment arm. Patients in the study also repo"
+    },
+    {
+     "date": "2026-11-22 15:02",
+     "source": "Yahoo",
+     "titre": "The Dividend Investing Strategy That Made Geraldine Weiss a Wall Street Legend",
+     "resume": "Wall Street shut her out, so she signed her newsletter \"G. Weiss\" and went on to rewrite how investors judge value. Her yield test now splits Coca-Cola, Johnson & Johnson, and PepsiCo, and only one of them tempts her."
+    },
+    {
+     "date": "2026-11-22 13:58",
+     "source": "Yahoo",
+     "titre": "Johnson & Johnson Is on Track for $101 Billion in 2026 Sales. Is This Dividend King Still a Buy?",
+     "resume": "J&J is a healthcare giant performing very well right now, but it won't be a great fit for every investor."
+    },
+    {
+     "date": "2026-11-22 13:34",
+     "source": "SeekingAlpha",
+     "titre": "Wall Street Brunch: Can AI Bulls Get Up Off The Canvas?",
+     "resume": "Wall Street suffers its worst tech selloff in years. Anthropic loses $109B in value after IPO. October inflation data sets stage for Fed decision."
+    },
+    {
+     "date": "2026-11-22 13:25",
+     "source": "Yahoo",
+     "titre": "Johnson & Johnson vs. Pfizer: Which Healthcare Stock Is a Better Buy for 2027?",
+     "resume": "Johnson & Johnson's drug-and-device product mix faces off against Pfizer's high-stakes oncology and obesity bets, with a valuation gap that may sway your choice."
+    },
+    {
+     "date": "2026-11-21 15:31",
+     "source": "Yahoo",
+     "titre": "3 Reasons Dividend Aristocrats Belong in Your Roth IRA Before You Retire",
+     "resume": "Three of the most reliable dividend payers in America quietly hand the IRS a bill every year, and the size of it depends on your income. Find out why the account holding them may matter more than the stocks themselves."
+    }
+   ]
+  }
+ ],
+ "erreurs": []
+}
