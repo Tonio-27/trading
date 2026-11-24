@@ -3,3 +3,4 @@ date_heure_zurich,type,statut,ordres_passes,ordres_executes,jetons_sous_agents,r
 2026-11-23 07:54,matin,ok,0,0,298345,"1 idée (Novartis) bloquée : prix suisse non utilisable. Défaut outil : ouverture suisse absente à 7 h 45, ordre de référence non exécutable. Contradicteur non lancé (verdict imposé). Prévision Novartis refusée par le programme (prix non utilisable)."
 2026-11-23 22:41,soir,ok,0,1,0,"Achat de la référence exécuté : 87 ETF MSCI World à USD 135.30 (ouverture du 23.11). Nvidia non utilisable ce soir (+31 % sur un jour, alerte normale)."
 2026-11-24 07:53,matin,ok,0,0,288393,"Aucune idée retenue (Novartis non reconduite, Roche écartée, UBS en attente de la commission). Portefeuille en liquidités, 1.96 point de retard sur la référence."
+2026-11-24 22:41,soir,ok,0,0,0,Aucun ordre en attente. Performance du 24.11 notée.

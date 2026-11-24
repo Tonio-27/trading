@@ -1,7 +1,7 @@
 {
-  "date_cours": "2026-11-23",
-  "releve": "2026-11-24_0647.json",
-  "releve_utc": "2026-11-24T06:47:02Z",
+  "date_cours": "2026-11-24",
+  "releve": "2026-11-24_2140.json",
+  "releve_utc": "2026-11-24T21:40:59Z",
   "ordres_en_attente": 0,
   "agents": {
     "valeur_chf": "10000.00",
@@ -11,22 +11,22 @@
     "positions": []
   },
   "reference": {
-    "valeur_chf": "10196.42",
+    "valeur_chf": "10067.57",
     "liquidites_chf": "108.56",
     "frais_cumules_chf": "6.68",
-    "performance_pct": "1.96",
+    "performance_pct": "0.68",
     "positions": [
       {
         "titre": "IE00B4L5Y983",
         "nom": "ETF MSCI World (SWDA)",
         "quantite": 87,
-        "cloture": 138.08,
+        "cloture": 136.66,
         "monnaie": "USD",
-        "date_cours": "20261123",
-        "valeur_chf": "10087.86",
+        "date_cours": "20261124",
+        "valeur_chf": "9959.01",
         "prix_douteux": false
       }
     ]
   },
-  "ecart_points": "-1.96"
+  "ecart_points": "-0.68"
 }
