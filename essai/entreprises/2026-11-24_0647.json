@@ -1,0 +1,412 @@
+{
+ "releve_utc": "2026-11-24T06:47:55Z",
+ "source": "Finnhub",
+ "entreprises": [
+  {
+   "nom": "Apple",
+   "code": "AAPL",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.0263,
+     "benefice_par_action_publie": 2.1,
+     "surprise_pct": 3.6372
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.9271,
+     "benefice_par_action_publie": 1.91,
+     "surprise_pct": -0.8873
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.9884,
+     "benefice_par_action_publie": 2.01,
+     "surprise_pct": 1.0863
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.7257,
+     "benefice_par_action_publie": 2.84,
+     "surprise_pct": 4.1934
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "1966 Or 1995: Which Way Does America's $2.1 Trillion Deficit Go?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "The 10-Year Topped 5% For The First Time Since 2007. What Happened Next?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 04:17",
+     "source": "Yahoo",
+     "titre": "Apple's five-device plan creates an iPhone buying dilemma",
+     "resume": "New launch timing could reward shoppers willing to wait."
+    },
+    {
+     "date": "2026-11-24 02:03",
+     "source": "Yahoo",
+     "titre": "QQQ Paid a $300,000 Holder $1,524 in Dividends Over the Past Year While VYM Paid $7,164",
+     "resume": "A retiree who counts on a portfolio to cover groceries and utilities faces a quiet choice between two popular ETFs. One sends cash on its own, while the other forces you to sell shares, even in a month when prices are tumbling."
+    },
+    {
+     "date": "2026-11-23 23:58",
+     "source": "Yahoo",
+     "titre": "Own HP Stock? Memory Costs Are The Risk",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-23 22:50",
+     "source": "Yahoo",
+     "titre": "Chamath Says Microsoft “Clearly Is Going to Need to Have a Frontier Model.” Nadella Is Betting It Won’t",
+     "resume": "Key TakeawaysChamath Palihapitiya says Microsoft needs a frontier model, the week Anthropic debuted at about $1. 75 trillion fully diluted."
+    },
+    {
+     "date": "2026-11-23 21:54",
+     "source": "Yahoo",
+     "titre": "How Risky Is Snap Stock Now?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-23 20:16",
+     "source": "Yahoo",
+     "titre": "Apple vs. Broadcom: Comparing Revenue Trends Amid the Artificial Intelligence Boom",
+     "resume": "Broadcom's quarterly revenue has climbed for seven straight periods, while Apple's has swung up and down, and the next report could change the picture."
+    }
+   ]
+  },
+  {
+   "nom": "Microsoft",
+   "code": "MSFT",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 4.824,
+     "benefice_par_action_publie": 4.89,
+     "surprise_pct": 1.3682
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 4.3274,
+     "benefice_par_action_publie": 4.74,
+     "surprise_pct": 9.5346
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 4.1432,
+     "benefice_par_action_publie": 4.27,
+     "surprise_pct": 3.0604
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 4.0345,
+     "benefice_par_action_publie": 4.14,
+     "surprise_pct": 2.6149
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "Why Did Palo Alto Networks Stock Fall?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "The Inflation Math, Updated: The Fed Is Fighting Oil",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "1966 Or 1995: Which Way Does America's $2.1 Trillion Deficit Go?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "Stocks Opened Up, Then Fell 3% By The Close. What Happened The Last 45 Times?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "The 10-Year Topped 5% For The First Time Since 2007. What Happened Next?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 02:30",
+     "source": "Yahoo",
+     "titre": "Microsoft CEO Satya Nadella Offered 60,000 Employees Buyouts So Everyone 'Felt Like They Had Agency' — Yet Insists Software Engineering Is 'Very Much Alive'",
+     "resume": "Nobody enjoys being shown the door, so Microsoft Corp. tried holding it open instead. Microsoft CEO Satya Nadella says the company’s buyout offer to roughly 60,000 employees was about choice, as AI changes what a workday looks like inside the..."
+    },
+    {
+     "date": "2026-11-24 01:25",
+     "source": "SeekingAlpha",
+     "titre": "Allspring Premier Large Company Growth Fund Q3 2026 Contributors And Detractors",
+     "resume": "Allspring Premier Large Company Growth Fund Q3 2026 commentary highlights top AI contributors and detractors. Read the full portfolio review."
+    },
+    {
+     "date": "2026-11-24 00:25",
+     "source": "Yahoo",
+     "titre": "Is Amazon's Profit Riskier Than It Looks?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    }
+   ]
+  },
+  {
+   "nom": "Nvidia",
+   "code": "NVDA",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-12-31",
+     "benefice_par_action_attendu": 2.5252,
+     "benefice_par_action_publie": 2.68,
+     "surprise_pct": 6.1302
+    },
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.1384,
+     "benefice_par_action_publie": 2.22,
+     "surprise_pct": 3.8159
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.7922,
+     "benefice_par_action_publie": 1.87,
+     "surprise_pct": 4.341
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.5634,
+     "benefice_par_action_publie": 1.62,
+     "surprise_pct": 3.6203
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-24 05:52",
+     "source": "Yahoo",
+     "titre": "Jensen Huang is back at Nvidia. What does it mean for Europe's AI stocks?",
+     "resume": "Europe's chip stocks rallied after Nvidia reinstated Jensen Huang as CEO, with Donald Trump cheering the board's decision. But Nokia, ASML and other AI names have only recovered part of what they lost during his absence.View on euronews"
+    },
+    {
+     "date": "2026-11-24 05:50",
+     "source": "Yahoo",
+     "titre": "Not Starlink. Not Starship. This SpaceX Business Could Be Worth $80 Billion on Its Own.",
+     "resume": "Space Exploration Technologies' fastest-growing business doesn't fly, orbit, or beam internet, and it might be worth $80 billion on its own."
+    },
+    {
+     "date": "2026-11-24 05:26",
+     "source": "Yahoo",
+     "titre": "3 AI Infrastructure Stocks Retail Investors Are Watching After Nvidia Shares Jump",
+     "resume": "AI infrastructure is back in the spotlight after Nvidia shares jumped about 29% in premarket trading on Jensen Huang’s reinstatement as CEO, pulling the S&P 500 and Nasdaq up around 4.7% and 6.5%. That kind of snapback tends to pull money toward companies wired into AI chips and data centers and awa"
+    },
+    {
+     "date": "2026-11-24 05:26",
+     "source": "Yahoo",
+     "titre": "Luceco And 2 Other British Penny Stocks To Own",
+     "resume": "Asian shares have just climbed after a Wall Street rebound linked to Jensen Huang’s return as Nvidia CEO, and that surge in risk appetite is spilling over into smaller stocks globally. For UK investors, this spotlight on higher growth themes is pushing interest towards lower priced shares where bala"
+    },
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "Can Sales Abroad Lift Hims & Hers Stock?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "Can Agnico Eagle Stock Bounce Off $151 Again?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "Disney Stops Reporting Streaming Profit. Should You Worry?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "The Inflation Math, Updated: The Fed Is Fighting Oil",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    }
+   ]
+  },
+  {
+   "nom": "JPMorgan",
+   "code": "JPM",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 5.958,
+     "benefice_par_action_publie": 5.57,
+     "surprise_pct": -6.5123
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 5.906,
+     "benefice_par_action_publie": 6.14,
+     "surprise_pct": 3.9621
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 5.5024,
+     "benefice_par_action_publie": 5.94,
+     "surprise_pct": 7.9529
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 5.0539,
+     "benefice_par_action_publie": 5.23,
+     "surprise_pct": 3.4844
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-24 05:06",
+     "source": "Yahoo",
+     "titre": "The 10-Year Topped 5% For The First Time Since 2007. What Happened Next?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-23 23:31",
+     "source": "Yahoo",
+     "titre": "Forget JPMorgan: Upstart Has More to Lose From a 10% Card Rate Cap",
+     "resume": "Key TakeawaysPresident Trump said on Nov. 21 that he would work with the incoming Democratic Congress to cap credit card interest rates at 10%, which would hit card issuers like JPMorgan and Capital One."
+    },
+    {
+     "date": "2026-11-23 22:12",
+     "source": "Yahoo",
+     "titre": "Jensen Huang is back: Does Washington have a seat in the boardroom?",
+     "resume": "As Nvidia reinstates Jensen Huang and investors add a trillion dollars to the stock, Deirdre Bosa dives into the White House's role in his return and asks General Catalyst's Madhu Namburi, who spent 25 years advising tech boards at J.P. Morgan, how boards, CEOs and dealmakers operate under the new r"
+    },
+    {
+     "date": "2026-11-23 21:30",
+     "source": "Yahoo",
+     "titre": "J.P. Morgan Asset Management to Transfer JPMorgan Active Bond ETF (JBND) to NYSE Arca from NYSE",
+     "resume": "J.P. Morgan Asset Management today announced the upcoming listing transfer for JPMorgan Active Bond ETF (NYSE: JBND) to the NYSE Arca from New York Stock Exchange (NYSE)."
+    },
+    {
+     "date": "2026-11-23 21:24",
+     "source": "Yahoo",
+     "titre": "Divided Wall Street: Wells Fargo Upgrades US Large Caps To ‘Most Favorable,’ But JPMorgan Is Taking A Measured Approach",
+     "resume": "Wells Fargo upgraded U.S. large-cap stocks to its top rating, while JPMorgan remains cautious about whether a rebound can hold."
+    },
+    {
+     "date": "2026-11-23 21:00",
+     "source": "Yahoo",
+     "titre": "Jensen Huang’s Shameless Return Is a New Low in This Era of Impunity",
+     "resume": "Did he lie or at least mislead the board about his infidelities? If he did, apparently all is forgiven. What kind of governance is that?"
+    },
+    {
+     "date": "2026-11-23 20:56",
+     "source": "Yahoo",
+     "titre": "Fidelity steps in where JPMorgan retreated",
+     "resume": "Fidelity Investments enters a territory that JPMorgan has withdrawn from."
+    },
+    {
+     "date": "2026-11-23 19:17",
+     "source": "Yahoo",
+     "titre": "How Much You Really Need Invested to Generate $50,000 a Year in Retirement",
+     "resume": "Safe blue chips have rallied so hard that their yields now trail Treasuries, while the highest payers promise to slash the capital you need. Before you chase either, see what each shortcut quietly puts at risk in year ten."
+    }
+   ]
+  },
+  {
+   "nom": "Johnson & Johnson",
+   "code": "JNJ",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.5631,
+     "benefice_par_action_publie": 2.59,
+     "surprise_pct": 1.0495
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 2.8745,
+     "benefice_par_action_publie": 2.9,
+     "surprise_pct": 0.8871
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 2.6914,
+     "benefice_par_action_publie": 2.7,
+     "surprise_pct": 0.3195
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.4633,
+     "benefice_par_action_publie": 2.46,
+     "surprise_pct": -0.134
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-23 22:02",
+     "source": "Yahoo",
+     "titre": "Should You Swap Tech For Johnson & Johnson Stock?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-23 21:30",
+     "source": "Yahoo",
+     "titre": "The Coca-Cola Company Names David Elkins as Incoming Chief Financial Officer",
+     "resume": "ATLANTA, November 23, 2026--The Coca-Cola Company today announced that David Elkins, a finance leader with extensive experience across global pharmaceuticals and consumer products companies, will become executive vice president and chief financial officer of Coca-Cola April 2, 2027, succeeding John "
+    },
+    {
+     "date": "2026-11-23 19:20",
+     "source": "Yahoo",
+     "titre": "Here's the 1 Stock I'd Most Want to Buy If the Market Crashes",
+     "resume": "Johnson & Johnson is probably the most recession-proof healthcare stock out there."
+    },
+    {
+     "date": "2026-11-23 19:17",
+     "source": "Yahoo",
+     "titre": "How Much You Really Need Invested to Generate $50,000 a Year in Retirement",
+     "resume": "Safe blue chips have rallied so hard that their yields now trail Treasuries, while the highest payers promise to slash the capital you need. Before you chase either, see what each shortcut quietly puts at risk in year ten."
+    },
+    {
+     "date": "2026-11-23 16:31",
+     "source": "Yahoo",
+     "titre": "Bristol Myers Squibb vs. Johnson & Johnson: Which Healthcare Giant's Stock Is a Better Buy for 2027?",
+     "resume": "Johnson & Johnson's diversified medicines and MedTech mix contrasts sharply with Bristol Myers Squibb's oncology focus, and the valuation gap between them may tip the scales for investors."
+    },
+    {
+     "date": "2026-11-23 15:17",
+     "source": "Yahoo",
+     "titre": "The Average 1-Year CD Pays 1.81%. Dividend Stocks Offer a Different Trade-Off",
+     "resume": "Your CD just matured, and the bank's clock is ticking. Doing nothing triggers an automatic rollover, while three dividend giants tempt you with raises, risks, and a very different tax bill. Which choice quietly costs more?"
+    },
+    {
+     "date": "2026-11-23 14:45",
+     "source": "Yahoo",
+     "titre": "Will Pfizer Stock Ever Get Back To Its Old High?",
+     "resume": "Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92."
+    },
+    {
+     "date": "2026-11-23 13:47",
+     "source": "Yahoo",
+     "titre": "Should You Be Worried About Johnson & Johnson Stock?",
+     "resume": "For questions about this article or underlying research, email help@trefis.com."
+    }
+   ]
+  }
+ ],
+ "erreurs": []
+}
