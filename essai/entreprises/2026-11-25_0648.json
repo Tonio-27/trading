@@ -1,0 +1,412 @@
+{
+ "releve_utc": "2026-11-25T06:48:09Z",
+ "source": "Finnhub",
+ "entreprises": [
+  {
+   "nom": "Apple",
+   "code": "AAPL",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.0263,
+     "benefice_par_action_publie": 2.1,
+     "surprise_pct": 3.6372
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.9271,
+     "benefice_par_action_publie": 1.91,
+     "surprise_pct": -0.8873
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.9884,
+     "benefice_par_action_publie": 2.01,
+     "surprise_pct": 1.0863
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.7257,
+     "benefice_par_action_publie": 2.84,
+     "surprise_pct": 4.1934
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-25 04:57",
+     "source": "Yahoo",
+     "titre": "Xiaomi shares jump over 8% as premium phone sales cushion rising chip costs",
+     "resume": "Investing.com -- Xiaomi shares surged more than 8% on Wednesday after its smartphone business performed better than expected in the third quarter, suggesting the Chinese technology group is using higher-priced devices to offset rising memory chip costs."
+    },
+    {
+     "date": "2026-11-24 23:00",
+     "source": "Yahoo",
+     "titre": "Tech Keeps Eating Hollywood As Netflix Buys Historic Seinfeld Lot",
+     "resume": "Netflix announced a $380 million deal for Radford Studio in Los Angeles, where Seinfeld, Mary Tyler Moore and more were filmed."
+    },
+    {
+     "date": "2026-11-24 21:19",
+     "source": "Yahoo",
+     "titre": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+     "resume": "The startup's encrypted AI architecture is designed to prevent even the company itself from accessing users' private data."
+    },
+    {
+     "date": "2026-11-24 21:13",
+     "source": "Yahoo",
+     "titre": "Is Apple (AAPL) Above Fair Value As ETF Buying Returns?",
+     "resume": "Heavy buying of Apple (AAPL) by major ETFs like SPY, QQQ, and XLK has flipped a brief selling spell into renewed accumulation, underscoring how large investors still treat the stock as a defensive tech anchor. Apple’s recent ETF-driven bid comes on top of a 12.6% 90 day share price return and a 28.8"
+    },
+    {
+     "date": "2026-11-24 20:53",
+     "source": "Yahoo",
+     "titre": "Top Analyst Reports for Apple, Philip Morris & Intel",
+     "resume": "Apple's expanding Services business, Philip Morris' smoke-free momentum and Intel's manufacturing recovery and AI expansion headline today's top analyst reports."
+    },
+    {
+     "date": "2026-11-24 19:59",
+     "source": "Yahoo",
+     "titre": "Trump Warns of “Paying 200 Percent on Chips” in Two Years. That Pushes TSMC Toward a $22.6 Billion Texas Plant",
+     "resume": "Key TakeawaysPresident Trump said foreign chips will face 200% tariffs in two years, and a filing shows TSMC weighing a $22. 6 billion Texas plant."
+    },
+    {
+     "date": "2026-11-24 19:45",
+     "source": "Yahoo",
+     "titre": "Why the Jensen Huang rally faded so quickly",
+     "resume": "Market Hang tackles the top stories of the day. Including why Monday's Jensen Huang rally faded within a day, what teeth the congressional hearings and board investigation can have given why he was reinstated, and whether the market is sniffing out a peak in the AI CapEx cycle the way it has in past"
+    },
+    {
+     "date": "2026-11-24 19:32",
+     "source": "Yahoo",
+     "titre": "At 63, a Robo-Adviser Bought You 11 Funds You Can’t Explain. These 3 ETFs Do the Same Job",
+     "resume": "Your robo-adviser spread your nest egg across a dozen funds, and two of them look like twins. Before retirement arrives, find out what that sprawl costs you in clarity, and what you'd give up by simplifying."
+    }
+   ]
+  },
+  {
+   "nom": "Microsoft",
+   "code": "MSFT",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 4.824,
+     "benefice_par_action_publie": 4.89,
+     "surprise_pct": 1.3682
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 4.3274,
+     "benefice_par_action_publie": 4.74,
+     "surprise_pct": 9.5346
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 4.1432,
+     "benefice_par_action_publie": 4.27,
+     "surprise_pct": 3.0604
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 4.0345,
+     "benefice_par_action_publie": 4.14,
+     "surprise_pct": 2.6149
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-25 00:16",
+     "source": "Yahoo",
+     "titre": "Nvidia-Backed Nscale Reportedly Eyes Private Route As AI Market Sell-Off Clouds $35B IPO Plans",
+     "resume": "Data center operator Nscale reassured employees it can stay private amid a steep AI stock downturn that threatens its planned $35 billion listing."
+    },
+    {
+     "date": "2026-11-24 23:10",
+     "source": "Yahoo",
+     "titre": "Driven Tech Completes Acquisitions of ADEX and TekBay, Accelerating Enterprise AI Strategy",
+     "resume": "Driven Tech, Inc. today announced the successful completion of its acquisitions of ADEX and TekBay, following receipt of all required government and regulatory approvals."
+    },
+    {
+     "date": "2026-11-24 22:54",
+     "source": "Yahoo",
+     "titre": "Maverick Medical AI Surfaces CodeAgent within Microsoft Radiology Reporting Solutions to Reduce Physician Rework",
+     "resume": "At RSNA 2026, Maverick will demonstrate real-time documentation guidance connecting radiology reporting with autonomous, billing-ready codingWILMINGTON, Del., Nov. 24, 2026 (GLOBE NEWSWIRE) -- Maverick Medical AI will showcase CodeAgent™, its real-time AI documentation assistant, within Microsoft Dr"
+    },
+    {
+     "date": "2026-11-24 22:24",
+     "source": "Yahoo",
+     "titre": "Retailers Sanguine for Black Friday",
+     "resume": "Forecasts for Black Friday and holiday sales gains hold up in the wake of healthy third-quarter financial reports by major retailers."
+    },
+    {
+     "date": "2026-11-24 22:15",
+     "source": "Yahoo",
+     "titre": "A week on, Chase still hasn’t explained its outage",
+     "resume": "Treasury Secretary Scott Bessent named JPMorganChase while explaining how patches can cause glitches. Asked if a patch caused its outage, the bank wouldn't say."
+    },
+    {
+     "date": "2026-11-24 21:45",
+     "source": "Yahoo",
+     "titre": "Anthropic falls below IPO price as Nvidia gives back gains",
+     "resume": "In this edition of Sozzi Unleashed: At The Close, Brian Sozzi sorts through \"reality trading\" as Nvidia slides nearly 7% after Monday's 31% surge and Anthropic falls below its $83 IPO price less than a week after the biggest offering in history. GCG Advisory Partners' Bill Gunderson makes the case t"
+    },
+    {
+     "date": "2026-11-24 21:44",
+     "source": "Yahoo",
+     "titre": "Best Buy also among companies benefiting from AI boom",
+     "resume": "Yahoo Finance Executive Editor Brian Sozzi  looks at Best Buy's (BBY) strongest comparable sales growth in five years as a sign that AI demand is reaching consumers' wallets through device upgrades, and not showing up through data-center spending on Nvidia (NVDA), Microsoft (MSFT), and Amazon (AMZN)"
+    },
+    {
+     "date": "2026-11-24 21:23",
+     "source": "Yahoo",
+     "titre": "5 High-Conviction Stocks Billionaire Philippe Laffont Is Betting On for 2027",
+     "resume": "Coatue Management’s November 16 regulatory filing puts billionaire Philippe Laffont’s positioning back in focus as investors look toward 2027. Its ten largest disclosed stock holdings represented 55.9% of a $54.5 billion reported portfolio at September 30, with chipmakers and equipment suppliers car"
+    }
+   ]
+  },
+  {
+   "nom": "Nvidia",
+   "code": "NVDA",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-12-31",
+     "benefice_par_action_attendu": 2.5252,
+     "benefice_par_action_publie": 2.68,
+     "surprise_pct": 6.1302
+    },
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.1384,
+     "benefice_par_action_publie": 2.22,
+     "surprise_pct": 3.8159
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.7922,
+     "benefice_par_action_publie": 1.87,
+     "surprise_pct": 4.341
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.5634,
+     "benefice_par_action_publie": 1.62,
+     "surprise_pct": 3.6203
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-25 05:33",
+     "source": "Yahoo",
+     "titre": "Why Investors Are Suddenly Turning Against AXT Inc. (AXTI)?",
+     "resume": "AXT Inc. (NASDAQ:AXTI) is one of the 10 Stocks Investors Are Dumping. AXT Inc. dropped its share price by 16.94 percent on Tuesday to close at $31.58 after investors resorted to profit-taking following the previous day’s 20 percent gains. The stock fell alongside its counterparts riding the AI boom,"
+    },
+    {
+     "date": "2026-11-25 05:28",
+     "source": "Yahoo",
+     "titre": "What Just Went Wrong With Astera Labs (ALAB)?",
+     "resume": "Astera Labs Inc. (NASDAQ:ALAB) is one of the 10 Stocks Investors Are Dumping. Astera Labs dropped its share price by 13.88 percent on Tuesday to end at $191.30 apiece, as investors took advantage of the previous day’s stunning rally to pocket gains. On Monday, Astera Labs Inc. (NASDAQ:ALAB) saw its "
+    },
+    {
+     "date": "2026-11-25 05:24",
+     "source": "Yahoo",
+     "titre": "From Smiling to Selling: Why Credo Technology (CRDO) is Getting Hammered",
+     "resume": "Credo Technology Group Holding Ltd. (NASDAQ:CRDO) is one of the 10 Stocks Investors Are Dumping. Credo Technology saw its share price decline by 13 percent on Tuesday to end at $106.46 apiece as investors resorted to profit-taking following the previous day’s stellar gains. The stock fell alongside "
+    },
+    {
+     "date": "2026-11-25 05:20",
+     "source": "Yahoo",
+     "titre": "Donald Trump Floats Jensen Huang Pardon, US Stake In Nvidia – But NVDA Loses Momentum",
+     "resume": "Trump has been actively backing Huang and urged the Nvidia board to rehire him moments before it announced his return as CEO."
+    },
+    {
+     "date": "2026-11-25 05:20",
+     "source": "Yahoo",
+     "titre": "Costco Hasn't Split Its Stock Since 2000. Here's Why 2027 Could Be the Year.",
+     "resume": "A four-digit share price has investors wondering if a stock split is on the table next year."
+    },
+    {
+     "date": "2026-11-25 05:13",
+     "source": "Yahoo",
+     "titre": "November 2026 Growth Stocks With Strong Earnings Potential",
+     "resume": "Fresh US tariffs on China and other major trading partners put global supply chains back under the microscope, which often rewards companies with strong balance sheets and clear earnings power. Investors who focus on financially sound businesses with solid growth potential can avoid scrambling after"
+    },
+    {
+     "date": "2026-11-25 05:11",
+     "source": "Yahoo",
+     "titre": "SK Hynix (NasdaqGS:SKHY) Stock May Trade At A Discount Despite AI Demand News",
+     "resume": "SK hynix has seen a sharp reset in its share price this year, and the drop is pushing investors to ask whether the current valuation still lines up with what the company earns today and what it might reasonably earn over time. The stock is down about 33.3% year to date, which puts the focus squarely"
+    },
+    {
+     "date": "2026-11-25 04:57",
+     "source": "Yahoo",
+     "titre": "The Semiconductor ETF Kept Falling After Nvidia Raised Its Forecast. Time to Buy?",
+     "resume": "The chip fund kept falling after its top holding raised its sales forecast."
+    }
+   ]
+  },
+  {
+   "nom": "JPMorgan",
+   "code": "JPM",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 5.958,
+     "benefice_par_action_publie": 5.57,
+     "surprise_pct": -6.5123
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 5.906,
+     "benefice_par_action_publie": 6.14,
+     "surprise_pct": 3.9621
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 5.5024,
+     "benefice_par_action_publie": 5.94,
+     "surprise_pct": 7.9529
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 5.0539,
+     "benefice_par_action_publie": 5.23,
+     "surprise_pct": 3.4844
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-25 02:02",
+     "source": "Yahoo",
+     "titre": "This Nasdaq ETF Pays a 19% Yield Without Writing a Single Covered Call. Here’s How",
+     "resume": "A yield near 20% usually hides something. This Calamos fund swaps option writing for structured notes tied to the Nasdaq-100, and the fine print on barriers, skipped coupons, and a JPMorgan swap decides who really wins."
+    },
+    {
+     "date": "2026-11-25 01:11",
+     "source": "Yahoo",
+     "titre": "MINISO (MNSO) Stock Fair Value Edges Higher On Overseas Large Format Rollout",
+     "resume": "The fair value estimate for MINISO Group Holding has been adjusted slightly higher, moving from US$14.16 to US$14.76 in the latest update. This shift comes as analysts factor in MINISO’s ongoing rollout of large format concepts overseas in 2026, including new MINISO LAND and SUPER MINISO locations i"
+    },
+    {
+     "date": "2026-11-24 22:15",
+     "source": "Yahoo",
+     "titre": "A week on, Chase still hasn’t explained its outage",
+     "resume": "Treasury Secretary Scott Bessent named JPMorganChase while explaining how patches can cause glitches. Asked if a patch caused its outage, the bank wouldn't say."
+    },
+    {
+     "date": "2026-11-24 21:15",
+     "source": "Yahoo",
+     "titre": "Could Meta Actually Climb 30%? Or Is J.P. Morgan Totally Wrong?",
+     "resume": "Key TakeawaysJ. P. Morgan cut its Meta Platforms price target to $775 from $940 on Nov."
+    },
+    {
+     "date": "2026-11-24 20:00",
+     "source": "Yahoo",
+     "titre": "Why Cheaper Crude Won’t Mean Cheap Gas in 2027",
+     "resume": "The Energy Information Administration, the government’s energy data provider, projects that gasoline prices will average $3.73 per gallon next year."
+    },
+    {
+     "date": "2026-11-24 19:59",
+     "source": "Yahoo",
+     "titre": "18% Upside for Wells Fargo? TD Cowen Thinks So, and Here’s How",
+     "resume": "Key TakeawaysTD Cowen rates Wells Fargo a Buy with a $95 price target, 18% above today’s price, and prefers it to JPMorgan Chase and Bank of America, which it rates Hold. Wells Fargo’s return on tangible common equity rose to 16."
+    },
+    {
+     "date": "2026-11-24 19:47",
+     "source": "Yahoo",
+     "titre": "$75,000 in These 5 Dividend Stocks Could Pay More Than $1,700 a Year Across 5 Sectors",
+     "resume": "When one industry stumbles, a retiree's dividend checks can shrink overnight. One approach spreads five equal bets across very different corners of the market, and the pick with the highest payout is not the one most investors would guess."
+    },
+    {
+     "date": "2026-11-24 19:13",
+     "source": "Yahoo",
+     "titre": "Why Pump Prices Are Likely to Stay High in 2027—Even if Oil Gets Cheaper",
+     "resume": "The Energy Information Administration, the government’s energy data provider, projects that gasoline prices will average $3.73 per gallon next year."
+    }
+   ]
+  },
+  {
+   "nom": "Johnson & Johnson",
+   "code": "JNJ",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.5631,
+     "benefice_par_action_publie": 2.59,
+     "surprise_pct": 1.0495
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 2.8745,
+     "benefice_par_action_publie": 2.9,
+     "surprise_pct": 0.8871
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 2.6914,
+     "benefice_par_action_publie": 2.7,
+     "surprise_pct": 0.3195
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.4633,
+     "benefice_par_action_publie": 2.46,
+     "surprise_pct": -0.134
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-24 21:12",
+     "source": "SeekingAlpha",
+     "titre": "Best Dividend Kings: November 2026",
+     "resume": "The bull case for Dividend Kings: 26 appear undervalued and could deliver annualized returns above 10%; Gorman-Rupp leads at 19.6%."
+    },
+    {
+     "date": "2026-11-24 21:00",
+     "source": "Yahoo",
+     "titre": "Why Is AbbVie (ABBV) Stock Up Today? Health Care Rally as Tech Slides",
+     "resume": "AbbVie shares rose 4.2% on Tuesday, Nov. 24, alongside a health care sector rally, a day after news of an FDA nod for Rinvoq in vitiligo."
+    },
+    {
+     "date": "2026-11-24 21:00",
+     "source": "Yahoo",
+     "titre": "Protagonist Therapeutics (PTGX) Stock Is Up 8.9% Today Without Company News",
+     "resume": "On Tuesday, Nov. 24, the shares rose 8.9% without company-specific news, as biotech peers and health care stocks gained"
+    },
+    {
+     "date": "2026-11-24 20:10",
+     "source": "ChartMill",
+     "titre": "Dow Jones Top Gainers for Today's US Session",
+     "resume": "Dow Jones top gainers in today's US session include NKE, AMGN, MRK, CRM, UNH and JNJ, led by NKE's 5.75% rise."
+    },
+    {
+     "date": "2026-11-24 20:08",
+     "source": "Yahoo",
+     "titre": "Johnson & Johnson (JNJ) Stock May Still Trade Below Fair Value Despite TREMFYA Trial News",
+     "resume": "Johnson & Johnson has ridden a powerful multi year run in its share price, and the question now is how well the current valuation lines up with the cash the healthcare group is expected to generate. A string of late stage drug updates, device launches and deal activity has sharpened the focus on whe"
+    },
+    {
+     "date": "2026-11-24 19:47",
+     "source": "Yahoo",
+     "titre": "$75,000 in These 5 Dividend Stocks Could Pay More Than $1,700 a Year Across 5 Sectors",
+     "resume": "When one industry stumbles, a retiree's dividend checks can shrink overnight. One approach spreads five equal bets across very different corners of the market, and the pick with the highest payout is not the one most investors would guess."
+    },
+    {
+     "date": "2026-11-24 17:41",
+     "source": "ChartMill",
+     "titre": "Dow Jones Top Gainers: Nov. 24, 2026 US Session",
+     "resume": "Dow Jones gainers on Nov. 24, 2026: NKE rose 5.91% to $35.76, AMGN gained 4.43% to $468.92, and CRM advanced 4.18% to $193.22 in the US session."
+    },
+    {
+     "date": "2026-11-24 16:59",
+     "source": "Yahoo",
+     "titre": "13 Big Funds Bought Johnson & Johnson Last Quarter, While 14 Sold. Who’s Right?",
+     "resume": "Key TakeawaysOf the 460 big funds that have filed 13Fs for the quarter ended Sept. 30, 13 bought Johnson & Johnson and 14 sold it."
+    }
+   ]
+  }
+ ],
+ "erreurs": []
+}
