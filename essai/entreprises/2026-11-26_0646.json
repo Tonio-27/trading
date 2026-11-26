@@ -1,0 +1,412 @@
+{
+ "releve_utc": "2026-11-26T06:46:33Z",
+ "source": "Finnhub",
+ "entreprises": [
+  {
+   "nom": "Apple",
+   "code": "AAPL",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.0263,
+     "benefice_par_action_publie": 2.1,
+     "surprise_pct": 3.6372
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.9271,
+     "benefice_par_action_publie": 1.91,
+     "surprise_pct": -0.8873
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.9884,
+     "benefice_par_action_publie": 2.01,
+     "surprise_pct": 1.0863
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.7257,
+     "benefice_par_action_publie": 2.84,
+     "surprise_pct": 4.1934
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-26 04:06",
+     "source": "Yahoo",
+     "titre": "Dow Jones Futures Rise After Nasdaq Slashes Losses In Wild Market Ride",
+     "resume": "The market went on a wild ride before Thanksgiving, but the Dow and Anthropic reversed higher while the Nasdaq and Nvidia came well off lows."
+    },
+    {
+     "date": "2026-11-26 04:02",
+     "source": "Yahoo",
+     "titre": "HLTH 2026: Quest Diagnostics' Patrick Plewman Breaks Down Whoop Partnership",
+     "resume": "Quest Diagnostics' Patrick Plewman joins Ashley Mastronardi at HLTH 2026 to discuss the partnership with Whoop and how the collaboration will benefit users and patients."
+    },
+    {
+     "date": "2026-11-26 03:44",
+     "source": "Yahoo",
+     "titre": "Michael Burry Says He’s Shorting The Market’s ‘Generals’ As Apple Flashes A Warning Last Seen In 2002",
+     "resume": "Burry said he was shorting the market’s “generals” after puts on his preferred targets grew expensive."
+    },
+    {
+     "date": "2026-11-26 02:39",
+     "source": "Yahoo",
+     "titre": "Nvidia’s Market Cap Falls Below Microsoft’s: Analyst Flags Five Overhangs For NVDA Stock",
+     "resume": "Nvidia shares fell nearly 4% on Wednesday, knocking the chipmaker down to third place in the U.S. market-cap rankings."
+    },
+    {
+     "date": "2026-11-26 01:34",
+     "source": "Yahoo",
+     "titre": "Dow Jones Futures Rise; Market Goes On Wild Ride As Nasdaq Slashes Losses",
+     "resume": "The market went on a wild ride before Thanksgiving, but the Dow and Anthropic reversed higher while the Nasdaq and Nvidia came well off lows."
+    },
+    {
+     "date": "2026-11-26 01:00",
+     "source": "Yahoo",
+     "titre": "Apple Stock Defies AI Selloff: Is It the Market's Safe Haven?",
+     "resume": "Apple stock is up 30.61% in 2026 while Nvidia falls 21.35%. See how low AI capex and a Gemini deal shaped the gap."
+    },
+    {
+     "date": "2026-11-25 23:45",
+     "source": "Yahoo",
+     "titre": "Dow Jones Futures: Market Goes On Wild Ride. Nasdaq, Nvidia Slash Losses While Anthropic Reverses Higher.",
+     "resume": "The market went on a wild ride before Thanksgiving, but the Dow and Anthropic reversed higher while the Nasdaq and Nvidia came well off lows."
+    },
+    {
+     "date": "2026-11-25 21:27",
+     "source": "Yahoo",
+     "titre": "Is the market experiencing a 'dead cat' bounce?",
+     "resume": "Interactive Brokers Chief Strategist Steve Sosnick joins Yahoo Finance Data and Markets Editor Jared Blikre to discuss the recent volatility in the market (^GSPC, ^IXIC) and the tech sell-off."
+    }
+   ]
+  },
+  {
+   "nom": "Microsoft",
+   "code": "MSFT",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 4.824,
+     "benefice_par_action_publie": 4.89,
+     "surprise_pct": 1.3682
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 4.3274,
+     "benefice_par_action_publie": 4.74,
+     "surprise_pct": 9.5346
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 4.1432,
+     "benefice_par_action_publie": 4.27,
+     "surprise_pct": 3.0604
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 4.0345,
+     "benefice_par_action_publie": 4.14,
+     "surprise_pct": 2.6149
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-26 02:39",
+     "source": "Yahoo",
+     "titre": "Nvidia’s Market Cap Falls Below Microsoft’s: Analyst Flags Five Overhangs For NVDA Stock",
+     "resume": "Nvidia shares fell nearly 4% on Wednesday, knocking the chipmaker down to third place in the U.S. market-cap rankings."
+    },
+    {
+     "date": "2026-11-26 01:00",
+     "source": "Yahoo",
+     "titre": "Apple Stock Defies AI Selloff: Is It the Market's Safe Haven?",
+     "resume": "Apple stock is up 30.61% in 2026 while Nvidia falls 21.35%. See how low AI capex and a Gemini deal shaped the gap."
+    },
+    {
+     "date": "2026-11-25 23:48",
+     "source": "Yahoo",
+     "titre": "Microsoft's Green Card Filings Reveal A Striking Pattern After Mass Layoffs. Trump's New Rule Could Freeze Sponsorships For Two Years.",
+     "resume": "An analysis of federal labor records shows Microsoft sharply reduced PERM filings after its 2025 layoffs, as proposed rules could impose longer restrictions on sponsoring foreign workers."
+    },
+    {
+     "date": "2026-11-25 23:31",
+     "source": "Yahoo",
+     "titre": "Are You Overpaying For Palantir Stock Versus Its Rivals?",
+     "resume": "Today's big story: Anthropic Below Its IPO Price: Do Giants Come Back."
+    },
+    {
+     "date": "2026-11-25 22:30",
+     "source": "Yahoo",
+     "titre": "Trump Has A Message for Big Tech Firms Like Amazon, Google and Microsoft Building Data Centers Abroad: ‘We’re Going to Put A Tremendous Tax On Them’",
+     "resume": "President Donald Trump is threatening steep tax penalties on U.S. technology companies that build data centers overseas, signaling a push to keep more AI infrastructure investment within American borders. Trump Threatens Taxes On Overseas Data Centers On Friday, speaking at..."
+    },
+    {
+     "date": "2026-11-25 20:53",
+     "source": "Yahoo",
+     "titre": "Salesforce Stock (CRM) Looks Mispriced After the AI Sell-Off",
+     "resume": "Salesforce (CRM) stock looks mispriced after the recent software sell-off, driven by fears that artificial intelligence (AI) will disrupt traditional enterprise software. The customer relationship management software provider enters this stretch from a position of financial strength, having generate"
+    },
+    {
+     "date": "2026-11-25 20:50",
+     "source": "Yahoo",
+     "titre": "Bill Ackman, George Soros and 5 Other Famous Investors Own Microsoft. Here’s Who Bought and Sold Recently",
+     "resume": "Key TakeawaysSeven famous investors held Microsoft on Sept. 30."
+    },
+    {
+     "date": "2026-11-25 20:49",
+     "source": "Yahoo",
+     "titre": "Megadeals Defy Selloff, Head Toward Record",
+     "resume": "Wall Street is taking a big step toward a record year for mergers and acquisitions as some of the world's largest companies defy a tech-induced selloff in global stocks to pursue major takeovers. Bloomberg's Scarlet Fu reports on \"Bloomberg Deals.\""
+    }
+   ]
+  },
+  {
+   "nom": "Nvidia",
+   "code": "NVDA",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-12-31",
+     "benefice_par_action_attendu": 2.5252,
+     "benefice_par_action_publie": 2.68,
+     "surprise_pct": 6.1302
+    },
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.1384,
+     "benefice_par_action_publie": 2.22,
+     "surprise_pct": 3.8159
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.7922,
+     "benefice_par_action_publie": 1.87,
+     "surprise_pct": 4.341
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.5634,
+     "benefice_par_action_publie": 1.62,
+     "surprise_pct": 3.6203
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-26 05:33",
+     "source": "Yahoo",
+     "titre": "ANT, NVDA Slide Tests Investor Resolve, Software Firms Post Sharp Growth",
+     "resume": "Investors faced intense volatility in the Thanksgiving week."
+    },
+    {
+     "date": "2026-11-26 05:32",
+     "source": "Yahoo",
+     "titre": "SpaceX Reportedly Slashes Some Nvidia Chip Rents — AI Researcher Sees Musk’s Edge In A GPU Glut",
+     "resume": "SpaceX is reportedly seeking a new renter for 50,000 H200 chips leased to Anthropic."
+    },
+    {
+     "date": "2026-11-26 05:31",
+     "source": "Yahoo",
+     "titre": "Asian stocks rally as Taiwan, South Korea rebound; Nvidia risks linger",
+     "resume": "Investing.com -- Most Asian stocks rose on Thursday as a recovery in technology shares and improving sentiment around U.S. trade policy helped markets regain some footing after a volatile November, although concerns over Nvidia's governance continued to temper confidence."
+    },
+    {
+     "date": "2026-11-26 05:21",
+     "source": "Yahoo",
+     "titre": "Asian shares rebound led by AI stocks after Wall Street pares sharp losses",
+     "resume": "HONG KONG (AP) — Asian shares rebounded on Thursday led by artificial intelligence -related stocks after Wall Street pared its sharp losses Wednesday.Nvidia, one of Wall Street’s biggest drivers, fell 3."
+    },
+    {
+     "date": "2026-11-26 05:20",
+     "source": "Yahoo",
+     "titre": "2 Ways Anthropic's IPO Pays Off for Alphabet Investors",
+     "resume": "A large equity stake and nearly guaranteed cloud sales make Anthropic's future success a boon for Alphabet."
+    },
+    {
+     "date": "2026-11-26 04:25",
+     "source": "Yahoo",
+     "titre": "Global markets rebound as tech shares recover and tariff fears ease",
+     "resume": "Asian stocks staged a rebound on Thursday from another hard day of selling as trading in the tech sector stabilised, while investors took in their stride a fresh round of proposed US tariffs.View on euronews"
+    },
+    {
+     "date": "2026-11-26 04:22",
+     "source": "Yahoo",
+     "titre": "Nvidia Reportedly Sold Its Most Advanced AI Chips to US Firms Controlled by Chinese Parents as Jensen Huang Set to Face Congress",
+     "resume": "Nvidia Corp. (NASDAQ:NVDA) has reportedly sold its most advanced chips to at least two U.S. companies controlled by Chinese-owned firms, as CEO Jensen Huang prepares to face lawmakers next week. Firms Hold Nvidia Partner Status Ricloud AI Inc., Nvidia’s cloud partner headquartered in San Jose, is co"
+    },
+    {
+     "date": "2026-11-26 04:19",
+     "source": "Yahoo",
+     "titre": "Kioxia and NVIDIA Collaborate to Expand Effective High-Bandwidth Memory Capacity with SSDs",
+     "resume": "TOKYO, November 26, 2026--Kioxia and NVIDIA collaborate to extend effective GPU memory capacity to petabyte scale using NVIDIA SCADA software and Kioxia SSDs."
+    }
+   ]
+  },
+  {
+   "nom": "JPMorgan",
+   "code": "JPM",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 5.958,
+     "benefice_par_action_publie": 5.57,
+     "surprise_pct": -6.5123
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 5.906,
+     "benefice_par_action_publie": 6.14,
+     "surprise_pct": 3.9621
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 5.5024,
+     "benefice_par_action_publie": 5.94,
+     "surprise_pct": 7.9529
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 5.0539,
+     "benefice_par_action_publie": 5.23,
+     "surprise_pct": 3.4844
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-26 02:03",
+     "source": "Yahoo",
+     "titre": "Washington Calls It a Goldilocks Economy. On a $2,071 Social Security Check, She Calls It the Annoyance Economy: Prices Up 3.7%, and Her Real Raise Is Just 3.3%",
+     "resume": "Officials say the economy is just right, but a retiree on an average Social Security check sees a January raise shrink before it even arrives. One Medicare line item and one overlooked price index explain why she starts 2027 behind."
+    },
+    {
+     "date": "2026-11-25 22:20",
+     "source": "Yahoo",
+     "titre": "Market Chatter: JPMorgan Projects $450 Billion in AI High-Grade Debt Issuance for 2027",
+     "resume": "Companies will raise $450 billion in public investment-grade debt markets next year to fund artifici"
+    },
+    {
+     "date": "2026-11-25 21:58",
+     "source": "Yahoo",
+     "titre": "JPMorgan sees $450B in AI bond issuance in 2027",
+     "resume": "Investing.com -- JPMorgan Chase & Co. expects companies to raise $450 billion through investment-grade bond markets in 2027 to fund artificial intelligence capital expenditures, up from $368 billion in global investment-grade bond issuance for AI-focused companies this year."
+    },
+    {
+     "date": "2026-11-25 21:17",
+     "source": "Yahoo",
+     "titre": "JPMorgan Sees $450 Billion AI Debt Blitz in 2027 Before Plateau",
+     "resume": "Companies will tap public high-grade debt markets for $450 billion next year to finance their artificial intelligence-related capital expenditures, even as a growth plateau looms for the burgeoning industry further down the road, according to analysts at JPMorgan Chase & Co."
+    },
+    {
+     "date": "2026-11-25 19:55",
+     "source": "Yahoo",
+     "titre": "Jensen Huang’s Return Is Off to a Rough Start. The Market Isn’t the Only Thing Paying the Price.",
+     "resume": "Nvidia will never be the same. Neither will the rest of us."
+    },
+    {
+     "date": "2026-11-25 18:21",
+     "source": "Yahoo",
+     "titre": "12 Big Funds Bought JPMorgan Chase Last Quarter, While 12 Sold. Who’s Right?",
+     "resume": "Key TakeawaysOf the 460 big funds that have filed 13Fs for the third quarter, 12 bought JPMorgan Chase and 12 sold. Axiom Investors added about $489 million of the stock, while MKP Capital sold a stake worth about $466 million."
+    },
+    {
+     "date": "2026-11-25 16:50",
+     "source": "Yahoo",
+     "titre": "Oracle Is Down 60% From Its June High. J.P. Morgan Still Sees $200",
+     "resume": "Key TakeawaysJ. P. Morgan reiterated its Buy rating and $200 price target on Oracle on Nov."
+    },
+    {
+     "date": "2026-11-25 16:47",
+     "source": "Yahoo",
+     "titre": "JPMorgan Sees S&P 500 At 8,200 In 2027 As AI Supercycle Remains Intact",
+     "resume": "JPMorgan believes the recent unwinding of leveraged AI investments could extend the cycle rather than end it, saying investors are underestimating demand for AI computing capacity."
+    }
+   ]
+  },
+  {
+   "nom": "Johnson & Johnson",
+   "code": "JNJ",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.5631,
+     "benefice_par_action_publie": 2.59,
+     "surprise_pct": 1.0495
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 2.8745,
+     "benefice_par_action_publie": 2.9,
+     "surprise_pct": 0.8871
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 2.6914,
+     "benefice_par_action_publie": 2.7,
+     "surprise_pct": 0.3195
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.4633,
+     "benefice_par_action_publie": 2.46,
+     "surprise_pct": -0.134
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-25 23:16",
+     "source": "Yahoo",
+     "titre": "What Could Johnson & Johnson (JNJ) FDA Cancer Approval Change For Investors?",
+     "resume": "Johnson & Johnson (NYSE:JNJ) received FDA accelerated approval for RYBREVANT FASPRO for advanced head and neck cancer in adults. The therapy is cleared for recurrent or metastatic head and neck squamous cell carcinoma after platinum chemotherapy and anti-PD-(L)1 treatment. RYBREVANT FASPRO is descri"
+    },
+    {
+     "date": "2026-11-25 20:47",
+     "source": "Yahoo",
+     "titre": "Chevron Cut Its Debt by $8.4 Billion. These 4 Dividend Stocks Have Fortress Balance Sheets",
+     "resume": "When the next recession hits, only some dividends survive the squeeze. Four companies from four different sectors passed a strict balance sheet test, but one of them carries a red flag that makes retirees look twice."
+    },
+    {
+     "date": "2026-11-25 20:17",
+     "source": "Yahoo",
+     "titre": "How Much You’d Need in Dividend Stocks to Generate $5,000 a Month in Passive Income",
+     "resume": "The price tag on a $60,000 dividend paycheck swings by nearly $2 million depending on the yield you chase. Higher payouts shrink the bill, but one tier hides a trap that can gut your income when a cut arrives."
+    },
+    {
+     "date": "2026-11-25 19:47",
+     "source": "Yahoo",
+     "titre": "Leaving a Roth IRA to Your Kids? Why Dividend Stocks Make the 10-Year Rule Work for Them",
+     "resume": "One stock in a six-pack of blue-chip dividend payers drives nearly two-fifths of the tax bill on an inherited portfolio, and it belongs somewhere else entirely. Your kids could pay for that mistake for decades."
+    },
+    {
+     "date": "2026-11-25 18:49",
+     "source": "Yahoo",
+     "titre": "The Business Jim Cramer Would Shed From Long-Term Pick Johnson & Johnson",
+     "resume": "We just published the list of Jim Cramer’s 10 Long-Term Stock Picks, and Johnson & Johnson (NYSE:JNJ) ranked 6th on this list. A caller asked CNBC Mad Money’s Jim Cramer in November whether to buy a stock near $140 or wait. Cramer thought the difference between paying $130 and $150 would look small "
+    },
+    {
+     "date": "2026-11-25 18:18",
+     "source": "Yahoo",
+     "titre": "What Has The Market Missed In Boston Scientific Stock's Drop?",
+     "resume": "Today's big story: Anthropic Below Its IPO Price: Do Giants Come Back."
+    },
+    {
+     "date": "2026-11-25 15:54",
+     "source": "Yahoo",
+     "titre": "Global AI in Protein Engineering Market Outlook and Opportunity Forecast to 2031 | Industry to Reach $3.82 Billion at 21.6% CAGR as Generative AI Accelerates Biologics R&D",
+     "resume": "Dublin, Nov. 25, 2026 (GLOBE NEWSWIRE) -- \"AI in Protein Engineering Market: Global Forecast to 2031\" has been added to ResearchAndMarkets.com's offering. The global AI in protein engineering market is projected to grow from USD 1.44 billion in 2026 to USD 3.82 billion by 2031, registering a CAGR of"
+    },
+    {
+     "date": "2026-11-25 14:00",
+     "source": "Yahoo",
+     "titre": "Insulet names Todd Trapp as CFO",
+     "resume": "Insulet is changing CFOs 14 months after appointing Flavia Pease to the role."
+    }
+   ]
+  }
+ ],
+ "erreurs": []
+}
