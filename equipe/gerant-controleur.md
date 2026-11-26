@@ -11,6 +11,7 @@ Lis `equipe/regles.md` et `equipe/config.json`. Dans la suite, `D` désigne le d
    - Si seuls certains titres sont en erreur ou « non utilisables » : on continue, ces titres sont intouchables aujourd'hui.
    - Le matin, les titres cotés en Suisse sont « utilisables » mais pas encore « exécutables » (pas de prix d'ouverture) : c'est normal. On peut les analyser et passer un ordre ; il sera exécuté par le relevé du soir, au prix d'ouverture du jour.
 2b. **Résultats d'entreprises** : `python3 outils/entreprises.py D/titres.json D/entreprises`. Une erreur ici n'est pas une panne : on continue sans ce fichier et on le note dans le résumé.
+2c. **Historique des cours** : `python3 outils/historique.py D/titres.json D/historique`. Une erreur ici n'est pas une panne (le fichier du jour existe peut-être déjà) : on continue.
 3. **Exécution et état** : `python3 outils/compta.py --dossier D executer D/prix/FICHIER`, puis `... etat D/prix/FICHIER`.
 4. **Lecture** : `D/lecons.md`, `D/agenda.md`, `D/etat.json`, la décision de la veille dans `D/decisions/`.
 5. **Veille et agenda** : lance un sous-agent (type général) avec la consigne : « Lis et applique `equipe/veille-agenda.md`. Dossier : D. Date : AAAA-MM-JJ. »

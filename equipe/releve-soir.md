@@ -7,6 +7,7 @@ Pourquoi le soir : la bourse suisse n'affiche le prix d'ouverture d'un jour que 
 1. `git pull`, puis `python3 outils/compta.py --dossier D verifier`. REFUS = panne.
 2. `python3 outils/prix.py D/titres.json D/prix`. Pas de fichier ou pas de taux de change = panne.
 3. `python3 outils/compta.py --dossier D executer D/prix/FICHIER`, puis `... etat D/prix/FICHIER`.
+3a. `python3 outils/origine.py noter D` : note la part investie du jour, pour l'analyse de l'origine du résultat.
 3b. `python3 outils/previsions.py noter D D/prix/FICHIER` : note les prévisions et les paris arrivés à échéance (une erreur ici n'est pas une panne).
 4. `python3 outils/journal_bord.py D soir ok "résumé en une phrase" --ordres-executes N`.
 5. Tableau de bord : `equipe/tableau-de-bord.md`.
