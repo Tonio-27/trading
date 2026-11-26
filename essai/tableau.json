@@ -1,24 +1,24 @@
 {
  "resume": [
   {
-   "date": "2026-11-25",
+   "date": "2026-11-26",
    "phase": "essai",
    "debut_compteur": null,
    "valeur_agents_chf": 10000.0,
    "perf_agents_pct": 0.0,
-   "valeur_reference_chf": 9795.68,
-   "perf_reference_pct": -2.04,
-   "valeur_mixte_chf": 9897.84,
-   "perf_mixte_pct": -1.02,
+   "valeur_reference_chf": 10131.55,
+   "perf_reference_pct": 1.32,
+   "valeur_mixte_chf": 10065.78,
+   "perf_mixte_pct": 0.66,
    "part_agents_pct": 50.0,
-   "ecart_points": 2.04,
+   "ecart_points": -1.32,
    "objectif_points": 2.0,
    "liquidites_chf": 10000.0,
    "frais_cumules_chf": 0.0,
    "positions": 0,
    "ordres_en_attente": 0,
    "operations_executees": 0,
-   "routines_reussies": 8,
+   "routines_reussies": 9,
    "routines_en_panne": 0
   }
  ],
@@ -54,6 +54,14 @@
    "mixte_pct": -1.02,
    "agents_chf": 10000.0,
    "reference_chf": 9795.68
+  },
+  {
+   "date": "2026-11-26",
+   "agents_pct": 0.0,
+   "reference_pct": 1.32,
+   "mixte_pct": 0.66,
+   "agents_chf": 10000.0,
+   "reference_chf": 10131.55
   }
  ],
  "positions": [
