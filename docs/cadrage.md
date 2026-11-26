@@ -141,6 +141,7 @@
 | D-62 | Fiche d'historique par titre (option D) : chaque matin, `outils/historique.py` calcule sur 5 ans de cours quotidiens (bourse suisse, Twelve Data) les variations sur 1 semaine à 5 ans, l'écart aux plus hauts et plus bas, la variation d'un jour habituelle et la plus forte baisse. L'analyste et le contradicteur doivent s'en servir. Durée de 5 ans recommandée par Claude, réglable. Limite : variations hors dividendes. | 26.11.2026 |
 | D-63 | Analyse de l'origine du résultat : `outils/origine.py` note chaque soir la part investie des deux portefeuilles et sépare l'écart en « effet de la part investie » et « choix des titres et frais ». Reprise dans le bilan du vendredi. | 26.11.2026 |
 | D-64 | Historique porté de 5 à 10 ans sur décision d'Antoine : 5 ans ne contenaient qu'une seule vraie baisse (2022), 10 ans en contiennent trois (2018, 2020, 2022). La fiche donne la plus forte baisse sur 5 et sur 10 ans avec ses dates, et rappelle que février-mars 2020 est le choc du Covid-19, cause exceptionnelle. Modifie D-62. | 26.11.2026 |
+| D-65 | Revue d'amélioration hebdomadaire, décidée par Antoine (pas de revue quotidienne) : chaque vendredi, le Contrôleur relit les fichiers de la semaine et propose au plus 3 améliorations orientées vers l'objectif (+2 points), avec constat, cas, effet attendu, coût et type ; Antoine décide. Après le départ du compteur : correction de l'outil dès acceptation, changement de méthode au plus une fois par mois. | 26.11.2026 |
 
 ## Points ouverts
 

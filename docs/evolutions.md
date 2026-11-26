@@ -1,6 +1,8 @@
 # Demandes d'évolution de l'outil
 
-Statuts : à faire / en cours / fait / refusé. Le Contrôleur propose, Antoine décide.
+Statuts : proposé / à faire / en cours / fait / refusé. Le Contrôleur propose chaque vendredi (au plus 3 propositions), Antoine décide.
+
+Règle des changements : pendant l'essai, tout changement est permis. Une fois le compteur lancé, une **correction de l'outil** (défaut, panne, donnée fausse) est faite dès qu'Antoine l'accepte ; un **changement de méthode** (façon d'analyser ou de décider) au maximum une fois par mois, numéroté, valable pour l'avenir seulement.
 
 | Date | Constat | Amélioration proposée | Statut |
 |---|---|---|---|

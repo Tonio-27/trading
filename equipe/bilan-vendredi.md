@@ -13,13 +13,19 @@ Lis `equipe/regles.md` et `equipe/config.json`. `D` est le dossier de travail. A
    - 0 à 3 leçons nouvelles tirées des erreurs **et** des réussites. Format : date, situation, ce qu'on a fait, ce qu'on fera la prochaine fois, **cas à l'appui** (dates des décisions concernées).
    - Relis les leçons existantes : pour chacune touchée par les faits de la semaine, ajoute une ligne datée « confirmée par … » ou « contredite par … ». Une leçon contredite 2 fois est marquée « retirée » (elle reste écrite, mais ne s'applique plus).
    - Une leçon appuyée par un seul cas est marquée « à confirmer » : elle informe, elle n'interdit rien. Un seul résultat peut être de la chance.
-5c. **L'outil** : note dans `docs/evolutions.md` (statut « à faire ») toute amélioration utile constatée pendant la semaine : panne, prix non utilisable, source illisible, consigne ambiguë. Tu ne modifies aucun programme toi-même : Antoine décide.
+5c. **Propositions d'amélioration de la semaine** (obligatoire, but : atteindre +2 points sur la référence) :
+   - Relis tous les fichiers de la semaine (`D/veille/`, `D/analyses/`, `D/risques/`, `D/decisions/`, `D/routines.csv`) et relève ce qui a manqué ou freiné : donnée absente, source illisible, règle floue ou trop stricte, erreur répétée, panne, quota gaspillé, opportunité manquée ou perte évitable.
+   - Retiens **au plus 3 propositions**, les plus utiles pour l'objectif. Pour chacune : le constat, les cas précis qui le prouvent (dates), la proposition, l'effet attendu sur le résultat ou sur la fiabilité, le coût (quota, frais, travail), et son type :
+     - **correction de l'outil** (défaut, panne, donnée fausse ou manquante) ;
+     - **changement de méthode** (façon d'analyser ou de décider).
+   - Ajoute-les à `docs/evolutions.md`, statut « proposé ». Zéro proposition est permis si la semaine n'a rien révélé : dis-le.
+   - Tu ne modifies aucun programme ni aucune consigne toi-même : Antoine décide.
 6. **Fiabilité** : compte dans `D/routines.csv` les routines de la semaine réussies et en panne.
-7. **Bilan écrit** dans `D/bilans/AAAA-MM-JJ.md`, une demi-page : valeur du portefeuille et de la référence, écart en points, opérations de la semaine, frais cumulés, positions, routines réussies, leçons, événements de la semaine suivante.
+7. **Bilan écrit** dans `D/bilans/AAAA-MM-JJ.md`, une page au maximum, qui se termine par les propositions de la semaine : valeur du portefeuille et de la référence, écart en points, opérations de la semaine, frais cumulés, positions, routines réussies, leçons, événements de la semaine suivante.
 8. **Premier vendredi du mois — audit et revue de la méthode** :
    - lance un sous-agent avec la consigne « Lis et applique `equipe/auditeur.md`. Dossier : D. Mois : AAAA-MM. » ;
    - à partir de son audit, retiens au maximum **une** correction des consignes de l'équipe. Écris-la dans `equipe/corrections.md` (numéro C-01, C-02…, date, constat chiffré, correction, effet attendu, comment on jugera dans un mois). Elle ne vaut que pour l'avenir. Ne modifie les fichiers `equipe/*.md` que pour cette correction ;
    - juge la correction du mois précédent : a-t-elle eu l'effet attendu ? Si non, propose de la retirer.
 9. **Tous les 3 mois** : prépare l'entretien avec Antoine (résultats, corrections appliquées, avertissement si plus de 5 points de retard sur la référence).
 10. `python3 outils/journal_bord.py D bilan ok "résumé"`, `python3 outils/tableau.py D`, publication du tableau de bord, commit, push.
-11. **Notification** (toujours, le vendredi) : valeur, écart avec la référence, nombre d'opérations de la semaine. Moins de 200 caractères.
+11. **Notification** (toujours, le vendredi) : valeur, écart avec la référence, nombre d'opérations de la semaine, nombre de propositions d'amélioration à décider. Moins de 200 caractères.
