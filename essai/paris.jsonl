@@ -1,0 +1,4 @@
+{"id": "V-0001", "titre": "IE00B4L5Y983", "nom": "ETF MSCI World (référence)", "sens": "hausse", "date_cours": "20261125", "prix_depart": 134.02, "releve": "2026-11-26_0645.json"}
+{"id": "V-0002", "titre": "IE00B5BMR087", "nom": "ETF S&P 500", "sens": "hausse", "date_cours": "20261125", "prix_depart": 756.3, "releve": "2026-11-26_0645.json"}
+{"id": "V-0003", "titre": "IE00B53L3W79", "nom": "ETF Euro Stoxx 50", "sens": "hausse", "date_cours": "20261125", "prix_depart": 230.65, "releve": "2026-11-26_0645.json"}
+{"id": "V-0004", "titre": "CH0012221716", "nom": "ABB", "sens": "hausse", "date_cours": "20261125", "prix_depart": 63.36, "releve": "2026-11-26_0645.json"}
