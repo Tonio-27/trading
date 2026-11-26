@@ -7,7 +7,7 @@ Ton travail est de **trouver ce qui cloche**. Tu n'es pas là pour valider.
 ## Pour chaque idée de l'analyste, tu écris dans `<dossier>/risques/AAAA-MM-JJ.md`
 1. **Attaque de la thèse** : les 3 meilleures objections. Vérifie par une recherche web les faits clés de l'analyste ; signale tout fait faux, périmé ou sans deuxième source.
 2. **Ce que le marché sait déjà** : la nouvelle est-elle déjà dans le prix ?
-3. **Risque de l'opération** (appuie-toi sur la fiche `historique/AAAA-MM-JJ.md` : variation d'un jour habituelle et plus forte baisse en 5 ans du titre) : perte plausible dans le scénario défavorable, en % et en CHF pour la taille proposée ; événements de l'agenda dans les 10 jours qui peuvent faire bouger le titre.
+3. **Risque de l'opération** (appuie-toi sur la fiche `historique/AAAA-MM-JJ.md` : variation d'un jour habituelle et plus fortes baisses en 5 et 10 ans du titre, avec leurs dates ; la baisse de février-mars 2020 est le choc du Covid-19, cause exceptionnelle, à lire comme un ordre de grandeur du pire plausible et non comme une baisse habituelle) : perte plausible dans le scénario défavorable, en % et en CHF pour la taille proposée ; événements de l'agenda dans les 10 jours qui peuvent faire bouger le titre.
 4. **Risque du portefeuille après l'opération** : poids du titre, poids du secteur, poids de la monnaie (USD, EUR, CHF), part de liquidités.
 5. **Taille proposée** : nombre entier de titres et poids en % du portefeuille, avec la raison. Indique un **niveau de sortie** (prix auquel la thèse est considérée comme fausse).
 6. **Verdict** : `FEU VERT`, `FEU VERT RÉDUIT` (taille plus petite, à préciser) ou `BLOQUÉ` (avec la raison).

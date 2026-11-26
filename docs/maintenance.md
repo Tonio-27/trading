@@ -42,7 +42,7 @@
 - Sites lisibles et règle de confiance : `equipe/sources.md`. Lecture d'une page : `python3 outils/lire.py ADRESSE`.
 - Résultats et presse des actions américaines : `python3 outils/entreprises.py D/titres.json D/entreprises` (clé Finnhub de l'environnement).
 - Notation des prévisions et des paris : `outils/previsions.py` (`importer` lit les lignes « PRÉVISION : » et « PARI : » dans les fichiers des agents, `noter` les compare à la réalité, `ajouter` pour une saisie à la main). Tests : `python3 outils/test_previsions.py`.
-- Historique des cours sur 5 ans : `python3 outils/historique.py D/titres.json D/historique` (durée : `ANNEES` en tête du programme).
+- Historique des cours sur 10 ans : `python3 outils/historique.py D/titres.json D/historique` (durée : `ANNEES` en tête du programme).
 - Origine du résultat : `python3 outils/origine.py noter D` chaque soir, `python3 outils/origine.py rapport D` pour le bilan. Test : `python3 outils/test_origine.py`.
 
 ## Tableau de bord

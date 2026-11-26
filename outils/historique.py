@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fiche chiffrée par titre : où en est le cours par rapport à son passé (5 ans).
+"""Fiche chiffrée par titre : où en est le cours par rapport à son passé (10 ans).
 Usage : python3 outils/historique.py DOSSIER/titres.json DOSSIER/historique
 Sources : bourse suisse (SIX) pour les titres cotés en Suisse, Twelve Data pour les actions américaines.
 Écrit AAAA-MM-JJ.json (pour les programmes) et AAAA-MM-JJ.md (tableau pour les agents). Fichiers datés, jamais réécrits.
@@ -9,8 +9,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from statistics import pstdev
 
-ANNEES = 5
-PERIODES = [("1 sem.", 7), ("1 mois", 30), ("3 mois", 91), ("1 an", 365), ("3 ans", 1096), ("5 ans", 1826)]
+ANNEES = 10
+PERIODES = [("1 sem.", 7), ("1 mois", 30), ("3 mois", 91), ("1 an", 365), ("3 ans", 1096), ("5 ans", 1826), ("10 ans", 3653)]
 
 
 def lire(url):
@@ -41,19 +41,26 @@ def fiche(cours):
     for nom, n in PERIODES:
         avant = [c for d, c in cours if d <= jour - timedelta(days=n)]
         # la période n'est donnée que si l'historique remonte assez loin
-        f["variations_pct"][nom] = pct(dernier, avant[-1]) if avant and cours[0][0] <= jour - timedelta(days=n) else None
+        f["variations_pct"][nom] = pct(dernier, avant[-1]) if avant and cours[0][0] <= jour - timedelta(days=n - 7) else None
     an = [c for d, c in cours if d > jour - timedelta(days=365)]
     f["plus_haut_1_an"], f["plus_bas_1_an"] = max(an), min(an)
     f["ecart_au_plus_haut_1_an_pct"] = pct(dernier, max(an))
     f["ecart_au_plus_bas_1_an_pct"] = pct(dernier, min(an))
-    f["ecart_au_plus_haut_5_ans_pct"] = pct(dernier, max(c for _, c in cours))
+    f["ecart_au_plus_haut_10_ans_pct"] = pct(dernier, max(c for _, c in cours))
     var = [(an[i] / an[i - 1] - 1) * 100 for i in range(1, len(an))]
     f["variation_quotidienne_habituelle_pct"] = round(pstdev(var), 2) if len(var) > 20 else None
-    sommet, pire = cours[0][1], 0.0
-    for _, c in cours:
-        sommet = max(sommet, c)
-        pire = min(pire, (c / sommet - 1) * 100)
-    f["plus_forte_baisse_5_ans_pct"] = round(pire, 1)
+    def pire_baisse(serie):
+        """Plus forte baisse d'un sommet à un creux, avec ses dates."""
+        sommet, jour_sommet, pire = serie[0][1], serie[0][0], (0.0, serie[0][0], serie[0][0])
+        for d, c in serie:
+            if c > sommet:
+                sommet, jour_sommet = c, d
+            if (c / sommet - 1) * 100 < pire[0]:
+                pire = ((c / sommet - 1) * 100, jour_sommet, d)
+        return {"baisse_pct": round(pire[0], 1), "du": pire[1].strftime("%m.%Y"), "au": pire[2].strftime("%m.%Y")}
+    f["plus_forte_baisse_5_ans"] = pire_baisse([x for x in cours if x[0] > jour - timedelta(days=1826)])
+    f["plus_forte_baisse_10_ans"] = pire_baisse(cours)
+    f["historique_depuis"] = cours[0][0].isoformat()
     return f
 
 
@@ -81,13 +88,17 @@ def main():
     base.with_suffix(".json").write_text(json.dumps(res, ensure_ascii=False, indent=1) + "\n")
     v = lambda x: "—" if x is None else f"{x:+.1f}"
     lignes = [f"# Historique des cours au {m.strftime('%d.%m.%Y')} ({ANNEES} ans)", "",
-              "Variations en %, hors dividendes. Faits sur le passé, pas des prévisions.", "",
-              "| Titre | Cours | " + " | ".join(n for n, _ in PERIODES) + " | Écart au plus haut d'un an | Écart au plus bas d'un an | Écart au plus haut de 5 ans | Variation d'un jour habituelle | Plus forte baisse en 5 ans |",
-              "|---|---|" + "---|" * (len(PERIODES) + 5)]
+              "Variations en %, hors dividendes. Faits sur le passé, pas des prévisions.",
+              "La plus forte baisse est mesurée d'un sommet à un creux ; ses dates disent de quel épisode il s'agit. "
+              "Février-mars 2020 est le choc de la pandémie de Covid-19 : une cause exceptionnelle, mais des baisses de cette taille "
+              "reviennent pour d'autres raisons (2008, 2022). À lire comme un ordre de grandeur du pire plausible, pas comme une habitude.", "",
+              "| Titre | Cours | " + " | ".join(n for n, _ in PERIODES) + " | Écart au plus haut d'un an | Écart au plus bas d'un an | Écart au plus haut de 10 ans | Variation d'un jour habituelle | Plus forte baisse en 5 ans | Plus forte baisse en 10 ans |",
+              "|---|---|" + "---|" * (len(PERIODES) + 6)]
+    b = lambda x: f"{x['baisse_pct']:+.1f} ({x['du']} à {x['au']})"
     for t in res["titres"]:
         lignes.append(f"| {t['nom']} | {t['cours']} | " + " | ".join(v(t["variations_pct"][n]) for n, _ in PERIODES) +
-                      f" | {v(t['ecart_au_plus_haut_1_an_pct'])} | {v(t['ecart_au_plus_bas_1_an_pct'])} | {v(t['ecart_au_plus_haut_5_ans_pct'])} | "
-                      f"± {t['variation_quotidienne_habituelle_pct']} | {v(t['plus_forte_baisse_5_ans_pct'])} |")
+                      f" | {v(t['ecart_au_plus_haut_1_an_pct'])} | {v(t['ecart_au_plus_bas_1_an_pct'])} | {v(t['ecart_au_plus_haut_10_ans_pct'])} | "
+                      f"± {t['variation_quotidienne_habituelle_pct']} | {b(t['plus_forte_baisse_5_ans'])} | {b(t['plus_forte_baisse_10_ans'])} |")
     for e in res["erreurs"]:
         lignes.append(f"\nHistorique indisponible pour {e['titre']} : {e['erreur']}")
     base.with_suffix(".md").write_text("\n".join(lignes) + "\n")
