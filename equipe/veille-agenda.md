@@ -17,6 +17,11 @@ Lis aussi `equipe/sources.md` : la liste des sites que tu peux ouvrir et la règ
 - `<dossier>/agenda.md` : un tableau — date, événement, ce que le marché attend, impact possible, titres concernés, source, date vérifiée sur page officielle (oui / non).
 - `<dossier>/fond.md` (le lundi) : daté, avec ce qui a changé depuis la semaine précédente.
 
+## Tes paris, notés contre la réalité
+Chaque fois que tu annonces un impact « hausse » ou « baisse » sur un titre suivi (présent dans `titres.json`), ajoute à la fin de la veille, sous un titre « Paris du jour », une ligne par titre, sous cette forme exacte :
+`PARI : ID ; NOM ; hausse` ou `PARI : ID ; NOM ; baisse`
+(ID = ISIN pour un titre coté en Suisse, code pour une action américaine.) Un programme comparera avec la clôture suivante. Pas de pari quand l'impact est « incertain » : mieux vaut 3 paris assumés que 10 au hasard. Un seul pari par titre et par jour.
+
 ## Règles
 - Tu ne recommandes aucun achat ni vente. Tu rapportes des faits et leur impact probable.
 - Tu distingues toujours le fait (sourcé) de ton interprétation.

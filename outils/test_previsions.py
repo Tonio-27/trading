@@ -58,6 +58,33 @@ attendu("scénario arrivé", n["arrive"], "favorable")
 attendu("note de Brier", n["brier"], "0.5450")
 lancer("noter", str(d), str(d / "plus-tard.json"))
 attendu("une prévision n'est notée qu'une fois", len(previsions.lire(d / "previsions-notes.jsonl")), 1)
+
+# Import depuis les fichiers des agents. Exemple calculé à la main :
+#   pari « hausse » sur Nestlé parti de 85.55 ; clôture suivante 90.00 → +5.20 % → juste
+#   pari « baisse » sur Novartis parti de 127.76 ; clôture suivante inchangée (127.76) → 0.00 % → faux
+#   prévision à 7 jours sur la référence, seuils +2 / −2, probabilités 30 / 40 / 30
+compta.maintenant = lambda: datetime(2026, 11, 22, 17, 0, tzinfo=timezone.utc)
+(d / "veille.md").write_text("Texte libre\nPARI : CH0038863350 ; Nestlé ; hausse\n- `PARI : CH0012005267 ; Novartis ; baisse`\n")
+(d / "analyse.md").write_text("PRÉVISION : IE00B4L5Y983 ; ETF MSCI World ; horizon 7 jours ; favorable si ≥ +2 % ; défavorable si ≤ −2 % ; probabilités 30 / 40 / 30 ; statut marche\n"
+                              "PRÉVISION : CH0012032113 ; Roche ; horizon 7 jours ; favorable si ≥ +2,5 % ; défavorable si ≤ -2 % ; probabilités 30 / 50 / 20 ; statut ecartee\n"
+                              "**PRÉVISION : AAPL ; Apple ; horizon 60 jours ; favorable si ≥ +6 % ; défavorable si ≤ −5 % ; probabilités 40 / 35 / 25 ; statut idee**\n")
+attendu("idée sans décision du Gérant refusée", "sans décision" in (lancer("importer", str(d), str(RELEVE), str(d / "veille.md"), str(d / "analyse.md")) or ""), True)
+attendu("import refusé = rien d'enregistré", len(previsions.lire(d / "previsions.jsonl")), 1)
+lancer("importer", str(d), str(RELEVE), str(d / "veille.md"), str(d / "analyse.md"), "--decision", "AAPL=retenue")
+pv = previsions.lire(d / "previsions.jsonl")
+attendu("3 prévisions importées", len(pv), 4)
+attendu("statut « ecartee » de l'analyste", [x["decision"] for x in pv if x["titre"] == "CH0012032113"], ["non_proposee"])
+attendu("seuil avec virgule lu correctement", [x["seuil_haut_pct"] for x in pv if x["titre"] == "CH0012032113"], [2.5])
+attendu("2 paris importés", len(previsions.lire(d / "paris.jsonl")), 2)
+lancer("importer", str(d), str(RELEVE), str(d / "veille.md"), str(d / "analyse.md"), "--decision", "AAPL=retenue")
+attendu("second import sans doublon", (len(previsions.lire(d / "previsions.jsonl")), len(previsions.lire(d / "paris.jsonl"))), (4, 2))
+(d / "mauvais.md").write_text("PRÉVISION : AAPL ; Apple ; horizon 60 jours ; probabilités 40 / 35 / 25\n")
+attendu("ligne mal formée refusée", "mal formée" in (lancer("importer", str(d), str(RELEVE), str(d / "mauvais.md")) or ""), True)
+compta.maintenant = lambda: datetime(2026, 12, 21, 7, 0, tzinfo=timezone.utc)
+lancer("noter", str(d), str(d / "plus-tard.json"))
+pn = {n["titre"]: n["juste"] for n in previsions.lire(d / "paris-notes.jsonl")}
+attendu("pari hausse Nestlé juste (+5.20 %)", pn["CH0038863350"], True)
+attendu("pari baisse Novartis faux (0.00 %)", pn["CH0012005267"], False)
 shutil.rmtree(d)
 print(f"\n{'TOUT EST JUSTE' if not echecs else str(len(echecs)) + ' ÉCHEC(S)'}")
 sys.exit(1 if echecs else 0)

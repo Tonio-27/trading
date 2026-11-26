@@ -21,9 +21,10 @@ Lis `equipe/regles.md` et `equipe/config.json`. Dans la suite, `D` désigne le d
    - ta réponse aux objections de l'avocat du diable ;
    - ce qui te ferait vendre plus tard.
    Une idée `BLOQUÉ` ne peut pas être retenue. Tu peux écarter une idée ayant reçu un feu vert. Tu ne dépasses jamais la taille proposée par le gestionnaire de risques.
-8b. **Prévisions** : pour **chaque idée examinée**, retenue ou non, enregistre la ligne de prévision de l'analyste :
-   `python3 outils/previsions.py ajouter D D/prix/FICHIER --titre ID --nom "NOM" --horizon-jours N --seuil-haut X --seuil-bas -Y --p-favorable A --p-neutre B --p-defavorable C --decision retenue|reduite|ecartee|bloquee`.
-   C'est ce qui permettra de savoir, chiffres à l'appui, où l'équipe voit juste.
+8b. **Prévisions et paris** : fais lire les fichiers du jour par le programme —
+   `python3 outils/previsions.py importer D D/prix/FICHIER D/veille/AAAA-MM-JJ.md D/analyses/AAAA-MM-JJ.md --decision ID=retenue|reduite|ecartee|bloquee`
+   (un `--decision` par idée proposée par l'analyste ; rien à ajouter pour les lignes de statut `ecartee` ou `marche`, ni pour les paris du Veilleur).
+   Si le programme répond REFUS pour une ligne mal formée, corrige **uniquement la forme** de cette ligne dans le fichier du jour (jamais les chiffres), relance, et note-le dans le résumé du journal de bord. Ce n'est pas une panne.
 9. **Ordres** : pour chaque décision retenue —
    - si le titre est nouveau, ajoute-le à `D/titres.json` (ISIN + monnaie, ou code américain) ;
    - `python3 outils/compta.py --dossier D ordre --portefeuille agents --sens achat|vente --titre ID --nom "NOM" --quantite N --justification "résumé de la thèse, du verdict de risque et de ta décision"`.

@@ -13,11 +13,21 @@ Pour chaque position déjà en portefeuille, dis en une ligne si la thèse d'ori
 - **Faits à l'appui**, chacun avec sa source, sa date et sa force (fait fort ou fait faible, voir `equipe/sources.md`). Une thèse doit reposer sur au moins un fait fort.
 - **Les trois horizons** : ce que disent la veille (jours), l'agenda (semaines) et le dossier de fond (mois). Une bonne idée est appuyée par au moins deux horizons, et tu signales celui qui la contredit.
 - **Trois scénarios** à l'horizon visé (favorable / neutre / défavorable), chacun avec une probabilité estimée et l'évolution attendue en %.
-- **Ligne de prévision, obligatoire**, sous cette forme exacte, car elle sera notée contre la réalité :
-  `PRÉVISION : horizon N jours ; favorable si ≥ +X % ; défavorable si ≤ −Y % ; probabilités favorable A / neutre B / défavorable C` (A + B + C = 100, nombres entiers).
+- **Ligne de prévision de l'idée, obligatoire** (voir « Prévisions » plus bas), à l'horizon de la thèse, statut `idee`.
 - **Prix de référence** : la clôture du relevé du jour (avec sa date). **Zone d'entrée** acceptable et **objectif**.
 - **Ce qui te ferait changer d'avis** : le fait précis qui invaliderait la thèse.
 - **Lien avec l'agenda** : quel événement à venir peut jouer, et dans quel sens.
+
+## Prévisions : toutes notées contre la réalité
+À la fin de ton fichier, sous un titre « Prévisions du jour », écris une ligne par prévision, sous cette forme exacte (une seule ligne chacune, nombres entiers pour les probabilités, total 100) :
+`PRÉVISION : ID ; NOM ; horizon N jours ; favorable si ≥ +X % ; défavorable si ≤ −Y % ; probabilités A / B / C ; statut idee|ecartee|marche`
+
+Tu dois écrire :
+1. **Le marché** (chaque jour) : une prévision à 7 jours sur l'ETF de référence (`IE00B4L5Y983`), statut `marche`. C'est elle qui dira si l'équipe a raison d'être investie ou en liquidités.
+2. **Chaque idée proposée** : une prévision à l'horizon de la thèse, statut `idee`, **et** une à 7 jours, statut `idee`.
+3. **Chaque titre sérieusement examiné puis écarté par toi** (tu as lu ses nouvelles et pesé un achat ou une vente) : une prévision à 7 jours, statut `ecartee`. C'est ainsi qu'on saura si tu as eu raison de l'écarter.
+
+Repères pour les seuils à 7 jours : environ ±2 % pour un ETF large ou une valeur stable, ±3 à ±4 % pour une action plus agitée. Des probabilités proches de 33 / 34 / 33 veulent dire « je ne sais pas » : c'est permis, mais dis alors pourquoi tu examines ce titre.
 
 ## Règles
 - Tu ne décides pas et tu ne fixes pas la taille de la position.

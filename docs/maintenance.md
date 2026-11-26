@@ -41,7 +41,7 @@
 ## Information des agents
 - Sites lisibles et règle de confiance : `equipe/sources.md`. Lecture d'une page : `python3 outils/lire.py ADRESSE`.
 - Résultats et presse des actions américaines : `python3 outils/entreprises.py D/titres.json D/entreprises` (clé Finnhub de l'environnement).
-- Notation des prévisions : `outils/previsions.py` (`ajouter`, `noter`). Tests : `python3 outils/test_previsions.py`.
+- Notation des prévisions et des paris : `outils/previsions.py` (`importer` lit les lignes « PRÉVISION : » et « PARI : » dans les fichiers des agents, `noter` les compare à la réalité, `ajouter` pour une saisie à la main). Tests : `python3 outils/test_previsions.py`.
 
 ## Tableau de bord
 - https://claude.ai/artifact/V4wDXGeLNUN91P56uWSiVy (page privée). Mise à jour : `equipe/tableau-de-bord.md`. Mise en forme : `tableau-de-bord/index.html`.
