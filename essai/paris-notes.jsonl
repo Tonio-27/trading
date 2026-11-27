@@ -2,3 +2,6 @@
 {"id": "V-0002", "titre": "IE00B5BMR087", "nom": "ETF S&P 500", "sens": "hausse", "date_cours_fin": "20261126", "variation_pct": "3.37", "juste": true, "releve": "2026-11-26_2141.json"}
 {"id": "V-0003", "titre": "IE00B53L3W79", "nom": "ETF Euro Stoxx 50", "sens": "hausse", "date_cours_fin": "20261126", "variation_pct": "2.32", "juste": true, "releve": "2026-11-26_2141.json"}
 {"id": "V-0004", "titre": "CH0012221716", "nom": "ABB", "sens": "hausse", "date_cours_fin": "20261126", "variation_pct": "2.97", "juste": true, "releve": "2026-11-26_2141.json"}
+{"id": "V-0005", "titre": "IE00B4L5Y983", "nom": "ETF MSCI World (référence)", "sens": "hausse", "date_cours_fin": "20261127", "variation_pct": "0.74", "juste": true, "releve": "2026-11-27_2141.json"}
+{"id": "V-0006", "titre": "IE00B5BMR087", "nom": "ETF S&P 500", "sens": "hausse", "date_cours_fin": "20261127", "variation_pct": "0.61", "juste": true, "releve": "2026-11-27_2141.json"}
+{"id": "V-0007", "titre": "CH0139101593", "nom": "ETF or (ZKB Gold)", "sens": "hausse", "date_cours_fin": "20261127", "variation_pct": "1.87", "juste": true, "releve": "2026-11-27_2141.json"}
