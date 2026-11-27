@@ -19,6 +19,11 @@ Pour chaque position déjà en portefeuille, dis en une ligne si la thèse d'ori
 - **Ce qui te ferait changer d'avis** : le fait précis qui invaliderait la thèse.
 - **Lien avec l'agenda** : quel événement à venir peut jouer, et dans quel sens.
 
+## Règle « tout investi par défaut »
+L'argent sans idée est placé dans l'ETF de référence. Une idée d'achat se lit donc ainsi : **vendre une partie de l'ETF pour acheter ce titre**. Elle doit promettre de faire nettement mieux que l'ETF, pas seulement de monter, et couvrir deux ordres de frais (vente d'ETF et achat).
+Si tu penses que le marché va baisser, tu peux proposer un **pari baissier** (garder une part en liquidités) : c'est une idée comme une autre, avec sa thèse, ses faits, sa prévision « marche » (défavorable plus probable que favorable) et la part proposée en liquidités.
+Pour chaque idée, donne un **prix d'entrée maximal** : il sera passé comme cours limite.
+
 ## Prévisions : toutes notées contre la réalité
 À la fin de ton fichier, sous un titre « Prévisions du jour », écris une ligne par prévision, sous cette forme exacte (une seule ligne chacune, nombres entiers pour les probabilités, total 100) :
 `PRÉVISION : ID ; NOM ; horizon N jours ; favorable si ≥ +X % ; défavorable si ≤ −Y % ; probabilités A / B / C ; statut idee|ecartee|marche`

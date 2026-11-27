@@ -36,7 +36,8 @@
 - `outils/compta.py` : commandes `init`, `ordre`, `executer`, `etat`, `verifier`. Les données vivent dans `donnees/` (journal, état, performance).
 - Le journal `donnees/journal.jsonl` ne se modifie jamais à la main : `python3 outils/compta.py verifier` détecte toute retouche.
 - Frais : `outils/frais.json` (tarifs Interactive Brokers relevés le 22.11.2026). Un changement de tarif ne vaut que pour les opérations futures.
-- Tests : `python3 outils/test_compta.py` doit afficher « TOUT EST JUSTE » avant toute mise en service d'une modification.
+- Tests : `python3 outils/test_compta.py`, `test_ordres.py`, `test_previsions.py` et `test_origine.py` doivent tous afficher « TOUT EST JUSTE » avant toute mise en service d'une modification.
+- Ordres : `--limite` (cours limité), `--financer-par` (vente automatique d'ETF pour financer un achat), `--maximum` (placement de toutes les liquidités dans l'ETF de référence).
 
 ## Information des agents
 - Sites lisibles et règle de confiance : `equipe/sources.md`. Lecture d'une page : `python3 outils/lire.py ADRESSE`.

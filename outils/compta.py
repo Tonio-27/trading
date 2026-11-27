@@ -10,6 +10,11 @@ La vraie garantie reste l'historique Git poussé sur GitHub, que personne ne peu
 Commandes :
   init --capital 10000
   ordre --portefeuille agents|reference --sens achat|vente --titre ID --nom NOM --quantite N --justification TEXTE
+        [--limite PRIX]        ordre à cours limité : un achat ne s'exécute que si l'ouverture est au plus PRIX,
+                               une vente que si elle est au moins PRIX ; sinon l'ordre attend, puis est rejeté après 5 jours
+        [--financer-par ID]    achat : si les liquidités manquent, le programme vend lui-même le nombre de parts de ID
+                               juste nécessaire, au prix d'ouverture du même relevé (règle « tout investi par défaut »)
+        [--maximum]            achat du plus grand nombre de parts que les liquidités permettent (ETF de référence seulement)
   executer RELEVE.json     exécute les ordres en attente au prix d'ouverture du relevé
   etat RELEVE.json         valorise les deux portefeuilles et ajoute une ligne à la performance
   dividende RELEVE.json --portefeuille P --titre ID --par-action X --retenue-pct Y --date-detachement J --source S
@@ -30,6 +35,14 @@ RENDEMENT_MAX = Decimal("0.10")  # un dividende de plus de 10 % du cours est ref
 HEURE_LIMITE = (8, 55)    # un ordre enregistré plus tard (heure de Zurich) compte pour le lendemain :
                           # il ne peut ainsi jamais être exécuté à un prix d'ouverture déjà connu
 ZURICH = ZoneInfo("Europe/Zurich")
+CONFIG = Path(__file__).resolve().parent.parent / "equipe" / "config.json"
+
+
+def id_reference():
+    try:
+        return json.loads(CONFIG.read_text())["reference"]["titre"]
+    except Exception:
+        return "IE00B4L5Y983"
 
 
 def maintenant():
@@ -227,8 +240,12 @@ def cmd_ordre(a, F):
     journal = lire_journal(a.dossier)
     if not journal:
         raise Refus("journal vide : lancer d'abord « init »")
-    if a.maximum and (a.portefeuille, a.sens) != ("reference", "achat"):
-        raise Refus("--maximum est réservé à l'achat de la référence")
+    if a.maximum and (a.sens != "achat" or a.titre != id_reference()):
+        raise Refus("--maximum est réservé à l'achat de l'ETF de référence")
+    if a.limite is not None and a.limite <= 0:
+        raise Refus("le cours limite doit être positif")
+    if a.financer_par and (a.sens != "achat" or a.financer_par == a.titre):
+        raise Refus("--financer-par ne sert qu'à un achat, financé par la vente d'un autre titre")
     if a.quantite <= 0 and not a.maximum:
         raise Refus("la quantité doit être un nombre entier positif")
     if len(a.justification.strip()) < 20:
@@ -236,9 +253,13 @@ def cmd_ordre(a, F):
     n = sum(1 for l in journal if l["type"] == "ordre") + 1
     l = ajouter(a.dossier, {"type": "ordre", "id": f"O-{n:04d}", "portefeuille": a.portefeuille, "sens": a.sens,
                             "titre": a.titre, "nom": a.nom, "quantite": 0 if a.maximum else a.quantite,
-                            **({"maximum": True} if a.maximum else {}), "date_decision": date_decision_auto(), "justification": a.justification.strip()})
+                            **({"maximum": True} if a.maximum else {}),
+                            **({"limite": a.limite} if a.limite is not None else {}),
+                            **({"financement": a.financer_par} if a.financer_par else {}),
+                            "date_decision": date_decision_auto(), "justification": a.justification.strip()})
     print(f"Ordre {l['id']} enregistré : {a.sens} {'le maximum possible' if a.maximum else a.quantite} × {a.nom}, décision datée du {l['date_decision']}, "
-          f"exécution au premier prix d'ouverture à partir de ce jour.")
+          f"exécution au premier prix d'ouverture à partir de ce jour"
+          + (f", à cours limité {a.limite}" if a.limite is not None else "") + (f", financé au besoin par la vente de {a.financer_par}" if a.financer_par else "") + ".")
 
 
 def cmd_executer(a, F):
@@ -267,8 +288,17 @@ def cmd_executer(a, F):
                 print(f"{o['id']} en attente : pas encore de prix d'ouverture utilisable à partir du {o['date_decision']}")
             continue
         if p["date_cours"] > limite.strftime("%Y%m%d"):
-            rejet(f"premier prix d'ouverture disponible plus de {EXPIRATION_JOURS} jours après la décision")
+            rejet(f"cours limite {o['limite']} non atteint en {EXPIRATION_JOURS} jours" if "limite" in o else
+                  f"premier prix d'ouverture disponible plus de {EXPIRATION_JOURS} jours après la décision")
             continue
+        if "limite" in o:
+            ouv, lim = D(p["ouverture"]), D(str(o["limite"]))
+            if (o["sens"] == "achat" and ouv > lim) or (o["sens"] == "vente" and ouv < lim):
+                if jour_releve > limite:
+                    rejet(f"cours limite {o['limite']} non atteint en {EXPIRATION_JOURS} jours")
+                else:
+                    print(f"{o['id']} en attente : ouverture {p['ouverture']}, cours limite {o['limite']} non atteint")
+                continue
         taux = taux_de(releve, p["monnaie"])
         marche = "six" if p["source"].startswith("SIX") else "us"
         calcul = lambda q: frais_ordre(marche, q, p["ouverture"], p["monnaie"], taux, taux_de(releve, "USD"), F)
@@ -291,6 +321,33 @@ def cmd_executer(a, F):
                 continue
             montants = {"net_chf": str(montant - frais)}
         else:
+            if montant + frais > pf["liquidites"] and o.get("financement"):
+                manque = montant + frais - pf["liquidites"]
+                fid, pe = o["financement"], prix.get(o["financement"])
+                detenu = pf["positions"].get(fid, {"quantite": 0})["quantite"]
+                if not executable(pe) or pe["date_cours"] < decision.strftime("%Y%m%d"):
+                    rejet(f"financement impossible : pas de prix d'ouverture utilisable pour {fid} dans ce relevé")
+                    continue
+                te = taux_de(releve, pe["monnaie"])
+                me = "six" if pe["source"].startswith("SIX") else "us"
+                net = lambda q: (lambda r: r[0] - r[1] - r[2] - r[3])(frais_ordre(me, q, pe["ouverture"], pe["monnaie"], te, taux_de(releve, "USD"), F))
+                qv = next((q for q in range(1, detenu + 1) if net(q) >= manque), None)
+                if qv is None:
+                    rejet(f"financement impossible : {detenu} part(s) de {fid} ne suffisent pas")
+                    continue
+                mv, cv, chv, tv = frais_ordre(me, qv, pe["ouverture"], pe["monnaie"], te, taux_de(releve, "USD"), F)
+                n = sum(1 for l in lire_journal(a.dossier) if l["type"] == "ordre") + 1
+                ov = ajouter(a.dossier, {"type": "ordre", "id": f"O-{n:04d}", "portefeuille": o["portefeuille"], "sens": "vente",
+                                         "titre": fid, "nom": pf["noms"].get(fid, fid), "quantite": qv, "date_decision": o["date_decision"],
+                                         "justification": f"Vente automatique pour financer l'ordre {o['id']} (règle « tout investi par défaut »)."})
+                ajouter(a.dossier, {"type": "execution", "ordre": ov["id"], "quantite": qv, "date_cours": pe["date_cours"],
+                                    "prix": pe["ouverture"], "monnaie": pe["monnaie"], "taux_chf": str(te),
+                                    "date_taux": releve["change_en_chf"]["date"], "montant_chf": str(mv), "commission_chf": str(cv),
+                                    "frais_change_chf": str(chv), "timbre_chf": str(tv), "net_chf": str(mv - cv - chv - tv),
+                                    "source_prix": pe["source"], **trace(releve)})
+                print(f"{ov['id']} EXÉCUTÉ : vente automatique de {qv} × {fid} à {pe['ouverture']} {pe['monnaie']}, net CHF {mv - cv - chv - tv}")
+                s, _ = situation(lire_journal(a.dossier))
+                pf = s[o["portefeuille"]]
             if montant + frais > pf["liquidites"]:
                 rejet(f"liquidités insuffisantes (CHF {pf['liquidites']} disponibles, CHF {montant + frais} nécessaires) : pas d'effet de levier")
                 continue
@@ -401,6 +458,7 @@ def main(argv=None):
     p.add_argument("--titre", required=True); p.add_argument("--nom", required=True)
     p.add_argument("--quantite", type=int, default=0); p.add_argument("--justification", required=True)
     p.add_argument("--maximum", action="store_true")
+    p.add_argument("--limite", type=float); p.add_argument("--financer-par")
     p = sp.add_parser("dividende"); p.add_argument("releve")
     p.add_argument("--portefeuille", choices=PORTEFEUILLES, required=True); p.add_argument("--titre", required=True)
     p.add_argument("--par-action", required=True); p.add_argument("--retenue-pct", required=True)

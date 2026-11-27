@@ -8,6 +8,11 @@ Argent **fictif**. Aucun ordre réel, aucune connexion à un courtier.
 - Titres achetables : uniquement ceux que le programme sait relever — cotés à la bourse suisse (par ISIN) ou actions américaines (par code). L'Europe s'achète via des ETF cotés en Suisse.
 - Nombres entiers de titres.
 
+## Tout investi par défaut (D-66)
+- L'argent qui ne sert à aucune idée est placé dans l'ETF de référence (`IE00B4L5Y983`). Les agents partent ainsi à égalité avec la référence : seules leurs idées font la différence.
+- Une idée d'achat est financée par la vente d'une partie de cet ETF (le programme calcule lui-même combien de parts vendre).
+- Garder plus de 5 % du portefeuille en liquidités est un **pari baissier** : il doit être écrit dans la décision du jour, appuyé par une prévision « marche » où le scénario défavorable est plus probable que le favorable, et accepté par le Gestionnaire de risques. Il vaut 5 jours de bourse, puis doit être renouvelé.
+
 ## Honnêteté
 - Les agents ne calculent rien : valeur, frais, change et performance viennent de `outils/compta.py`.
 - Aucun prix cité de mémoire. Un prix vient du relevé du jour (`<dossier>/prix/`), avec sa date.

@@ -17,7 +17,8 @@ Lignes lues par « importer » (une par ligne, format strict) :
       statut « idee » : idée proposée par l'analyste — le Gérant doit donner sa décision avec --decision ID=…
       statut « ecartee » : titre examiné puis écarté par l'analyste lui-même ; statut « marche » : prévision sur la référence.
   PARI : ID ; NOM ; hausse|baisse
-      Pari du Veilleur sur le sens du cours à la prochaine séance. Noté contre la clôture suivante.
+      Pari du Veilleur sur la prochaine séance, noté contre la clôture suivante. Sur un ETF large (marché), « hausse » veut dire
+      que le cours monte. Sur tout autre titre, « hausse » veut dire qu'il fait mieux que l'ETF de référence, « baisse » moins bien.
 
 Note de Brier : somme des carrés des écarts entre les probabilités annoncées et ce qui est arrivé.
 0 = prévision parfaite ; 0.67 = prévision au hasard (un tiers partout) ; 2 = certitude totale et fausse.
@@ -30,6 +31,9 @@ sys.path.insert(0, str(Path(__file__).parent))
 import compta
 
 SCENARIOS = ("favorable", "neutre", "defavorable")
+# Paris « de marché » : jugés dans l'absolu. Tout autre titre est jugé par rapport à l'ETF de référence.
+ETF_MARCHE = {"IE00B4L5Y983", "IE00B5BMR087", "IE00B53L3W79"}
+REFERENCE = "IE00B4L5Y983"
 
 
 def fiable(p):
@@ -124,8 +128,12 @@ def cmd_importer(a):
         p = prix.get(titre)
         if not fiable(p) or any((l["titre"], l["date_cours"]) == (titre, p["date_cours"]) for l in deja + lire(f)):
             continue
+        ref = prix.get(REFERENCE)
+        relatif = titre not in ETF_MARCHE and fiable(ref) and ref["date_cours"] == p["date_cours"]
         ajouter_ligne(f, {"id": f"V-{len(lire(f)) + 1:04d}", "titre": titre, "nom": nom, "sens": sens,
-                          "date_cours": p["date_cours"], "prix_depart": p["cloture"], "releve": releve["_nom"]})
+                          "type": "relatif" if relatif else "marche",
+                          "date_cours": p["date_cours"], "prix_depart": p["cloture"],
+                          **({"reference_depart": ref["cloture"]} if relatif else {}), "releve": releve["_nom"]})
         npa += 1
     print(f"Import : {np_} prévision(s) nouvelle(s) sur {len(previsions)} lue(s), {npa} pari(s) nouveau(x) sur {len(paris)} lu(s).")
 
@@ -136,13 +144,26 @@ def noter_paris(d, releve, prix):
         p = prix.get(pa["titre"])
         if pa["id"] in notes or not fiable(p) or p["date_cours"] <= pa["date_cours"]:
             continue
-        variation = (Decimal(str(p["cloture"])) / Decimal(str(pa["prix_depart"])) * 100 - 100).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
-        juste = variation > 0 if pa["sens"] == "hausse" else variation < 0
+        var = lambda fin, debut: (Decimal(str(fin)) / Decimal(str(debut)) * 100 - 100).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+        variation = var(p["cloture"], pa["prix_depart"])
+        extra = {}
+        if pa.get("type") == "relatif":
+            ref = prix.get(REFERENCE)
+            if not fiable(ref) or ref["date_cours"] != p["date_cours"]:
+                continue   # on attend un relevé où le titre et la référence ont un cours du même jour
+            ecart = variation - var(ref["cloture"], pa["reference_depart"])
+            extra = {"variation_reference_pct": str(var(ref["cloture"], pa["reference_depart"])), "variation_relative_pct": str(ecart)}
+            juste = ecart > 0 if pa["sens"] == "hausse" else ecart < 0
+        else:
+            juste = variation > 0 if pa["sens"] == "hausse" else variation < 0
         ajouter_ligne(d / "paris-notes.jsonl", {"id": pa["id"], "titre": pa["titre"], "nom": pa["nom"], "sens": pa["sens"],
-                      "date_cours_fin": p["date_cours"], "variation_pct": str(variation), "juste": juste, "releve": releve["_nom"]})
+                      "type": pa.get("type", "absolu"), "date_cours_fin": p["date_cours"], "variation_pct": str(variation), **extra,
+                      "juste": juste, "releve": releve["_nom"]})
     tous = lire(d / "paris-notes.jsonl")
-    if tous:
-        print(f"Paris du Veilleur : {sum(n['juste'] for n in tous)} juste(s) sur {len(tous)} (le hasard donnerait environ la moitié).")
+    for t, nom in (("relatif", "sur des titres, par rapport au marché"), ("marche", "sur le marché (ETF larges)"), ("absolu", "anciens, dans l'absolu (avant le 28.11.2026)")):
+        g = [n for n in tous if n.get("type", "absolu") == t]
+        if g:
+            print(f"Paris du Veilleur {nom} : {sum(n['juste'] for n in g)} juste(s) sur {len(g)} (le hasard donnerait environ la moitié).")
 
 
 def cmd_ajouter(a):

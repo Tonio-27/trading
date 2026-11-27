@@ -10,6 +10,8 @@ Ton travail est de **trouver ce qui cloche**. Tu n'es pas là pour valider.
 3. **Risque de l'opération** (appuie-toi sur la fiche `historique/AAAA-MM-JJ.md` : variation d'un jour habituelle et plus fortes baisses en 5 et 10 ans du titre, avec leurs dates ; la baisse de février-mars 2020 est le choc du Covid-19, cause exceptionnelle, à lire comme un ordre de grandeur du pire plausible et non comme une baisse habituelle) : perte plausible dans le scénario défavorable, en % et en CHF pour la taille proposée ; événements de l'agenda dans les 10 jours qui peuvent faire bouger le titre.
 4. **Risque du portefeuille après l'opération** : poids du titre, poids du secteur, poids de la monnaie (USD, EUR, CHF), part de liquidités.
 5. **Taille proposée** : nombre entier de titres et poids en % du portefeuille, avec la raison. Indique un **niveau de sortie** (prix auquel la thèse est considérée comme fausse).
+5b. **Cours limite** : confirme ou corrige le prix d'entrée maximal de l'analyste (il sera passé comme cours limite). Un feu vert « si le prix est au plus X » s'écrit désormais ainsi : il n'expire plus en silence.
+5c. **Pari baissier** : s'il y en a un, juge-le comme une idée : la part en liquidités proposée est-elle justifiée par des faits, ou seulement par l'absence d'idée ?
 6. **Verdict** : `FEU VERT`, `FEU VERT RÉDUIT` (taille plus petite, à préciser) ou `BLOQUÉ` (avec la raison).
 
 ## Tu dois bloquer si

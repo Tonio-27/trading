@@ -64,7 +64,7 @@ attendu("une prévision n'est notée qu'une fois", len(previsions.lire(d / "prev
 #   pari « baisse » sur Novartis parti de 127.76 ; clôture suivante inchangée (127.76) → 0.00 % → faux
 #   prévision à 7 jours sur la référence, seuils +2 / −2, probabilités 30 / 40 / 30
 compta.maintenant = lambda: datetime(2026, 11, 22, 17, 0, tzinfo=timezone.utc)
-(d / "veille.md").write_text("Texte libre\nPARI : CH0038863350 ; Nestlé ; hausse\n- `PARI : CH0012005267 ; Novartis ; baisse`\n")
+(d / "veille.md").write_text("Texte libre\nPARI : CH0038863350 ; Nestlé ; hausse\n- `PARI : CH0012005267 ; Novartis ; baisse`\nPARI : IE00B4L5Y983 ; ETF MSCI World ; hausse\n")
 (d / "analyse.md").write_text("PRÉVISION : IE00B4L5Y983 ; ETF MSCI World ; horizon 7 jours ; favorable si ≥ +2 % ; défavorable si ≤ −2 % ; probabilités 30 / 40 / 30 ; statut marche\n"
                               "PRÉVISION : CH0012032113 ; Roche ; horizon 7 jours ; favorable si ≥ +2,5 % ; défavorable si ≤ -2 % ; probabilités 30 / 50 / 20 ; statut ecartee\n"
                               "**PRÉVISION : AAPL ; Apple ; horizon 60 jours ; favorable si ≥ +6 % ; défavorable si ≤ −5 % ; probabilités 40 / 35 / 25 ; statut idee**\n")
@@ -75,13 +75,22 @@ pv = previsions.lire(d / "previsions.jsonl")
 attendu("3 prévisions importées", len(pv), 4)
 attendu("statut « ecartee » de l'analyste", [x["decision"] for x in pv if x["titre"] == "CH0012032113"], ["non_proposee"])
 attendu("seuil avec virgule lu correctement", [x["seuil_haut_pct"] for x in pv if x["titre"] == "CH0012032113"], [2.5])
-attendu("2 paris importés", len(previsions.lire(d / "paris.jsonl")), 2)
+attendu("3 paris importés", len(previsions.lire(d / "paris.jsonl")), 3)
+attendu("types de paris", [x["type"] for x in previsions.lire(d / "paris.jsonl")], ["relatif", "relatif", "marche"])
 lancer("importer", str(d), str(RELEVE), str(d / "veille.md"), str(d / "analyse.md"), "--decision", "AAPL=retenue")
-attendu("second import sans doublon", (len(previsions.lire(d / "previsions.jsonl")), len(previsions.lire(d / "paris.jsonl"))), (4, 2))
+attendu("second import sans doublon", (len(previsions.lire(d / "previsions.jsonl")), len(previsions.lire(d / "paris.jsonl"))), (4, 3))
 (d / "mauvais.md").write_text("PRÉVISION : AAPL ; Apple ; horizon 60 jours ; probabilités 40 / 35 / 25\n")
 attendu("ligne mal formée refusée", "mal formée" in (lancer("importer", str(d), str(RELEVE), str(d / "mauvais.md")) or ""), True)
 compta.maintenant = lambda: datetime(2026, 12, 21, 7, 0, tzinfo=timezone.utc)
-lancer("noter", str(d), str(d / "plus-tard.json"))
+r2 = json.loads((d / "plus-tard.json").read_text())
+for t in r2["titres"]:
+    t["date_cours"] = "20261221"   # titre et référence notés sur le même jour de cours
+(d / "plus-tard-2.json").write_text(json.dumps(r2))
+lancer("noter", str(d), str(d / "plus-tard-2.json"))
+# Relevé plus tard : Nestlé 85.55 → 90.00 (+5.20 %), référence inchangée (0.00 %) → Nestlé +5.20 % par rapport au marché.
+notes_paris = {n["titre"]: n for n in previsions.lire(d / "paris-notes.jsonl")}
+attendu("Nestlé jugé par rapport au marché : +5.20 points", notes_paris["CH0038863350"].get("variation_relative_pct"), "5.20")
+attendu("pari de marché hausse sur l'ETF inchangé : faux", notes_paris["IE00B4L5Y983"]["juste"], False)
 pn = {n["titre"]: n["juste"] for n in previsions.lire(d / "paris-notes.jsonl")}
 attendu("pari hausse Nestlé juste (+5.20 %)", pn["CH0038863350"], True)
 attendu("pari baisse Novartis faux (0.00 %)", pn["CH0012005267"], False)

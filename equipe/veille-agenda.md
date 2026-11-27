@@ -20,7 +20,7 @@ Lis aussi `equipe/sources.md` : la liste des sites que tu peux ouvrir et la règ
 ## Tes paris, notés contre la réalité
 Chaque fois que tu annonces un impact « hausse » ou « baisse » sur un titre suivi (présent dans `titres.json`), ajoute à la fin de la veille, sous un titre « Paris du jour », une ligne par titre, sous cette forme exacte :
 `PARI : ID ; NOM ; hausse` ou `PARI : ID ; NOM ; baisse`
-(ID = ISIN pour un titre coté en Suisse, code pour une action américaine.) Un programme comparera avec la clôture suivante. Pas de pari quand l'impact est « incertain » : mieux vaut 3 paris assumés que 10 au hasard. Un seul pari par titre et par jour.
+(ID = ISIN pour un titre coté en Suisse, code pour une action américaine.) Un programme comparera avec la clôture suivante. **Sens du pari** : sur un ETF large (MSCI World, S&P 500, Euro Stoxx 50), « hausse » veut dire que le cours monte ; sur tout autre titre, « hausse » veut dire qu'il fera **mieux que l'ETF de référence**, « baisse » moins bien. Pas de pari quand l'impact est « incertain » : mieux vaut 3 paris assumés que 10 au hasard. Un seul pari par titre et par jour.
 
 ## Règles
 - Tu ne recommandes aucun achat ni vente. Tu rapportes des faits et leur impact probable.
