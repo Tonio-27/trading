@@ -2,3 +2,6 @@
 {"id": "V-0002", "titre": "IE00B5BMR087", "nom": "ETF S&P 500", "sens": "hausse", "date_cours": "20261125", "prix_depart": 756.3, "releve": "2026-11-26_0645.json"}
 {"id": "V-0003", "titre": "IE00B53L3W79", "nom": "ETF Euro Stoxx 50", "sens": "hausse", "date_cours": "20261125", "prix_depart": 230.65, "releve": "2026-11-26_0645.json"}
 {"id": "V-0004", "titre": "CH0012221716", "nom": "ABB", "sens": "hausse", "date_cours": "20261125", "prix_depart": 63.36, "releve": "2026-11-26_0645.json"}
+{"id": "V-0005", "titre": "IE00B4L5Y983", "nom": "ETF MSCI World (référence)", "sens": "hausse", "date_cours": "20261126", "prix_depart": 138.14, "releve": "2026-11-27_0647.json"}
+{"id": "V-0006", "titre": "IE00B5BMR087", "nom": "ETF S&P 500", "sens": "hausse", "date_cours": "20261126", "prix_depart": 781.8, "releve": "2026-11-27_0647.json"}
+{"id": "V-0007", "titre": "CH0139101593", "nom": "ETF or (ZKB Gold)", "sens": "hausse", "date_cours": "20261126", "prix_depart": 881.6, "releve": "2026-11-27_0647.json"}
