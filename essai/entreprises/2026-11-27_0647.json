@@ -1,0 +1,412 @@
+{
+ "releve_utc": "2026-11-27T06:47:55Z",
+ "source": "Finnhub",
+ "entreprises": [
+  {
+   "nom": "Apple",
+   "code": "AAPL",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.0263,
+     "benefice_par_action_publie": 2.1,
+     "surprise_pct": 3.6372
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.9271,
+     "benefice_par_action_publie": 1.91,
+     "surprise_pct": -0.8873
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.9884,
+     "benefice_par_action_publie": 2.01,
+     "surprise_pct": 1.0863
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.7257,
+     "benefice_par_action_publie": 2.84,
+     "surprise_pct": 4.1934
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-27 03:19",
+     "source": "Yahoo",
+     "titre": "Apple (AAPL) Has Found a New AI Opportunity That Has Little to Do With the iPhone",
+     "resume": "We just published the list of the 10 Best Tech Stocks to Buy for 2027 According to Hedge Funds, and Apple Inc. (NASDAQ:AAPL) ranked 10th on this list. Tech stocks aren’t lacking in growth stories for 2027. The problem is that smart money is increasingly selective about which companies it’s willing t"
+    },
+    {
+     "date": "2026-11-27 03:17",
+     "source": "Yahoo",
+     "titre": "Target cut its Apple Black Friday discount in half",
+     "resume": "There are two Target rules customers should know before buying."
+    },
+    {
+     "date": "2026-11-26 19:30",
+     "source": "Yahoo",
+     "titre": "Apple Enters the AI Agent Race as It Takes on OpenAI, Anthropic, and Meta. What That Means for AAPL Stock.",
+     "resume": "Apple is reportedly developing an autonomous AI agent capable of controlling apps, writing code, and completing complex tasks as competition with OpenAI, Anthropic, and Meta intensifies."
+    },
+    {
+     "date": "2026-11-26 19:00",
+     "source": "Yahoo",
+     "titre": "Apple Stocks Rise as AI Selloff Spares the iPhone Maker",
+     "resume": "Apple gained while the Nasdaq briefly fell 4.6%, as investors favored device-based AI over cloud spending despite rising memory costs."
+    },
+    {
+     "date": "2026-11-26 18:09",
+     "source": "Yahoo",
+     "titre": "Apple Removes Talkie From App Store After Reports of Inappropriate AI Messages",
+     "resume": "AI Chatbots Face New Child Safety Test. Apple Makes a Major Move Against MiniMax"
+    },
+    {
+     "date": "2026-11-26 17:07",
+     "source": "Yahoo",
+     "titre": "Apple, Exxon and Lowe’s Are Rewarding Shareholders Beyond Their Regular Dividends",
+     "resume": "One of these three dividend payers yields just 0.30%, another has stopped buying back shares entirely, and the third just promised never to cut its payout. Each handles the cash differently, and the differences matter if you live on portfolio income."
+    },
+    {
+     "date": "2026-11-26 15:28",
+     "source": "Yahoo",
+     "titre": "The Economy Grew Way Faster Than First Reported: Q3 GDP Revised Up to 4.3%",
+     "resume": "A blockbuster growth revision sounds like a green light for stocks, yet the market barely cheered. Behind the headline sits a boom that is narrower than it looks, plus an inflation reading that complicates the rate-cut story."
+    },
+    {
+     "date": "2026-11-26 15:26",
+     "source": "Yahoo",
+     "titre": "Can VZ's New Apple Deals and Loyalty Benefits Drive Subscriber Growth?",
+     "resume": "Verizon's 2026 holiday deals feature iPhone 18 Pro offers, free Apple devices, affordable wireless plans and loyalty rewards to attract and retain subscribers."
+    }
+   ]
+  },
+  {
+   "nom": "Microsoft",
+   "code": "MSFT",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 4.824,
+     "benefice_par_action_publie": 4.89,
+     "surprise_pct": 1.3682
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 4.3274,
+     "benefice_par_action_publie": 4.74,
+     "surprise_pct": 9.5346
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 4.1432,
+     "benefice_par_action_publie": 4.27,
+     "surprise_pct": 3.0604
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 4.0345,
+     "benefice_par_action_publie": 4.14,
+     "surprise_pct": 2.6149
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-27 03:30",
+     "source": "Yahoo",
+     "titre": "Microsoft’s Brad Smith Says ‘We Didn’t Know’ $10 Million Trump Ballroom Donation Would Involve Demolition of the East Wing: ’We Never Expect to Get Everything Perfect",
+     "resume": "Microsoft Corp. Vice Chair and President Brad Smith said the company partners with every administration it can, but was not aware that its reported $10 million donation to the new White House ballroom would involve demolishing the East Wing. MSFT..."
+    },
+    {
+     "date": "2026-11-27 03:21",
+     "source": "Yahoo",
+     "titre": "5 Best Quantum Computing Stocks To Buy for 2027",
+     "resume": "Quantum computing is entering a consequential period as technology companies work to turn experimental processors into systems capable of solving commercially relevant problems. The competition increasingly extends beyond building more qubits to improving their reliability, reducing error-correction"
+    },
+    {
+     "date": "2026-11-27 03:08",
+     "source": "Yahoo",
+     "titre": "5 Best Tech Stocks to Buy for 2027 According to Hedge Funds",
+     "resume": "Tech stocks aren’t lacking in growth stories for 2027. The problem is that smart money is increasingly selective about which companies it’s willing to pay a premium for. AI is still the big story, but skepticism is growing about whether the money invested will deliver the promised returns. You could"
+    },
+    {
+     "date": "2026-11-26 23:00",
+     "source": "Yahoo",
+     "titre": "LUNR Aerospace Appoints Draganfly CEO Cameron Chell to Board of Directors",
+     "resume": "VANCOUVER, BC / ACCESS Newswire / November 26, 2026 / LUNR Aerospace Corp. (CSE:FLY)(Frankfurt:6GB)(WKN:A4269V) is pleased to announce the appointment of Mr."
+    },
+    {
+     "date": "2026-11-26 22:20",
+     "source": "Yahoo",
+     "titre": "Tech Stock Sell-Off: Down 13%, Is Microsoft a Buy Now?",
+     "resume": "While other big tech names are burning through cash on AI, Microsoft is paying for its build-out and still has money left over."
+    },
+    {
+     "date": "2026-11-26 22:06",
+     "source": "Yahoo",
+     "titre": "Steve Cohen’s 5 Biggest Stock Bets for 2027",
+     "resume": "Steve Cohen’s Point72 Asset Management filed its third-quarter 13F with the SEC on November 16, reporting about $90.0 billion in holdings at September 30, including options, according to 13f.info. That snapshot predates the Nasdaq Composite’s 5.5% drop on November 5, its biggest one-day fall in 19 m"
+    },
+    {
+     "date": "2026-11-26 21:22",
+     "source": "Yahoo",
+     "titre": "Jensen Huang’s Return Doesn’t Make Nvidia Stock (NVDA) a Buy",
+     "resume": "Jensen Huang’s return as CEO doesn’t make Nvidia (NVDA) stock a Buy, despite the market’s positive reaction. Shares of the leading semiconductor manufacturer jumped roughly 31.5% on November 23 after Nvidia’s board unanimously reinstated Huang with immediate effect. Yet the stock remains down roughl"
+    },
+    {
+     "date": "2026-11-26 18:42",
+     "source": "Yahoo",
+     "titre": "Microsoft Stocks Slip 1.25% While Nadella Backs Cheaper In-House AI Models",
+     "resume": "Microsoft's CEO said trailing frontier labs by three to six months is fine if Microsoft spends a fraction of their compute."
+    }
+   ]
+  },
+  {
+   "nom": "Nvidia",
+   "code": "NVDA",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-12-31",
+     "benefice_par_action_attendu": 2.5252,
+     "benefice_par_action_publie": 2.68,
+     "surprise_pct": 6.1302
+    },
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.1384,
+     "benefice_par_action_publie": 2.22,
+     "surprise_pct": 3.8159
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 1.7922,
+     "benefice_par_action_publie": 1.87,
+     "surprise_pct": 4.341
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 1.5634,
+     "benefice_par_action_publie": 1.62,
+     "surprise_pct": 3.6203
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-27 05:14",
+     "source": "Yahoo",
+     "titre": "Learn Why The Bull Case For Nvidia Stock Could Change Following CEO Reinstatement",
+     "resume": "Nvidia reinstated founder Jensen Huang as CEO and president in late November while multiple US investigations into export controls, governance and disclosure practices continue. Kioxia also announced a collaboration with Nvidia to use SCADA software and high performance SSDs to extend effective GPU "
+    },
+    {
+     "date": "2026-11-27 04:23",
+     "source": "Yahoo",
+     "titre": "Nvidia (NVDA) Stock Fair Value Falls After Analysts Reassess Leadership And Regulatory Risks",
+     "resume": "Analysts have reset their fair value estimate for Nvidia from about US$320 to about US$242, which marks a clear change in how the stock’s long term potential is being framed. This shift comes alongside fresh Street research that points to renewed confidence in Jensen Huang’s leadership and AI execut"
+    },
+    {
+     "date": "2026-11-27 04:17",
+     "source": "Yahoo",
+     "titre": "Asian stocks rise as tech rebound, easing U.S. trade concerns lift sentiment",
+     "resume": "Investing.com -- Most Asian stocks rose on Friday as technology shares extended their recovery and investors took some comfort from easing concerns over U.S. trade tensions, although uncertainty surrounding the artificial-intelligence investment cycle continued to limit risk appetite."
+    },
+    {
+     "date": "2026-11-27 04:14",
+     "source": "Yahoo",
+     "titre": "Singapore yet to confirm if Nvidia has halted advanced chip shipments- deputy PM",
+     "resume": "Investing.com-- Singapore has not yet confirmed whether Nvidia has stopped supplying advanced chips to the country, Deputy Prime Minister Gan Kim Yong said on Friday."
+    },
+    {
+     "date": "2026-11-27 04:11",
+     "source": "Yahoo",
+     "titre": "Neoclouds Told To Choose: Nvidia Chips Or Chinese Customers",
+     "resume": "Nvidia Corp. (NASDAQ:NVDA) chip sellers are reportedly barring neoclouds from buying GPUs if Chinese firms rent any capacity, after a Commerce Department rule restricting remote access to AI chips took effect Nov. 19. Commerce Rule Targets Remote Access Loophole Chip sellers relayed the message to n"
+    },
+    {
+     "date": "2026-11-27 03:53",
+     "source": "Yahoo",
+     "titre": "Amazon Lost 40 Satellites on a Boeing-Lockheed Rocket in November. SpaceX Is the Only Company That Can Fix Amazon’s Problem. Is the Stock a Buy Near $130?",
+     "resume": "The failed launch is a blow to Amazon's plans, but SpaceX isn't going out of its way to help other companies."
+    },
+    {
+     "date": "2026-11-27 03:21",
+     "source": "Yahoo",
+     "titre": "5 Best Quantum Computing Stocks To Buy for 2027",
+     "resume": "Quantum computing is entering a consequential period as technology companies work to turn experimental processors into systems capable of solving commercially relevant problems. The competition increasingly extends beyond building more qubits to improving their reliability, reducing error-correction"
+    },
+    {
+     "date": "2026-11-27 03:20",
+     "source": "Yahoo",
+     "titre": "Nvidia Is Down 35% From Its All-Time High, Tied for Its Biggest Drop Since the AI Boom Began. Is It a Buy?",
+     "resume": "Nvidia is a bargain buy right now."
+    }
+   ]
+  },
+  {
+   "nom": "JPMorgan",
+   "code": "JPM",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 5.958,
+     "benefice_par_action_publie": 5.57,
+     "surprise_pct": -6.5123
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 5.906,
+     "benefice_par_action_publie": 6.14,
+     "surprise_pct": 3.9621
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 5.5024,
+     "benefice_par_action_publie": 5.94,
+     "surprise_pct": 7.9529
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 5.0539,
+     "benefice_par_action_publie": 5.23,
+     "surprise_pct": 3.4844
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-27 03:33",
+     "source": "Yahoo",
+     "titre": "AI Risk Is 'Moving Somewhere Harder to See': Citigroup, JPMorgan Reportedly Look to Offload AI Debt as Investors Grow Wary of Buildout",
+     "resume": "Banks have reportedly put portfolios of artificial intelligence-related loans on the market to shed risk or free up capacity to lend more, as investor appetite for the debt behind the buildout tests. Banks Shop Their AI Loans Citigroup Inc. (NYSE:C) and JPMorgan Chase & Co. (NYSE:JPM) are among the "
+    },
+    {
+     "date": "2026-11-26 22:09",
+     "source": "Yahoo",
+     "titre": "Is Standard Chartered (LSE:STAN) Undervalued Following Its J.P. Morgan Conference Appearance?",
+     "resume": "Conference spotlight on Standard Chartered Standard Chartered (LSE:STAN) will participate in the J.P. Morgan UK Leaders Conference on 18 November 2026 in London, with Group CFO Manus James MacGregor Costello set to outline the bank’s current position for institutional investors. Recent trading tells"
+    },
+    {
+     "date": "2026-11-26 15:47",
+     "source": "Yahoo",
+     "titre": "JPMorgan Sees $450 Billion AI Debt Wave as Credit Risks Mount",
+     "resume": "Growing artificial intelligence infrastructure spending could drive corporate borrowing and investment banking activity."
+    },
+    {
+     "date": "2026-11-26 14:11",
+     "source": "Yahoo",
+     "titre": "Will Bank of America's Swiss Expansion Fuel Further Fee Income Growth?",
+     "resume": "BAC's Swiss expansion is driving rapid client growth and broader European capabilities, potentially boosting cross-border opportunities and fee income."
+    },
+    {
+     "date": "2026-11-26 14:05",
+     "source": "Yahoo",
+     "titre": "JPMorgan Rethinks UK Investments: Will Higher Taxes Hurt Growth?",
+     "resume": "JPM reconsiders major U.K. investments as rising banking taxes threaten profitability, raising concerns over future expansion and long-term earnings growth."
+    },
+    {
+     "date": "2026-11-26 11:04",
+     "source": "Yahoo",
+     "titre": "What State Street Financial Sel Sector SPDR (XLF) Bought: Berkshire Leads on Nov. 24",
+     "resume": "The fund added $266.5 million across all 76 holdings on Tuesday, led by a $36.3 million increase in Berkshire Hathaway."
+    },
+    {
+     "date": "2026-11-26 11:00",
+     "source": "Yahoo",
+     "titre": "Why Outages at Apps Like Chase Mean Cybersecurity Is Now Everyone’s Problem",
+     "resume": "Austin Campbell, founder of Zero Knowledge Group, says outages are now breaking everyday apps and that AI will hurt everyone between big tech and the data-minimized. Chris Perkins, head of Franklin Crypto, warns mixed messages break trust. From Unchained, the no-hype resource for all things crypto."
+    },
+    {
+     "date": "2026-11-26 08:08",
+     "source": "Yahoo",
+     "titre": "What Is JPMorgan Chase (JPM) Saying With Its $450 Billion AI Debt Call?",
+     "resume": "JPMorgan Chase (NYSE:JPM) analysts project that AI related capital expenditure will drive US$450b in investment grade debt issuance in 2027. The bank links this expected borrowing to funding for artificial intelligence infrastructure and hardware across corporate issuers. JPMorgan Chase frames the p"
+    }
+   ]
+  },
+  {
+   "nom": "Johnson & Johnson",
+   "code": "JNJ",
+   "derniers_resultats": [
+    {
+     "trimestre_clos_le": "2026-09-30",
+     "benefice_par_action_attendu": 2.5631,
+     "benefice_par_action_publie": 2.59,
+     "surprise_pct": 1.0495
+    },
+    {
+     "trimestre_clos_le": "2026-06-30",
+     "benefice_par_action_attendu": 2.8745,
+     "benefice_par_action_publie": 2.9,
+     "surprise_pct": 0.8871
+    },
+    {
+     "trimestre_clos_le": "2026-03-31",
+     "benefice_par_action_attendu": 2.6914,
+     "benefice_par_action_publie": 2.7,
+     "surprise_pct": 0.3195
+    },
+    {
+     "trimestre_clos_le": "2025-12-31",
+     "benefice_par_action_attendu": 2.4633,
+     "benefice_par_action_publie": 2.46,
+     "surprise_pct": -0.134
+    }
+   ],
+   "prochains_resultats": null,
+   "presse_3_jours": [
+    {
+     "date": "2026-11-26 21:33",
+     "source": "Yahoo",
+     "titre": "The Nasdaq Composite Is in a Correction, but These 3 Dividend Stocks Are Near 52-Week Highs. Here's Why They're Still Worth Buying Right Now.",
+     "resume": "Johnson & Johnson, Visa, and Coca-Cola have held up during the market's recent turbulence."
+    },
+    {
+     "date": "2026-11-26 20:12",
+     "source": "Yahoo",
+     "titre": "Syndax Pharmaceuticals Defends Revuforj as Rival Leukemia Drug Draws Investor Attention",
+     "resume": "Syndax Pharmaceuticals (NASDAQ:SNDX) executives defended the company’s position in the competitive menin inhibitor market, pointing to forthcoming leukemia data and ongoing frontline trials as investors assess a rival treatment. Speaking at the Jefferies Global Healthcare Conference in London, CEO"
+    },
+    {
+     "date": "2026-11-26 19:25",
+     "source": "Yahoo",
+     "titre": "The Buffett Indicator Is Flashing Red. These 2 Dividend Stocks Could Be Safe Havens.",
+     "resume": "The Buffett indicator is well above its long-term average, so you may want to consider buying stocks of companies that sell things people don't want to live without."
+    },
+    {
+     "date": "2026-11-26 14:23",
+     "source": "Yahoo",
+     "titre": "Minimally Invasive Medical Robots Global Market Report 2026 | Capitalize on AI Surgery as Market Hits $65.25B by 2030: Intuitive Surgical, Johnson & Johnson, Medtronic, Stryker",
+     "resume": "Boost ROI via AI-guided precision, real-time imaging, connected robotics, miniaturized tools, clinical training and strategic acquisitions.Dublin, Nov. 26, 2026 (GLOBE NEWSWIRE) -- \"Minimally Invasive Medical Robots Market Global Report 2026\" has been added to ResearchAndMarkets.com's offering. The "
+    },
+    {
+     "date": "2026-11-26 13:32",
+     "source": "Yahoo",
+     "titre": "3 Dividend Kings Retirees Can Own for the Rest of Their Lives",
+     "resume": "Nearly two centuries of combined dividend raises sit behind three household names, yet each one carries a catch that could trim your future payouts. Which risk matters most, and which stock asks you to pay a record price for safety?"
+    },
+    {
+     "date": "2026-11-26 13:07",
+     "source": "Yahoo",
+     "titre": "Investors 50 and Older Can Put $8,600 Into a Roth IRA in 2026 to Build Tax-Free Dividend Income",
+     "resume": "Four household-name dividend stocks can quietly hand the IRS a four-figure bill every year, and one of them does most of the damage. Investors over 50 hold a special tool to fight back, but income limits can shut some couples out."
+    },
+    {
+     "date": "2026-11-26 13:03",
+     "source": "Yahoo",
+     "titre": "Big Yields Are Easy to Find. These 4 Dividend Stocks Cover Theirs With Cash to Spare",
+     "resume": "A fat yield means little if the cash behind it runs thin. Four dividend payers, from a pipeline giant to a burger empire, pass a stricter test, though each carries one risk that could squeeze its next raise."
+    },
+    {
+     "date": "2026-11-26 11:56",
+     "source": "Yahoo",
+     "titre": "Can Oncology Emerge as Eli Lilly's Next Major Growth Driver?",
+     "resume": "Lilly's oncology pipeline features eight potential medicines and new indications that could shape its next major growth opportunity."
+    }
+   ]
+  }
+ ],
+ "erreurs": []
+}
